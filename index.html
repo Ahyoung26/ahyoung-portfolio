@@ -34,6 +34,26 @@
   <section class="hero" id="about">
     <div class="container hero-grid">
       <div class="hero-text">
+        <div class="hero-avatar fade-in">
+          <svg class="char-svg char-svg-hero" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="35" r="20" fill="#FFDCB4"/>
+            <path d="M12 28c0-12 8-20 20-20s20 8 20 20v4c0 2-1 3.5-3 3.5h-1V30c0-10-7-16-16-16S16 20 16 30v5.5h-1c-2 0-3-1.5-3-3.5v-4z" fill="#2C2C2E"/>
+            <path d="M18 18c4-6 10-8 15-7-5 .5-11 4.5-15 10v-3z" fill="rgba(255,255,255,0.1)"/>
+            <ellipse cx="24" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <ellipse cx="40" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <line x1="31.5" y1="34" x2="32.5" y2="34" stroke="#636366" stroke-width="1.3"/>
+            <line x1="16.5" y1="32.5" x2="14" y2="31" stroke="#636366" stroke-width="1"/>
+            <line x1="47.5" y1="32.5" x2="50" y2="31" stroke="#636366" stroke-width="1"/>
+            <circle cx="24" cy="34" r="2.5" fill="#1C1C1E"/>
+            <circle cx="40" cy="34" r="2.5" fill="#1C1C1E"/>
+            <circle cx="25" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="41" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="16" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+            <circle cx="48" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+            <path d="M31 39c.5 1 1.5 1 2 0" stroke="#E8C0A0" stroke-width="0.6" fill="none"/>
+            <path d="M26 45c2 3 8 3 10 0" stroke="#C9846A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
         <p class="hero-label fade-in">🧠 AI Service Planner</p>
         <h1 class="hero-title fade-in">김아영</h1>
         <p class="hero-role fade-in">AI 서비스 기획자</p>
@@ -108,6 +128,29 @@
         문제를 기능이 아닌<br>
         <em>'사용 흐름과 구조'</em>로 해결하는 기획자
       </h2>
+      <div class="narrator narrator-dark fade-in" style="margin-bottom: 20px;">
+        <div class="narrator-avatar">
+          <svg class="char-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="35" r="20" fill="#FFDCB4"/>
+            <path d="M12 28c0-12 8-20 20-20s20 8 20 20v4c0 2-1 3.5-3 3.5h-1V30c0-10-7-16-16-16S16 20 16 30v5.5h-1c-2 0-3-1.5-3-3.5v-4z" fill="#2C2C2E"/>
+            <path d="M18 18c4-6 10-8 15-7-5 .5-11 4.5-15 10v-3z" fill="rgba(255,255,255,0.1)"/>
+            <ellipse cx="24" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <ellipse cx="40" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <line x1="31.5" y1="34" x2="32.5" y2="34" stroke="#636366" stroke-width="1.3"/>
+            <circle cx="24" cy="34" r="2.5" fill="#1C1C1E"/>
+            <circle cx="40" cy="34" r="2.5" fill="#1C1C1E"/>
+            <circle cx="25" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="41" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="16" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+            <circle cx="48" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+            <path d="M31 39c.5 1 1.5 1 2 0" stroke="#E8C0A0" stroke-width="0.6" fill="none"/>
+            <path d="M26 45c2 3 8 3 10 0" stroke="#C9846A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="narrator-bubble">
+          <p>제 기획 철학을 소개합니다.</p>
+        </div>
+      </div>
       <div class="summary-body fade-in">
         <p>
           데이터 기반으로 사용자 행동과 이탈 지점을 분석하고,<br>
@@ -181,13 +224,24 @@
     <div class="container">
       <div class="narrator fade-in">
         <div class="narrator-avatar">
-          <svg class="char-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="26" r="16" fill="#FFD6B0"/>
-            <path d="M8 22c0-9 7-16 16-16s16 7 16 16v2c0 2-1 3-2 3H10c-1 0-2-1-2-3v-2z" fill="#2D2D2D"/>
-            <rect x="15" y="23" width="7" height="5" rx="2.5" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
-            <rect x="26" y="23" width="7" height="5" rx="2.5" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
-            <line x1="22" y1="25.5" x2="26" y2="25.5" stroke="#2D2D2D" stroke-width="1.2"/>
-            <path d="M20 33c0 1.5 1.8 3 4 3s4-1.5 4-3" stroke="#2D2D2D" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <svg class="char-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="35" r="20" fill="#FFDCB4"/>
+            <path d="M12 28c0-12 8-20 20-20s20 8 20 20v4c0 2-1 3.5-3 3.5h-1V30c0-10-7-16-16-16S16 20 16 30v5.5h-1c-2 0-3-1.5-3-3.5v-4z" fill="#2C2C2E"/>
+            <path d="M18 18c4-6 10-8 15-7-5 .5-11 4.5-15 10v-3z" fill="rgba(255,255,255,0.1)"/>
+            <ellipse cx="24" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <ellipse cx="40" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <line x1="31.5" y1="34" x2="32.5" y2="34" stroke="#636366" stroke-width="1.3"/>
+            <circle cx="25" cy="33" r="2.5" fill="#1C1C1E"/>
+            <circle cx="41" cy="33" r="2.5" fill="#1C1C1E"/>
+            <circle cx="26" cy="32" r="1" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="42" cy="32" r="1" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="16" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+            <circle cx="48" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+            <path d="M31 39c.5 1 1.5 1 2 0" stroke="#E8C0A0" stroke-width="0.6" fill="none"/>
+            <path d="M28 46h8" stroke="#C9846A" stroke-width="1.2" stroke-linecap="round"/>
+            <circle cx="52" cy="14" r="2.2" fill="#C7C7CC"/>
+            <circle cx="56" cy="10" r="1.6" fill="#C7C7CC"/>
+            <circle cx="59" cy="7" r="1" fill="#C7C7CC"/>
           </svg>
         </div>
         <div class="narrator-bubble narrator-bubble-think">
@@ -240,15 +294,26 @@
       <div class="solution-text">
         <div class="narrator narrator-dark fade-in">
           <div class="narrator-avatar">
-            <svg class="char-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="24" cy="26" r="16" fill="#FFD6B0"/>
-              <path d="M8 22c0-9 7-16 16-16s16 7 16 16v2c0 2-1 3-2 3H10c-1 0-2-1-2-3v-2z" fill="#2D2D2D"/>
-              <rect x="15" y="23" width="7" height="5" rx="2.5" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
-              <rect x="26" y="23" width="7" height="5" rx="2.5" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
-              <line x1="22" y1="25.5" x2="26" y2="25.5" stroke="#2D2D2D" stroke-width="1.2"/>
-              <circle cx="37" cy="14" r="4" fill="#FFE066" opacity="0.9"/>
-              <path d="M37 11v3M37 17v-1M35 14h4" stroke="#2D2D2D" stroke-width="0.8" stroke-linecap="round"/>
-              <path d="M20 33c0 1.5 1.8 3 4 3s4-1.5 4-3" stroke="#2D2D2D" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            <svg class="char-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="35" r="20" fill="#FFDCB4"/>
+              <path d="M12 28c0-12 8-20 20-20s20 8 20 20v4c0 2-1 3.5-3 3.5h-1V30c0-10-7-16-16-16S16 20 16 30v5.5h-1c-2 0-3-1.5-3-3.5v-4z" fill="#2C2C2E"/>
+              <path d="M18 18c4-6 10-8 15-7-5 .5-11 4.5-15 10v-3z" fill="rgba(255,255,255,0.1)"/>
+              <ellipse cx="24" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+              <ellipse cx="40" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+              <line x1="31.5" y1="34" x2="32.5" y2="34" stroke="#636366" stroke-width="1.3"/>
+              <circle cx="24" cy="34" r="2.5" fill="#1C1C1E"/>
+              <circle cx="40" cy="34" r="2.5" fill="#1C1C1E"/>
+              <circle cx="25" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="41" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="16" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+              <circle cx="48" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+              <path d="M31 39c.5 1 1.5 1 2 0" stroke="#E8C0A0" stroke-width="0.6" fill="none"/>
+              <path d="M26 44c2 4 8 4 10 0" stroke="#C9846A" stroke-width="1.2" fill="rgba(193,107,80,0.1)" stroke-linecap="round"/>
+              <circle cx="54" cy="12" r="5" fill="#FFD60A" opacity="0.2"/>
+              <circle cx="54" cy="12" r="2.5" fill="#FFD60A" opacity="0.5"/>
+              <line x1="54" y1="6" x2="54" y2="4" stroke="#FFD60A" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+              <line x1="58" y1="8" x2="60" y2="7" stroke="#FFD60A" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+              <line x1="59" y1="13" x2="61" y2="13" stroke="#FFD60A" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
             </svg>
           </div>
           <div class="narrator-bubble">
@@ -469,7 +534,20 @@
       </div>
       <div class="chat-window fade-in">
         <div class="chat-header">
-          <div class="chat-avatar-icon">AI</div>
+          <div class="chat-avatar-icon chat-avatar-char">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="35" r="20" fill="#FFDCB4"/>
+              <path d="M12 28c0-12 8-20 20-20s20 8 20 20v4c0 2-1 3.5-3 3.5h-1V30c0-10-7-16-16-16S16 20 16 30v5.5h-1c-2 0-3-1.5-3-3.5v-4z" fill="#2C2C2E"/>
+              <ellipse cx="24" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+              <ellipse cx="40" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+              <line x1="31.5" y1="34" x2="32.5" y2="34" stroke="#636366" stroke-width="1.3"/>
+              <circle cx="24" cy="34" r="2.5" fill="#1C1C1E"/>
+              <circle cx="40" cy="34" r="2.5" fill="#1C1C1E"/>
+              <circle cx="25" cy="33" r="0.8" fill="rgba(255,255,255,0.9)"/>
+              <circle cx="41" cy="33" r="0.8" fill="rgba(255,255,255,0.9)"/>
+              <path d="M26 45c2 3 8 3 10 0" stroke="#C9846A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div>
             <div class="chat-header-title">AI Avatar Assistant</div>
             <div class="chat-header-status"><span class="status-dot"></span>Online</div>
@@ -647,15 +725,20 @@
 
       <div class="narrator fade-in" style="margin-top: 24px;">
         <div class="narrator-avatar">
-          <svg class="char-svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="26" r="16" fill="#FFD6B0"/>
-            <path d="M8 22c0-9 7-16 16-16s16 7 16 16v2c0 2-1 3-2 3H10c-1 0-2-1-2-3v-2z" fill="#2D2D2D"/>
-            <rect x="15" y="23" width="7" height="5" rx="2.5" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
-            <rect x="26" y="23" width="7" height="5" rx="2.5" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
-            <line x1="22" y1="25.5" x2="26" y2="25.5" stroke="#2D2D2D" stroke-width="1.2"/>
-            <circle cx="37" cy="14" r="4" fill="#FFE066" opacity="0.9"/>
-            <path d="M37 11v3M37 17v-1M35 14h4" stroke="#2D2D2D" stroke-width="0.8" stroke-linecap="round"/>
-            <path d="M19 32q5 5 10 0" stroke="#2D2D2D" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          <svg class="char-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="35" r="20" fill="#FFDCB4"/>
+            <path d="M12 28c0-12 8-20 20-20s20 8 20 20v4c0 2-1 3.5-3 3.5h-1V30c0-10-7-16-16-16S16 20 16 30v5.5h-1c-2 0-3-1.5-3-3.5v-4z" fill="#2C2C2E"/>
+            <path d="M18 18c4-6 10-8 15-7-5 .5-11 4.5-15 10v-3z" fill="rgba(255,255,255,0.1)"/>
+            <ellipse cx="24" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <ellipse cx="40" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <line x1="31.5" y1="34" x2="32.5" y2="34" stroke="#636366" stroke-width="1.3"/>
+            <path d="M21 34c1.5-2 4.5-2 6 0" stroke="#1C1C1E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <path d="M37 34c1.5-2 4.5-2 6 0" stroke="#1C1C1E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <circle cx="16" cy="40" r="4.5" fill="rgba(255,130,130,0.18)"/>
+            <circle cx="48" cy="40" r="4.5" fill="rgba(255,130,130,0.18)"/>
+            <path d="M31 39c.5 1 1.5 1 2 0" stroke="#E8C0A0" stroke-width="0.6" fill="none"/>
+            <path d="M25 44c3 5 10 5 13 0" stroke="#C9846A" stroke-width="1.2" fill="rgba(193,107,80,0.1)" stroke-linecap="round"/>
+            <path d="M53 10l1.2 3.5 1.2-3.5M52 12.5h4.8" stroke="#FFD60A" stroke-width="0.9" stroke-linecap="round" opacity="0.7"/>
           </svg>
         </div>
         <div class="narrator-bubble">
@@ -690,6 +773,29 @@
         Experience
       </p>
       <h2 class="section-title fade-in">대규모 서비스 기획 경험</h2>
+      <div class="narrator fade-in">
+        <div class="narrator-avatar">
+          <svg class="char-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="35" r="20" fill="#FFDCB4"/>
+            <path d="M12 28c0-12 8-20 20-20s20 8 20 20v4c0 2-1 3.5-3 3.5h-1V30c0-10-7-16-16-16S16 20 16 30v5.5h-1c-2 0-3-1.5-3-3.5v-4z" fill="#2C2C2E"/>
+            <path d="M18 18c4-6 10-8 15-7-5 .5-11 4.5-15 10v-3z" fill="rgba(255,255,255,0.1)"/>
+            <ellipse cx="24" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <ellipse cx="40" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+            <line x1="31.5" y1="34" x2="32.5" y2="34" stroke="#636366" stroke-width="1.3"/>
+            <circle cx="24" cy="34" r="2.5" fill="#1C1C1E"/>
+            <circle cx="40" cy="34" r="2.5" fill="#1C1C1E"/>
+            <circle cx="25" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="41" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+            <circle cx="16" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+            <circle cx="48" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+            <path d="M31 39c.5 1 1.5 1 2 0" stroke="#E8C0A0" stroke-width="0.6" fill="none"/>
+            <path d="M26 45c2 3 8 3 10 0" stroke="#C9846A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="narrator-bubble">
+          <p>AI 이전, 대규모 서비스에서 쌓은 경험입니다.</p>
+        </div>
+      </div>
 
       <div class="exp-grid fade-in">
         <div class="exp-card">
@@ -737,13 +843,23 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-character">
-        <svg class="char-svg char-svg-lg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="24" cy="26" r="16" fill="#FFD6B0"/>
-          <path d="M8 22c0-9 7-16 16-16s16 7 16 16v2c0 2-1 3-2 3H10c-1 0-2-1-2-3v-2z" fill="#2D2D2D"/>
-          <rect x="15" y="23" width="7" height="5" rx="2.5" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
-          <rect x="26" y="23" width="7" height="5" rx="2.5" stroke="#2D2D2D" stroke-width="1.5" fill="none"/>
-          <line x1="22" y1="25.5" x2="26" y2="25.5" stroke="#2D2D2D" stroke-width="1.2"/>
-          <path d="M20 33c0 1.5 1.8 3 4 3s4-1.5 4-3" stroke="#2D2D2D" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <svg class="char-svg char-svg-lg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="35" r="20" fill="#FFDCB4"/>
+          <path d="M12 28c0-12 8-20 20-20s20 8 20 20v4c0 2-1 3.5-3 3.5h-1V30c0-10-7-16-16-16S16 20 16 30v5.5h-1c-2 0-3-1.5-3-3.5v-4z" fill="#2C2C2E"/>
+          <path d="M18 18c4-6 10-8 15-7-5 .5-11 4.5-15 10v-3z" fill="rgba(255,255,255,0.1)"/>
+          <ellipse cx="24" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+          <ellipse cx="40" cy="34" rx="7.5" ry="5.5" fill="rgba(174,198,255,0.08)" stroke="#636366" stroke-width="1.3"/>
+          <line x1="31.5" y1="34" x2="32.5" y2="34" stroke="#636366" stroke-width="1.3"/>
+          <line x1="16.5" y1="32.5" x2="14" y2="31" stroke="#636366" stroke-width="1"/>
+          <line x1="47.5" y1="32.5" x2="50" y2="31" stroke="#636366" stroke-width="1"/>
+          <circle cx="24" cy="34" r="2.5" fill="#1C1C1E"/>
+          <circle cx="40" cy="34" r="2.5" fill="#1C1C1E"/>
+          <circle cx="25" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+          <circle cx="41" cy="33" r="1" fill="rgba(255,255,255,0.9)"/>
+          <circle cx="16" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+          <circle cx="48" cy="40" r="4" fill="rgba(255,130,130,0.13)"/>
+          <path d="M31 39c.5 1 1.5 1 2 0" stroke="#E8C0A0" stroke-width="0.6" fill="none"/>
+          <path d="M26 45c2 3 8 3 10 0" stroke="#C9846A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
         </svg>
       </div>
       <p class="footer-name">김아영</p>
