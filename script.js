@@ -43,78 +43,79 @@ document.addEventListener('DOMContentLoaded', () => {
     a.addEventListener('click', () => navLinks.classList.remove('open'));
   });
 
-  // ===== Agent Flow: staggered reveal =====
+  // ===== Agent Flow (optional: .flow-step present only on pages that use it) =====
   const flowSteps = document.querySelectorAll('.flow-step');
-  const flowRevealObs = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) {
-        flowSteps.forEach((step, i) => {
-          setTimeout(() => step.classList.add('visible'), i * 120);
-        });
-        flowRevealObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.05 });
 
-  if (flowSteps.length) flowRevealObs.observe(flowSteps[0]);
-
-  // ===== Agent Flow: connecting line animation =====
-  const flowLine = document.getElementById('flowLine');
-  const flowWrapper = document.querySelector('.flow-wrapper');
-
-  if (flowLine && flowWrapper) {
-    const lineObs = new IntersectionObserver((entries) => {
+  if (flowSteps.length) {
+    const flowRevealObs = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) {
-          const totalH = flowWrapper.scrollHeight;
-          flowLine.style.height = totalH + 'px';
-          lineObs.unobserve(e.target);
+          flowSteps.forEach((step, i) => {
+            setTimeout(() => step.classList.add('visible'), i * 120);
+          });
+          flowRevealObs.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1 });
-    lineObs.observe(flowWrapper);
-  }
+    }, { threshold: 0.05 });
 
-  // ===== Agent Flow: auto-cycle highlight =====
-  let flowInterval = null;
-  const flowSection = document.getElementById('agent-flow');
+    flowRevealObs.observe(flowSteps[0]);
 
-  const flowCycleObs = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting && !flowInterval) {
-        startCycle();
-      } else if (!e.isIntersecting && flowInterval) {
-        clearInterval(flowInterval);
-        flowInterval = null;
+    const flowLine = document.getElementById('flowLine');
+    const flowWrapper = document.querySelector('.flow-wrapper');
+
+    if (flowLine && flowWrapper) {
+      const lineObs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            flowLine.style.height = flowWrapper.scrollHeight + 'px';
+            lineObs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      lineObs.observe(flowWrapper);
+    }
+
+    let flowInterval = null;
+    const flowSection = flowSteps[0].closest('section[id]');
+
+    function startCycle() {
+      let idx = 0;
+      const tick = () => {
         flowSteps.forEach((s) => s.classList.remove('flow-step-active'));
-      }
+        if (flowSteps[idx]) flowSteps[idx].classList.add('flow-step-active');
+        idx = (idx + 1) % flowSteps.length;
+      };
+      tick();
+      flowInterval = setInterval(tick, 2400);
+    }
+
+    if (flowSection) {
+      const flowCycleObs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting && !flowInterval) {
+            startCycle();
+          } else if (!e.isIntersecting && flowInterval) {
+            clearInterval(flowInterval);
+            flowInterval = null;
+            flowSteps.forEach((s) => s.classList.remove('flow-step-active'));
+          }
+        });
+      }, { threshold: 0.2 });
+      flowCycleObs.observe(flowSection);
+    }
+
+    flowSteps.forEach((step) => {
+      step.addEventListener('mouseenter', () => {
+        if (flowInterval) { clearInterval(flowInterval); flowInterval = null; }
+        flowSteps.forEach((s) => s.classList.remove('flow-step-active'));
+        step.classList.add('flow-step-active');
+      });
+
+      step.addEventListener('mouseleave', () => {
+        if (!flowInterval && flowSection) startCycle();
+      });
     });
-  }, { threshold: 0.2 });
-
-  if (flowSection) flowCycleObs.observe(flowSection);
-
-  function startCycle() {
-    let idx = 0;
-    const tick = () => {
-      flowSteps.forEach((s) => s.classList.remove('flow-step-active'));
-      if (flowSteps[idx]) flowSteps[idx].classList.add('flow-step-active');
-      idx = (idx + 1) % flowSteps.length;
-    };
-    tick();
-    flowInterval = setInterval(tick, 2400);
   }
-
-  flowSteps.forEach((step) => {
-    step.addEventListener('mouseenter', () => {
-      if (flowInterval) { clearInterval(flowInterval); flowInterval = null; }
-      flowSteps.forEach((s) => s.classList.remove('flow-step-active'));
-      step.classList.add('flow-step-active');
-    });
-
-    step.addEventListener('mouseleave', () => {
-      if (!flowInterval) startCycle();
-    });
-  });
 
   // ===== Chat Simulation =====
   const chatBody = document.getElementById('chatBody');
