@@ -2,861 +2,883 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>김아영 — AX / AI 서비스 기획자 Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>김아영 — 서비스 기획자 포트폴리오</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Nav -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <span class="nav-logo">김아영</span>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#project1">AX Human</a></li>
-        <li><a href="#project2">NH 챗봇</a></li>
-        <li><a href="#experience">Experience</a></li>
-      </ul>
-    </div>
-  </nav>
+<!-- ================================================================
+     NAVIGATION
+     ================================================================ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#p1" class="nav-brand">
+      <span class="nav-brand-mark"></span>
+      김아영
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#p1">About</a>
+      <a href="#p2">문제 해결</a>
+      <a href="#p3">핵심 역량</a>
+      <a href="#p4">Project 01</a>
+      <a href="#p5">문제 정의</a>
+    </nav>
+  </div>
+</nav>
 
-  <!-- ============================================ -->
-  <!-- 1. HERO / ABOUT ME                          -->
-  <!-- ============================================ -->
-  <section class="hero" id="about">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="hero-label fade-in">AI Service Planner</p>
-        <h1 class="hero-title fade-in">김아영</h1>
-        <p class="hero-role fade-in">AI 서비스 기획자 · AX·대화형 서비스 기획</p>
-        <p class="hero-desc fade-in">문제를 구조로 풀고, 사용 흐름·운영까지 잇는 기획자입니다.</p>
-        <ul class="hero-intro-bullets fade-in">
-          <li>UI·UX 기획 기반으로 <strong>가상인간·LLM 챗봇</strong> 등 AI 서비스 설계</li>
-          <li>퍼널·어드민·운영 정책까지 포함한 <span class="text-highlight">실제 동작 구조</span> 중심</li>
-          <li>기술·사용자·운영을 연결해 <strong>서비스 단위</strong>로 정리하는 데 강점</li>
-        </ul>
-        <div class="hero-skills fade-in">
-          <span class="skill-tag">Figma</span>
-          <span class="skill-tag">Notion</span>
-          <span class="skill-tag">Jira</span>
-          <span class="skill-tag">Slack</span>
-          <span class="skill-tag">Datadog</span>
-        </div>
-      </div>
-      <div class="hero-career fade-in">
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">2022.04 – 현재</div>
-            <div class="timeline-company">딥브레인AI</div>
-            <ul class="timeline-details">
-              <li>AI Studios (AI SaaS 영상 제작 플랫폼) 서비스 기획</li>
-              <li>NH농협은행 AI 가상인간 프로젝트 PL</li>
-              <li>딥페이크 탐지 공공기관 솔루션 기획</li>
-            </ul>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">2020.02 – 2022.04</div>
-            <div class="timeline-company">아이파트너즈</div>
-            <ul class="timeline-details">
-              <li>현대자동차/제네시스 UX 및 Admin 구조 개선</li>
-              <li>O2O 예약·상담 UX 개선</li>
-            </ul>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-date">2013.09 – 2020.02</div>
-            <div class="timeline-company">투어마케팅코리아</div>
-            <ul class="timeline-details">
-              <li>글로벌 예약 시스템 UX 및 결제/정산 구조 설계</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============================================ -->
-  <!-- 2. SUMMARY                                   -->
-  <!-- ============================================ -->
-  <div class="section-divider"></div>
-  <section class="section section-light" id="summary">
-    <div class="container">
-      <p class="section-label fade-in">What Kind of Planner</p>
-      <h2 class="section-title fade-in">사용 흐름·구조로 문제를 정리하는 기획자</h2>
-      <p class="section-oneliner fade-in">기능 나열이 아니라 진입–생성–대화–검증까지 한 축으로 묶어 설명 가능하게 만드는 일을 합니다.</p>
-      <div class="notion-callout fade-in">
-        <p class="notion-callout-title">핵심 요약</p>
-        <ul>
-          <li>이탈·행동 데이터를 바탕으로 UX·정책·데이터 구조를 같이 맞춤</li>
-          <li>가상인간·LLM 챗봇에서 <strong>입력 → 판단 → 응답</strong> 대화 구조를 정의</li>
-          <li>AX 단위 설계 후 Agent 역할(Document / Retrieval / Conversation 등)로 확장할 전제를 둠</li>
-        </ul>
-      </div>
-      <div class="summary-body fade-in">
-        <div class="summary-highlight">
-          <div class="summary-highlight-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-          </div>
-          <p>대화형 서비스에서는 응답 지연이 곧 이탈 요인이라, <strong>속도·품질 기준</strong>을 먼저 합의하는 편입니다.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ================================================================
+     PAGE 1 — ABOUT ME
+     CONTENT_GUIDE.md: 문제를 구조로 해결하는 서비스 기획자
 
-  <!-- ============================================ -->
-  <!-- 3. PROJECT 1 – AX Interactive AI Human       -->
-  <!-- ============================================ -->
-  <div class="section-divider section-divider-light"></div>
-  <section class="section section-padded" id="project1">
-    <div class="container">
-      <p class="section-label fade-in">Project 01 · Overview</p>
-      <h2 class="section-title fade-in">인터랙티브 AI Human 기반 대화형 AX 시스템 설계</h2>
-      <p class="section-oneliner fade-in">생성 결과물이 아닌, 실시간으로 상호작용하는 인터페이스로 아바타를 전환한 AX 프로젝트입니다.</p>
-      <div class="notion-callout fade-in">
-        <p class="notion-callout-title">핵심 요약</p>
-        <ul>
-          <li>생성 중심 인식에서 <strong>대화·실시간 상호작용</strong> 축으로 전환</li>
-          <li>기본 LLM 경로와 <strong>파일·URL 시 RAG</strong> 선택 경로를 분리해 기술 전달</li>
-          <li>완성 Agent 주장 없이 <strong>AX 시스템·품질 기준</strong> 기획 범위를 명확히 함</li>
-        </ul>
-      </div>
-      <div class="project-overview fade-in">
-        <div class="project-overview-text">
-          <p class="ax-lead fade-in">한 줄 정의</p>
-          <ul class="ax-bullets">
-            <li>생성 중심 AI 아바타를 <strong>진입·생성·대화·품질 기준·선택적 지식 확장</strong>까지 한 AX 단위로 묶음.</li>
-            <li>완성 Agent가 아니라 <strong>AX 시스템 설계</strong>가 메인 · 이후 Document / Retrieval / Conversation 등 역할 분해 가능한 전제.</li>
-            <li>B2B에서 <strong>빠른 생성·즉시 활용</strong> 니즈와 파이프라인·운영 병목이 공존.</li>
-            <li>대화는 있었으나 지연으로 <strong>실시간 경험은 미완</strong> — 아바타를 <strong>실시간 상호작용 UI</strong>로 둔다는 목표.</li>
-          </ul>
-        </div>
-        <div class="media-block">
-          <div class="media-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            삽입 가이드
-          </div>
-          <div class="media-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
-            <span>[이미지 삽입: 프로젝트 대표 화면 또는 인터랙티브 아바타 화면]</span>
-            <span class="media-sub insert-note"><strong>[실제 작업 이미지 필요]</strong> · 없을 경우 <strong>[도표/다이어그램으로 대체 가능]</strong></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+     SECTION LABEL : ABOUT ME
+     TITLE         : 문제를 구조로 해결하는 서비스 기획자 김아영입니다.
+     SUBTITLE      : 데이터와 사용자 흐름 기반으로 실제로 운영 가능한 구조를 설계합니다.
+     VISUAL        : 프로젝트 맵 + 역량 요약
+     CONTENT       : 5가지 핵심 영역
+     ================================================================ -->
+<section class="page-section page-section--intro" id="p1">
+  <div class="container">
 
-  <!-- Problem -->
-  <section class="section section-light section-padded" id="problem">
-    <div class="container">
-      <p class="section-label fade-in">2. Background / Problem</p>
-      <h2 class="section-title fade-in">AI 기능은 있었지만 사용자 경험으로는 미완이었던 상태</h2>
-      <p class="section-oneliner fade-in">도메인을 모르는 독자도 이해할 수 있도록, 원인을 구조 단위로 정리했습니다.</p>
-      <div class="notion-callout fade-in">
-        <p class="notion-callout-title">핵심 요약</p>
-        <ul>
-          <li>빠른 생성·현장 활용 요구와 <strong>긴 파이프라인</strong> 병목이 공존</li>
-          <li>대화는 있으나 <strong>지연·생성 시간</strong>으로 실시간 체감이 약함</li>
-          <li>대화형을 기존 기능에 붙은 흐름이 아니라 <strong>독립 서비스 단위</strong>로 둘 필요</li>
-        </ul>
-      </div>
-      <div class="limitations fade-in">
-        <div class="limitation-card">
-          <div class="limitation-header">
-            <div class="limitation-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    <!-- Zone 1: Header -->
+    <header class="ps-header">
+      <p class="ps-label">About Me</p>
+      <h1 class="ps-title ps-title--hero">
+        문제를 구조로 해결하는<br>서비스 기획자 김아영입니다.
+      </h1>
+      <p class="ps-subtitle">
+        데이터와 사용자 흐름을 기반으로<br>
+        서비스의 문제를 정의하고,<br>
+        실제로 운영 가능한 해결 구조를 설계합니다.
+      </p>
+    </header>
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 2: Visual — Career timeline + Capability summary -->
+    <div class="ps-visual">
+
+      <div class="p1-grid">
+
+        <!-- Left: Career timeline -->
+        <div>
+          <p class="vis-diagram-label" style="margin-bottom:24px">Career</p>
+          <div class="p1-timeline">
+
+            <div class="p1-tl-item">
+              <div class="p1-tl-dot-col">
+                <div class="p1-tl-dot p1-tl-dot--active"></div>
+                <div class="p1-tl-line"></div>
+              </div>
+              <div class="p1-tl-content">
+                <p class="p1-tl-date">2022.04 — 현재</p>
+                <p class="p1-tl-company">딥브레인AI</p>
+                <p class="p1-tl-detail">
+                  Interactive AI Human 서비스 기획 PL<br>
+                  AI Studios SaaS 플랫폼 기획<br>
+                  AI 딥페이크 탐지 솔루션 기획
+                </p>
+              </div>
             </div>
-            <span class="limitation-num">01</span>
-          </div>
-          <h3>생성 파이프라인 병목</h3>
-          <p>촬영·보정·렌더 등에 시간이 길어 B2B의 빠른 생성·확장 요구와 충돌</p>
-        </div>
-        <div class="limitation-card">
-          <div class="limitation-header">
-            <div class="limitation-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+
+            <div class="p1-tl-item">
+              <div class="p1-tl-dot-col">
+                <div class="p1-tl-dot"></div>
+                <div class="p1-tl-line"></div>
+              </div>
+              <div class="p1-tl-content">
+                <p class="p1-tl-date">2020.02 — 2022.04</p>
+                <p class="p1-tl-company">아이파트너즈</p>
+                <p class="p1-tl-detail">
+                  현대자동차·제네시스 UX 및 Admin 구조 개선<br>
+                  O2O 예약·상담 UX 개선
+                </p>
+              </div>
             </div>
-            <span class="limitation-num">02</span>
-          </div>
-          <h3>대화 체감 한계</h3>
-          <p>응답·생성이 느려 실시간 대화라기보다 체감상 지연된 상호작용</p>
-        </div>
-        <div class="limitation-card">
-          <div class="limitation-header">
-            <div class="limitation-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+
+            <div class="p1-tl-item">
+              <div class="p1-tl-dot-col">
+                <div class="p1-tl-dot"></div>
+              </div>
+              <div class="p1-tl-content">
+                <p class="p1-tl-date">2013.09 — 2020.02</p>
+                <p class="p1-tl-company">투어마케팅코리아</p>
+                <p class="p1-tl-detail">
+                  글로벌 예약 시스템 UX 및 결제·정산 구조 설계
+                </p>
+              </div>
             </div>
-            <span class="limitation-num">03</span>
+
           </div>
-          <h3>서비스 경계 모호</h3>
-          <p>초기엔 신규 대화형 생성보다 기존 아바타 전환에 가까운 흐름 — 대화형을 <strong>독립 서비스 개념</strong>으로 둘 필요(핵심 기획 전환점)</p>
+        </div>
+
+        <!-- Right: Project map diagram + Capability summary -->
+        <div style="display:flex;flex-direction:column;gap:16px">
+
+          <!-- Project map SVG -->
+          <div class="vis-diagram">
+            <p class="vis-diagram-label">Project Map</p>
+            <svg viewBox="0 0 580 200" xmlns="http://www.w3.org/2000/svg" style="min-width:400px">
+              <defs>
+                <marker id="pm-arr" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+                  <path d="M0,0 L5,2.5 L0,5 Z" fill="#D1D5DB"/>
+                </marker>
+              </defs>
+
+              <!-- Company nodes (left column, x=10) -->
+              <!-- 딥브레인AI -->
+              <rect x="10" y="12" width="130" height="36" rx="6" fill="#EFEFF5" stroke="#9BA8D0" stroke-width="1.5"/>
+              <text x="75" y="34" text-anchor="middle" font-size="12" font-weight="600" fill="#3D4A7A" font-family="system-ui,sans-serif">딥브레인AI</text>
+              <!-- Project 1a -->
+              <line x1="140" y1="24" x2="200" y2="24" stroke="#D1D5DB" stroke-width="1.5" marker-end="url(#pm-arr)"/>
+              <rect x="202" y="12" width="166" height="36" rx="6" fill="#fff" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="285" y="34" text-anchor="middle" font-size="12" fill="#666" font-family="system-ui,sans-serif">Interactive AI Human</text>
+              <!-- Project 1b -->
+              <path d="M140 30 H175 V55 H200" stroke="#D1D5DB" stroke-width="1.5" fill="none" marker-end="url(#pm-arr)" stroke-dasharray="4,3"/>
+              <rect x="202" y="45" width="166" height="36" rx="6" fill="#fff" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="285" y="67" text-anchor="middle" font-size="12" fill="#666" font-family="system-ui,sans-serif">AI Studios — Dubbing</text>
+
+              <!-- 아이파트너즈 -->
+              <rect x="10" y="98" width="130" height="36" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="75" y="120" text-anchor="middle" font-size="12" font-weight="500" fill="#666" font-family="system-ui,sans-serif">아이파트너즈</text>
+              <!-- Project 2 -->
+              <line x1="140" y1="116" x2="200" y2="116" stroke="#D1D5DB" stroke-width="1.5" marker-end="url(#pm-arr)"/>
+              <rect x="202" y="98" width="166" height="36" rx="6" fill="#fff" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="285" y="120" text-anchor="middle" font-size="12" fill="#666" font-family="system-ui,sans-serif">현대·제네시스 UX</text>
+
+              <!-- 투어마케팅코리아 -->
+              <rect x="10" y="158" width="130" height="36" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="75" y="176" text-anchor="middle" font-size="11" font-weight="500" fill="#999" font-family="system-ui,sans-serif">투어마케팅코리아</text>
+              <!-- Project 3 -->
+              <line x1="140" y1="176" x2="200" y2="176" stroke="#D1D5DB" stroke-width="1.5" marker-end="url(#pm-arr)"/>
+              <rect x="202" y="158" width="166" height="36" rx="6" fill="#fff" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="285" y="180" text-anchor="middle" font-size="12" fill="#999" font-family="system-ui,sans-serif">Alamo 글로벌 예약</text>
+
+              <!-- Right labels -->
+              <text x="398" y="34" font-size="11" fill="#9BA8D0" font-family="system-ui,sans-serif" font-weight="600">→ AX / Conversational</text>
+              <text x="398" y="67" font-size="11" fill="#9BA8D0" font-family="system-ui,sans-serif" font-weight="600">→ Funnel / Conversion</text>
+              <text x="398" y="120" font-size="11" fill="#D1D5DB" font-family="system-ui,sans-serif">→ UX / Admin</text>
+              <text x="398" y="180" font-size="11" fill="#D1D5DB" font-family="system-ui,sans-serif">→ B2B / Ops</text>
+            </svg>
+          </div>
+
+          <!-- Capability summary -->
+          <div class="p1-caps">
+            <div class="p1-cap">
+              <span class="p1-cap-num">01</span>
+              <div>
+                <p class="p1-cap-title">사용자 흐름 분석</p>
+                <p class="p1-cap-desc">행동 데이터와 이탈 지점 기반으로 서비스 문제를 정의</p>
+              </div>
+            </div>
+            <div class="p1-cap">
+              <span class="p1-cap-num">02</span>
+              <div>
+                <p class="p1-cap-title">데이터 기반 문제 정의</p>
+                <p class="p1-cap-desc">퍼널 분석, 이벤트 데이터로 개선 가설 수립</p>
+              </div>
+            </div>
+            <div class="p1-cap">
+              <span class="p1-cap-num">03</span>
+              <div>
+                <p class="p1-cap-title">서비스 정책 설계</p>
+                <p class="p1-cap-desc">슬롯·과금·상태 정책 등 실제 운영 기준 수립</p>
+              </div>
+            </div>
+            <div class="p1-cap">
+              <span class="p1-cap-num">04</span>
+              <div>
+                <p class="p1-cap-title">운영 구조 기획</p>
+                <p class="p1-cap-desc">Admin IA, 모니터링 흐름, 에러 처리 체계 설계</p>
+              </div>
+            </div>
+            <div class="p1-cap">
+              <span class="p1-cap-num">05</span>
+              <div>
+                <p class="p1-cap-title">인터랙티브 경험 설계</p>
+                <p class="p1-cap-desc">AI Human · Conversational UX 기반 실시간 상호작용 기획</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="comparison ax-comparison-inner fade-in" aria-label="문제 상황 Before After">
-        <div class="comparison-card comparison-before">
-          <div class="comparison-badge comparison-badge-before">Before · 문제 정리</div>
-          <ul>
-            <li><span class="comp-icon comp-icon-before"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></span>아바타 = 생성 산출물 중심 인식</li>
-            <li><span class="comp-icon comp-icon-before"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></span>대화형이 기존 기능에 종속된 흐름</li>
-            <li><span class="comp-icon comp-icon-before"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></span>느린 응답·긴 생성으로 현장 활용성 부족</li>
-          </ul>
-        </div>
-        <div class="comparison-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </div>
-        <div class="comparison-card comparison-after">
-          <div class="comparison-badge comparison-badge-after">After · 기획 방향</div>
-          <ul>
-            <li><span class="comp-icon comp-icon-after"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>아바타 = <strong>실시간 상호작용 인터페이스</strong></li>
-            <li><span class="comp-icon comp-icon-after"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>대화형 = <strong>독립 서비스</strong> 단위로 재정의</li>
-            <li><span class="comp-icon comp-icon-after"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>속도·립싱크·실시간성을 품질 핵심으로 상향</li>
-          </ul>
-        </div>
-      </div>
-      <div class="insert-slot fade-in">
-        <p class="insert-slot-label">[이미지 삽입]</p>
-        <p class="insert-slot-desc">프로젝트 대표 화면 · 병목/구조 설명용 보조 컷</p>
-        <p class="insert-note"><strong>[실제 작업 이미지 필요]</strong> · 또는 <strong>[도표/다이어그램으로 대체 가능]</strong></p>
+
+    </div><!-- /ps-visual -->
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 3: Content -->
+    <div class="ps-body">
+      <p class="cb-lead">
+        UI·UX 기획을 기반으로 AI 서비스, 퍼널 개선, Admin·운영 구조까지
+        기술과 사용자, 운영 환경 사이를 연결하는 기획을 해왔습니다.
+      </p>
+      <div class="cb-tags">
+        <span class="cb-tag cb-tag--accent">Conversational AI</span>
+        <span class="cb-tag cb-tag--accent">Interactive Avatar</span>
+        <span class="cb-tag cb-tag--accent">AI Workflow</span>
+        <span class="cb-tag">Admin UX</span>
+        <span class="cb-tag">Funnel Optimization</span>
+        <span class="cb-tag">Operational Design</span>
+        <span class="cb-tag">LLM / RAG</span>
+        <span class="cb-tag">Figma · Notion · Jira</span>
       </div>
     </div>
-  </section>
 
-  <!-- Why AX -->
-  <section class="section section-dark section-padded" id="ax-why">
-    <div class="container">
-      <p class="section-label fade-in">3. Why AX</p>
-      <h2 class="section-title fade-in">AI를 기능 목록이 아니라 사용·운영 흐름으로 묶은 이유</h2>
-      <ul class="ax-bullets ax-bullets-light fade-in">
-        <li>AX는 모델 탑재가 아니라 <strong>진입–생성–설정–대화–검증</strong> 단위를 재설계하는 일.</li>
-        <li>파일·URL·RAG는 스펙 나열이 아니라 <strong>대화 맥락을 확장하는 선택적 장치</strong>로 정의.</li>
-      </ul>
-      <div class="decision-box fade-in">
-        <p class="decision-box-title">의사결정 축 요약</p>
-        <table class="ax-table">
-          <thead>
-            <tr><th>축</th><th>판단 질문</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>경험</td><td>사용자가 「대화한다」고 느낄 만큼 빠른가</td></tr>
-            <tr><td>구조</td><td>대화형이 제품 안에서 독립적으로 설명 가능한가</td></tr>
-            <tr><td>확장</td><td>지식 주입(파일/URL)이 <strong>선택적</strong>으로 붙는가</td></tr>
-            <tr><td>운영</td><td>B2B 반복 사용·비용 제약 안에서 지속 가능한가</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Solution -->
-  <section class="section section-dark section-padded" id="solution">
-    <div class="container solution-layout">
-      <div class="solution-text">
-        <p class="section-label fade-in">4. Solution</p>
-        <h2 class="section-title fade-in">아바타 역할 재정의 · 독립 생성·대화 UX 정렬</h2>
-        <div class="notion-callout fade-in">
-          <p class="notion-callout-title">핵심 요약 (변화)</p>
-          <ul>
-            <li>아바타 = 산출물 → <strong>대화 인터페이스</strong></li>
-            <li>종속 흐름 제거 → <strong>독립 생성·프로젝트</strong> 단위</li>
-            <li>기본 <strong>GPT-4o-mini</strong> · 자료 첨부 시 <strong>자사 RAG</strong> · 필수/확장 경계를 기획 문서로 먼저 분리</li>
-          </ul>
-        </div>
-        <ul class="ax-bullets ax-bullets-light fade-in">
-          <li><strong>RAG</strong>: 자사 구축 RAG 연결 · <strong>파일 우선</strong> 적용, URL은 구조상 수용</li>
-          <li><strong>OCR</strong>: PDF·Word를 우선 적용 범위로 정의</li>
-          <li><strong>고도화 분리</strong>: 제스처·추가 표현은 당장 필수가 아닌 로드맵 항목으로 분리</li>
-        </ul>
-      </div>
-      <div class="solution-visual fade-in">
-        <div class="solution-tags">
-          <div class="solution-tag-item">
-            <div class="solution-tag-badge">LLM</div>
-            <span>기본 대화 · 빠른 응답 축</span>
-          </div>
-          <div class="solution-tag-connector"></div>
-          <div class="solution-tag-item">
-            <div class="solution-tag-badge solution-tag-badge-alt">RAG</div>
-            <span>파일·URL 시 맥락 확장(선택)</span>
-          </div>
-          <div class="solution-tag-connector"></div>
-          <div class="solution-tag-item">
-            <div class="solution-tag-badge solution-tag-badge-out">AX</div>
-            <span>아바타 출력·체감 품질 기준</span>
+
+<!-- ================================================================
+     PAGE 2 — PROBLEM SOLVING
+     CONTENT_GUIDE.md: 기능보다 먼저, 흐름과 구조를 봅니다.
+
+     SECTION LABEL : PROBLEM SOLVING
+     TITLE         : 기능보다 먼저, 사용자의 흐름과 서비스 구조를 봅니다.
+     SUBTITLE      : 서비스 문제는 기능 부족보다 흐름의 단절에서 발생한다고 생각합니다.
+     VISUAL        : 문제 해결 4단계 프로세스 + 구조 다이어그램
+     CONTENT       : 4가지 접근 방식
+     ================================================================ -->
+<section class="page-section" id="p2">
+  <div class="container">
+
+    <!-- Zone 1: Header -->
+    <header class="ps-header">
+      <p class="ps-label">Problem Solving</p>
+      <h2 class="ps-title">
+        기능보다 먼저,<br>사용자의 흐름과 서비스 구조를 봅니다.
+      </h2>
+      <p class="ps-subtitle">
+        서비스 문제는 기능 부족보다
+        흐름의 단절에서 발생한다고 생각합니다.
+      </p>
+    </header>
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 2: Visual — 4-step process + flow diagram -->
+    <div class="ps-visual">
+
+      <!-- 4-step process grid -->
+      <div class="p2-process" style="margin-bottom:16px">
+        <div class="p2-step">
+          <span class="p2-step-num">Step 01</span>
+          <h4 class="p2-step-title">데이터 수집</h4>
+          <p class="p2-step-desc">사용자 행동 데이터와 이탈 패턴을 수집·정리</p>
+          <div class="p2-step-tags">
+            <span class="p2-step-tag">사용자 행동 데이터</span>
+            <span class="p2-step-tag">이탈 지점 추적</span>
+            <span class="p2-step-tag">퍼널 분석</span>
           </div>
         </div>
+        <div class="p2-step">
+          <span class="p2-step-num">Step 02</span>
+          <h4 class="p2-step-title">흐름 분석</h4>
+          <p class="p2-step-desc">서비스 흐름에서 단절 지점과 운영 리스크를 파악</p>
+          <div class="p2-step-tags">
+            <span class="p2-step-tag">이탈 지점 분석</span>
+            <span class="p2-step-tag">운영 리스크 파악</span>
+            <span class="p2-step-tag">반복 업무 구조</span>
+          </div>
+        </div>
+        <div class="p2-step p2-step--accent">
+          <span class="p2-step-num">Step 03</span>
+          <h4 class="p2-step-title">문제 정의</h4>
+          <p class="p2-step-desc">가설을 수립하고 핵심 원인을 구조적으로 정의</p>
+          <div class="p2-step-tags">
+            <span class="p2-step-tag">핵심 원인 도출</span>
+            <span class="p2-step-tag">개선 가설 수립</span>
+          </div>
+        </div>
+        <div class="p2-step">
+          <span class="p2-step-num">Step 04</span>
+          <h4 class="p2-step-title">구조 설계</h4>
+          <p class="p2-step-desc">서비스 흐름 안에서 실제로 작동하는 해결 방법 설계</p>
+          <div class="p2-step-tags">
+            <span class="p2-step-tag">UX 구조 설계</span>
+            <span class="p2-step-tag">운영 정책 정의</span>
+            <span class="p2-step-tag">검증 기준 수립</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Workflow -->
-  <div class="section-divider section-divider-light"></div>
-  <section class="section section-padded section-light" id="ax-workflow">
-    <div class="container">
-      <p class="section-label fade-in">5. Workflow</p>
-      <h2 class="section-title fade-in">사용자 흐름 · 기본 LLM과 선택적 RAG 분기</h2>
-      <p class="section-oneliner fade-in">파일 없이도 대화 가능. 자료가 붙으면 문서 맥락이 더해지는 구조입니다.</p>
-      <div class="notion-callout fade-in">
-        <p class="notion-callout-title">핵심 요약</p>
-        <ul>
-          <li>업로드 없음 → <strong>기본 LLM</strong>만</li>
-          <li>파일/URL 있음 → <strong>OCR(PDF·Word) → RAG</strong> 합류</li>
-          <li>아래 다이어그램 = 면접관용 30초 플로우 스냅샷</li>
-        </ul>
-      </div>
-      <div class="flow-diagram fade-in" aria-label="사용자 흐름 다이어그램">
-        <svg viewBox="0 0 680 168" xmlns="http://www.w3.org/2000/svg" role="img">
-          <title>기본 LLM 경로와 RAG 분기</title>
+      <!-- Problem → Solution flow diagram -->
+      <div class="vis-diagram">
+        <p class="vis-diagram-label">Problem → Solution Flow</p>
+        <svg viewBox="0 0 760 80" xmlns="http://www.w3.org/2000/svg" style="min-width:480px">
           <defs>
-            <marker id="wf-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#999"/></marker>
+            <marker id="ps-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#9CA3AF"/>
+            </marker>
           </defs>
-          <g font-family="system-ui,-apple-system,sans-serif">
-            <rect x="8" y="56" width="76" height="40" rx="6" fill="#fff" stroke="#e5e5e5" stroke-width="1.5"/>
-            <text x="46" y="80" text-anchor="middle" font-size="12" fill="#111">User</text>
-            <line x1="84" y1="76" x2="108" y2="76" stroke="#999" stroke-width="1.5" marker-end="url(#wf-arr)"/>
-            <rect x="108" y="56" width="92" height="40" rx="6" fill="#fafafa" stroke="#e5e5e5" stroke-width="1.5"/>
-            <text x="154" y="80" text-anchor="middle" font-size="11" fill="#111">진입·생성</text>
-            <line x1="200" y1="76" x2="224" y2="76" stroke="#999" stroke-width="1.5" marker-end="url(#wf-arr)"/>
-            <rect x="224" y="56" width="104" height="40" rx="6" fill="#fafafa" stroke="#e5e5e5" stroke-width="1.5"/>
-            <text x="276" y="80" text-anchor="middle" font-size="11" fill="#111">프로젝트·설정</text>
-            <line x1="328" y1="76" x2="352" y2="76" stroke="#999" stroke-width="1.5" marker-end="url(#wf-arr)"/>
-            <rect x="352" y="52" width="108" height="48" rx="6" fill="rgba(37,99,235,0.06)" stroke="rgba(37,99,235,0.3)" stroke-width="1.5"/>
-            <text x="406" y="74" text-anchor="middle" font-size="11" fill="#111">자료 첨부</text>
-            <text x="406" y="90" text-anchor="middle" font-size="10" fill="#666">유 / 무</text>
-            <line x1="406" y1="100" x2="406" y2="118" stroke="#999" stroke-width="1.5" marker-end="url(#wf-arr)"/>
-            <text x="414" y="116" font-size="9" fill="#666">무</text>
-            <rect x="352" y="118" width="108" height="34" rx="6" fill="#fff" stroke="#e5e5e5" stroke-width="1.5"/>
-            <text x="406" y="138" text-anchor="middle" font-size="11" fill="#111">기본 LLM</text>
-            <path d="M460 76 H488" stroke="#999" stroke-width="1.5" marker-end="url(#wf-arr)"/>
-            <text x="468" y="70" font-size="9" fill="#666">유</text>
-            <rect x="488" y="56" width="96" height="40" rx="6" fill="#fafafa" stroke="#e5e5e5" stroke-width="1.5" stroke-dasharray="5 4"/>
-            <text x="536" y="80" text-anchor="middle" font-size="11" fill="#111">OCR → RAG</text>
-            <path d="M536 96 L536 108 Q536 118 526 118 H420" stroke="#bbb" stroke-width="1.5" fill="none" stroke-dasharray="5 4" marker-end="url(#wf-arr)"/>
-            <text x="440" y="112" font-size="9" fill="#666">맥락 합류</text>
-            <line x1="460" y1="135" x2="520" y2="135" stroke="#999" stroke-width="1.5" marker-end="url(#wf-arr)"/>
-            <rect x="520" y="118" width="100" height="34" rx="6" fill="#fafafa" stroke="#e5e5e5" stroke-width="1.5"/>
-            <text x="570" y="138" text-anchor="middle" font-size="11" fill="#111">아바타 출력</text>
-          </g>
+
+          <rect x="10"  y="20" width="130" height="40" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="75"  y="38" text-anchor="middle" font-size="11" font-weight="600" fill="#999" font-family="system-ui,sans-serif">사용자 행동</text>
+          <text x="75"  y="53" text-anchor="middle" font-size="11" fill="#BBB" font-family="system-ui,sans-serif">이탈 · 데이터</text>
+
+          <line x1="140" y1="40" x2="162" y2="40" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#ps-arr)"/>
+
+          <rect x="164" y="20" width="130" height="40" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="229" y="38" text-anchor="middle" font-size="11" font-weight="600" fill="#666" font-family="system-ui,sans-serif">흐름 분석</text>
+          <text x="229" y="53" text-anchor="middle" font-size="11" fill="#999" font-family="system-ui,sans-serif">단절 · 비효율 파악</text>
+
+          <line x1="294" y1="40" x2="316" y2="40" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#ps-arr)"/>
+
+          <rect x="318" y="14" width="140" height="52" rx="6" fill="#EFEFF5" stroke="#9BA8D0" stroke-width="2"/>
+          <text x="388" y="36" text-anchor="middle" font-size="12" font-weight="700" fill="#3D4A7A" font-family="system-ui,sans-serif">문제 정의</text>
+          <text x="388" y="52" text-anchor="middle" font-size="11" fill="#666" font-family="system-ui,sans-serif">핵심 원인 구조화</text>
+
+          <line x1="458" y1="40" x2="480" y2="40" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#ps-arr)"/>
+
+          <rect x="482" y="20" width="130" height="40" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="547" y="38" text-anchor="middle" font-size="11" font-weight="600" fill="#666" font-family="system-ui,sans-serif">구조 설계</text>
+          <text x="547" y="53" text-anchor="middle" font-size="11" fill="#999" font-family="system-ui,sans-serif">UX · 운영 설계</text>
+
+          <line x1="612" y1="40" x2="634" y2="40" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#ps-arr)"/>
+
+          <rect x="636" y="20" width="110" height="40" rx="6" fill="#fff" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="691" y="38" text-anchor="middle" font-size="11" font-weight="600" fill="#111" font-family="system-ui,sans-serif">검증 · 개선</text>
+          <text x="691" y="53" text-anchor="middle" font-size="11" fill="#999" font-family="system-ui,sans-serif">반복 루프</text>
         </svg>
       </div>
-      <ol class="ax-steps fade-in">
-        <li><strong>진입</strong> — 서비스/프로젝트 진입</li>
-        <li><strong>아바타 생성</strong> — 웹캠 또는 파일 업로드</li>
-        <li><strong>프로젝트 화면</strong> — 생성 결과 기반 작업 공간</li>
-        <li><strong>언어·프롬프트</strong> — 대화 설정</li>
-        <li><strong>선택</strong> — 파일 또는 URL 업로드(없으면 기본 LLM만)</li>
-        <li><strong>대화</strong> — 일반 대화 또는 문서 기반 응답</li>
-      </ol>
-      <div class="ax-flow-note fade-in">
-        <p><strong>분기:</strong> 업로드 없음 → 기본 LLM 대화만. 파일/URL 추가 → 자사 RAG(문서 처리 시 OCR: PDF·Word)로 맥락 반영.</p>
-      </div>
-      <div class="insert-slot insert-slot-compact fade-in">
-        <p class="insert-slot-label">[이미지] 실제 UI 캡처를 소형 그리드로 추가 (플로우 다이어그램 보조)</p>
-      </div>
-      <div class="media-block fade-in ax-mt-lg">
-        <div class="media-label">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-          아바타 생성 / 대화 UI
-        </div>
-        <div class="media-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
-          <span>[이미지 삽입: 아바타 생성 UI 또는 생성 플로우 화면]</span>
-          <span class="media-sub insert-note"><strong>[실제 작업 이미지 필요]</strong> · <strong>[도표/다이어그램으로 대체 가능]</strong></span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- AI Architecture -->
-  <div class="section-divider section-divider-light"></div>
-  <section class="section section-padded section-dark" id="ax-architecture">
-    <div class="container">
-      <p class="section-label fade-in">6. AI Architecture</p>
-      <h2 class="section-title fade-in">기본 LLM 축과 선택적 RAG·OCR 확장</h2>
-      <ul class="ax-bullets ax-bullets-light fade-in">
-        <li>목적: 스택 나열이 아니라 <strong>필수 경로 vs 옵션 경로</strong>를 10초 안에 구분 가능하게.</li>
-        <li>완성 멀티 Agent가 아니라 Document / Retrieval / Conversation 등으로 <strong>쪼갤 수 있는 설계 관점</strong>.</li>
-      </ul>
-      <div class="arch-blocks fade-in">
-        <div class="arch-row arch-row-main">
-          <div class="arch-node">User</div>
-          <span class="arch-arrow">→</span>
-          <div class="arch-node arch-node-accent">AI Human<br><span class="arch-sub">(프로젝트·UI)</span></div>
-          <span class="arch-arrow">→</span>
-          <div class="arch-node arch-node-accent">LLM<br><span class="arch-sub">GPT-4o-mini</span></div>
-          <span class="arch-arrow">→</span>
-          <div class="arch-node">Response<br><span class="arch-sub">아바타 출력</span></div>
-        </div>
-        <div class="arch-branch fade-in">
-          <p class="arch-branch-label">선택 경로 (파일 / URL)</p>
-          <div class="arch-row arch-row-opt">
-            <div class="arch-node arch-node-dim">File · URL</div>
-            <span class="arch-arrow arch-arrow-dashed">⇢</span>
-            <div class="arch-node arch-node-dim">OCR<br><span class="arch-sub">PDF·Word</span></div>
-            <span class="arch-arrow arch-arrow-dashed">⇢</span>
-            <div class="arch-node arch-node-purple">자사 RAG</div>
-            <span class="arch-arrow arch-arrow-dashed">⇢</span>
-            <div class="arch-node arch-node-dim">LLM/응답에 맥락 반영</div>
-          </div>
-        </div>
-      </div>
-      <p class="section-desc ax-arch-footnote fade-in">
-        사용자 입력 데이터는 대화 품질·맥락 반영에 연결되도록 설계 의도를 문서화했습니다.
+    </div><!-- /ps-visual -->
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 3: Content -->
+    <div class="ps-body">
+      <p class="cb-lead">
+        서비스 문제는 단순히 기능 부족이 아니라, 사용자 흐름이 끊기거나
+        운영 구조가 비효율적으로 설계된 경우 발생한다고 생각합니다.
       </p>
-      <div class="insert-slot fade-in">
-        <p class="insert-slot-label">[다이어그램 삽입: 시스템 구조도]</p>
-        <p class="insert-slot-desc">실선: User–AI Human–LLM–Response · 점선: File/URL–OCR–RAG 합류 지점 표시</p>
-        <p class="insert-note"><strong>[실제 작업 이미지 필요]</strong> 또는 <strong>[도표/다이어그램으로 대체 가능]</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Key Contributions -->
-  <div class="section-divider section-divider-light"></div>
-  <section class="section section-padded" id="ax-contributions">
-    <div class="container">
-      <p class="section-label fade-in">7. Key Contributions</p>
-      <h2 class="section-title fade-in">직접 기획·기준을 세운 범위</h2>
-      <p class="section-oneliner fade-in">데이터 스키마·Tool 세부 구현 완료 등, 실제 수행하지 않은 구현은 적지 아니함.</p>
-      <div class="contributions-grid fade-in">
-        <div class="contrib-card">
-          <span class="contrib-num">01</span>
-          <h3>아바타 생성 UX</h3>
-          <p>진입부터 생성까지 흐름 · 기존 종속 구조를 <strong>독립 개념</strong>으로 재정의</p>
-        </div>
-        <div class="contrib-card">
-          <span class="contrib-num">02</span>
-          <h3>대화형 UX</h3>
-          <p>인터페이스 관점 · <strong>입력 → 응답 → 인터랙션</strong> 정의</p>
-        </div>
-        <div class="contrib-card">
-          <span class="contrib-num">03</span>
-          <h3>품질 테스트 기준</h3>
-          <p>대화 속도·립싱크·실시간성 · <strong>고도화 우선순위</strong> 정리</p>
-        </div>
-        <div class="contrib-card">
-          <span class="contrib-num">04</span>
-          <h3>LLM 선택 기준</h3>
-          <p>과금 제약 하 <strong>속도·비용·실시간성</strong> 비교 → GPT-4o-mini</p>
-        </div>
-        <div class="contrib-card">
-          <span class="contrib-num">05</span>
-          <h3>RAG 적용 흐름</h3>
-          <p>자사 RAG 연결 · 파일 우선 · URL 구조</p>
-        </div>
-        <div class="contrib-card">
-          <span class="contrib-num">06</span>
-          <h3>OCR 범위</h3>
-          <p>PDF·Word 우선 적용 대상 정의</p>
-        </div>
-        <div class="contrib-card contrib-card-wide">
-          <span class="contrib-num">07</span>
-          <h3>품질 고도화 방향</h3>
-          <p>제스처는 후순위 · 사진 기반 생성·보정으로 <strong>입력 품질 편차</strong> 완화 방향 제시</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- UX Design -->
-  <section class="section section-dark section-padded" id="ux-design">
-    <div class="container">
-      <div class="ux-layout">
-        <div class="ux-text">
-          <p class="section-label fade-in">UX 설계 포인트</p>
-          <h2 class="section-title fade-in">AX 관점에서의 경험 설계</h2>
-          <p class="section-oneliner section-oneliner-dark fade-in">플로우·품질 기준·반복 검증 가능한 문장으로만 정리했습니다.</p>
-          <div class="ux-grid fade-in">
-            <div class="ux-card">
-              <div class="ux-card-header">
-                <svg class="ux-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                <span class="ux-num">01</span>
-              </div>
-              <h3>사용자 흐름</h3>
-              <p>진입 → 생성 → 프로젝트 → 설정 → (선택) 자료 첨부 → 대화까지 한 축으로 정렬</p>
-            </div>
-            <div class="ux-card">
-              <div class="ux-card-header">
-                <svg class="ux-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4M10 17l5-5-5-5M13.8 12H3"/></svg>
-                <span class="ux-num">02</span>
-              </div>
-              <h3>진입 장벽</h3>
-              <p>웹캠·파일 업로드 등 B2B 현장에 맞는 생성 진입을 전제로 설계</p>
-            </div>
-            <div class="ux-card">
-              <div class="ux-card-header">
-                <svg class="ux-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span class="ux-num">03</span>
-              </div>
-              <h3>체감 안정성</h3>
-              <p>속도·립싱크 등 「대화로 느껴지는가」를 기술 스펙보다 우선하는 평가틀</p>
-            </div>
-            <div class="ux-card">
-              <div class="ux-card-header">
-                <svg class="ux-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
-                <span class="ux-num">04</span>
-              </div>
-              <h3>반복 검증</h3>
-              <p>타사 리서치를 근거로 내부 설득 가능한 품질 언어로 정렬</p>
-            </div>
-            <div class="ux-card">
-              <div class="ux-card-header">
-                <svg class="ux-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-                <span class="ux-num">05</span>
-              </div>
-              <h3>립싱크·모션</h3>
-              <p>이질감 완화를 기술팀과 합의하고, 제스처는 후순위로 분리</p>
-            </div>
-          </div>
-        </div>
-        <div class="ux-media fade-in">
-          <div class="media-block media-block-dark">
-            <div class="media-label">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-              UX 설계 화면
-            </div>
-            <div class="media-placeholder">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
-              <span>Image / Video Placeholder</span>
-              <span class="media-sub">UX 플로우 또는 Figma 화면</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Chat Simulation -->
-  <div class="section-divider section-divider-light"></div>
-  <section class="section section-padded" id="chat">
-    <div class="container chat-layout">
-      <div class="chat-text">
-        <p class="section-label fade-in">Chat Simulation</p>
-        <h2 class="section-title fade-in">대화형 인터랙션 데모</h2>
-        <ul class="ax-bullets fade-in">
-          <li>추천 질문 클릭 또는 자유 입력으로 <strong>입력 → 응답</strong> 흐름 확인</li>
-          <li>실서비스 UI는 좌측 슬롯에 <strong>캡처+설명</strong>으로 보강</li>
-        </ul>
-        <div class="insert-slot insert-slot-compact fade-in">
-          <p class="insert-slot-label">[이미지 삽입: 대화 인터페이스 화면]</p>
-          <p class="insert-note"><strong>[실제 작업 이미지 필요]</strong> · 우측 데모는 보조 · <strong>[도표/다이어그램으로 대체 가능]</strong></p>
-        </div>
-      </div>
-      <div class="chat-window fade-in">
-        <div class="chat-header">
-          <div class="chat-avatar-initial" aria-hidden="true">AI</div>
-          <div>
-            <div class="chat-header-title">AI Avatar Assistant</div>
-            <div class="chat-header-status"><span class="status-dot"></span>Online</div>
-          </div>
-        </div>
-        <div class="chat-body" id="chatBody">
-          <div class="chat-message chat-message-system">
-            <p>AI 아바타 어시스턴트에 오신 것을 환영합니다.</p>
-          </div>
-        </div>
-        <div class="chat-input-area">
-          <div class="chat-suggestions" id="chatSuggestions">
-            <button class="chat-suggestion-btn" data-message="상품 추천해줘">상품 추천해줘</button>
-            <button class="chat-suggestion-btn" data-message="계좌 개설 방법 알려줘">계좌 개설 방법 알려줘</button>
-            <button class="chat-suggestion-btn" data-message="오늘 환율 알려줘">오늘 환율 알려줘</button>
-          </div>
-          <div class="chat-input-row">
-            <input type="text" class="chat-input" id="chatInput" placeholder="메시지를 입력하세요..." autocomplete="off">
-            <button class="chat-send" id="chatSend" aria-label="Send">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quality Criteria -->
-  <section class="section section-dark section-padded" id="ax-quality">
-    <div class="container">
-      <p class="section-label fade-in">8. Quality Criteria &amp; Decision Making</p>
-      <h2 class="section-title fade-in">「좋은 대화형 아바타」 정의 · 평가틀</h2>
-      <ul class="ax-bullets ax-bullets-light fade-in">
-        <li>모델 실험보다 <strong>평가틀 합의</strong>를 먼저 — 내부 설득·우선순위 정렬용.</li>
-        <li>고사양 모델은 과금 제약 · 대화형에서는 <strong>지연 = UX 훼손</strong>으로 간주.</li>
+      <ul class="cb-list">
+        <li class="cb-item"><strong>사용자 행동 데이터</strong> — 이탈 패턴과 행동 흐름을 기반으로 문제 지점을 특정</li>
+        <li class="cb-item"><strong>이탈 지점</strong> — 퍼널 내 어느 단계에서 경험이 끊기는지 구조적으로 파악</li>
+        <li class="cb-item"><strong>운영 리스크</strong> — 서비스 운영 단계의 비효율과 반복 업무 구조를 함께 분석</li>
+        <li class="cb-item"><strong>반복 업무 구조</strong> — 장기적으로 확장 가능한 해결 방법을 설계</li>
       </ul>
-      <table class="ax-table ax-table-dark fade-in">
-        <thead>
-          <tr><th>기준</th><th>정의</th><th>우선순위</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>대화 속도</td><td>목표 <strong>약 4초 이내</strong> 응답 체감</td><td>최우선</td></tr>
-          <tr><td>립싱크</td><td>입모양·발화 싱크 자연스러움</td><td>최우선</td></tr>
-          <tr><td>제스처·부가 표현</td><td>몰입에 도움 / 단 당장 필수 아님</td><td>고도화</td></tr>
-        </tbody>
-      </table>
-      <div class="decision-box decision-box-dark fade-in">
-        <p class="decision-box-title">LLM 선택 (요지)</p>
-        <ul class="ax-bullets ax-bullets-light">
-          <li>「가장 강한 모델」이 아니라 <strong>속도·비용·실시간성</strong> 균형 → <strong>GPT-4o-mini</strong></li>
-          <li>제스처는 리소스 대비 <strong>속도·립싱크</strong>가 먼저 최소 요건</li>
-        </ul>
-      </div>
     </div>
-  </section>
 
-  <!-- Impact / Outcome -->
-  <div class="section-divider section-divider-light"></div>
-  <section class="section section-padded" id="impact">
-    <div class="container">
-      <p class="section-label fade-in">9. Outcome</p>
-      <h2 class="section-title fade-in">체감 품질 중심의 개선 결과</h2>
-      <div class="dense-row fade-in">
-        <div>
-          <ul class="ax-bullets">
-            <li>대화 속도 <strong>실시간에 가깝게</strong> 개선 · 체감 향상</li>
-            <li><strong>립싱크</strong> 개선</li>
-            <li><strong>몰입도</strong> 향상</li>
-          </ul>
-          <p class="body-text outcome-context">
-            타사 리서치를 근거로 <strong>품질 언어를 합의</strong>해 산발적 개선이 아닌 평가 축으로 맞춤.
+  </div>
+</section>
+
+
+<!-- ================================================================
+     PAGE 3 — CORE STRENGTH
+     CONTENT_GUIDE.md: 사용자 경험과 운영 구조를 함께 설계합니다.
+
+     SECTION LABEL : CORE STRENGTH
+     TITLE         : 사용자 경험과 운영 구조를 함께 설계합니다.
+     SUBTITLE      : 문제 정의부터 운영 구조까지 실제로 작동 가능한 서비스를 고민합니다.
+     VISUAL        : 4개 역량 카드 (2×2) + 연결 구조도
+     CONTENT       : 역량 설명
+     ================================================================ -->
+<section class="page-section page-section--alt" id="p3">
+  <div class="container">
+
+    <!-- Zone 1: Header -->
+    <header class="ps-header">
+      <p class="ps-label">Core Strength</p>
+      <h2 class="ps-title">
+        사용자 경험과 운영 구조를<br>함께 설계합니다.
+      </h2>
+      <p class="ps-subtitle">
+        문제 정의부터 운영 구조까지
+        실제로 작동 가능한 서비스를 고민합니다.
+      </p>
+    </header>
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 2: Visual — 2×2 capability cards -->
+    <div class="ps-visual">
+
+      <div class="p3-grid">
+
+        <div class="p3-card">
+          <span class="p3-card-num">01 · Data-Driven</span>
+          <h3 class="p3-card-title">데이터 기반 문제 정의</h3>
+          <p class="p3-card-desc">
+            행동 데이터와 사용자 흐름을 기반으로
+            이탈 지점과 서비스 문제를 분석합니다.
           </p>
-        </div>
-        <figure class="outcome-chart-wrap">
-          <svg viewBox="0 0 320 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="응답 체감 시간 개선 시각화">
-            <text x="12" y="22" font-size="11" fill="#111" font-family="system-ui,sans-serif">응답 체감 (개념도 · 목표 4초 기준)</text>
-            <text x="12" y="125" font-size="9" fill="#666" font-family="system-ui,sans-serif">Before</text>
-            <text x="248" y="125" font-size="9" fill="#666" font-family="system-ui,sans-serif">After</text>
-            <rect x="12" y="88" width="56" height="28" rx="4" fill="#f0f0f0" stroke="#e5e5e5"/>
-            <text x="40" y="106" text-anchor="middle" font-size="9" fill="#666" font-family="system-ui,sans-serif">길게</text>
-            <rect x="248" y="52" width="56" height="64" rx="4" fill="rgba(37,99,235,0.12)" stroke="rgba(37,99,235,0.35)"/>
-            <text x="276" y="88" text-anchor="middle" font-size="9" fill="#111" font-family="system-ui,sans-serif">↓</text>
-            <line x1="12" y1="72" x2="308" y2="72" stroke="#2563eb" stroke-dasharray="4 3" opacity="0.5"/>
-            <text x="14" y="68" font-size="8" fill="#2563eb" font-family="system-ui,sans-serif">목표 ~4s</text>
-          </svg>
-          <figcaption>실제 수치 그래프는 [실제 작업 이미지]로 교체 · 위는 구조 설명용 플레이스홀더입니다.</figcaption>
-        </figure>
-      </div>
-      <div class="comparison fade-in ax-mt-lg">
-        <div class="comparison-card comparison-before">
-          <div class="comparison-badge comparison-badge-before">품질 관점 Before</div>
-          <ul>
-            <li><span class="comp-icon comp-icon-before"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></span>느린 응답·긴 생성으로 몰입 어려움</li>
-            <li><span class="comp-icon comp-icon-before"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></span>품질 논의가 산발</li>
+          <ul class="p3-card-points">
+            <li class="p3-card-point">퍼널 분석 · 이벤트 데이터 기반 가설 수립</li>
+            <li class="p3-card-point">정성·정량 데이터 통합 분석</li>
+            <li class="p3-card-point">팀 내 설득 가능한 근거 기반 의사결정</li>
           </ul>
         </div>
-        <div class="comparison-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </div>
-        <div class="comparison-card comparison-after">
-          <div class="comparison-badge comparison-badge-after">품질 관점 After</div>
-          <ul>
-            <li><span class="comp-icon comp-icon-after"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>속도·립싱크 중심으로 평가 정렬</li>
-            <li><span class="comp-icon comp-icon-after"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>제약 안 최적 모델·운영 논리 합의</li>
-          </ul>
-        </div>
-      </div>
-      <div class="insert-row fade-in">
-        <div class="insert-slot insert-slot-half">
-          <p class="insert-slot-label">[그래프 삽입: 응답 속도 개선 비교]</p>
-          <p class="insert-note"><strong>[실제 작업 이미지 필요]</strong> · 없으면 <strong>[도표/다이어그램으로 대체 가능]</strong> (개선 전/후·목표 4초 기준선)</p>
-        </div>
-        <div class="insert-slot insert-slot-half">
-          <p class="insert-slot-label">[비교 이미지: 립싱크 Before / After]</p>
-          <p class="insert-note"><strong>[실제 작업 이미지 필요]</strong> · 없으면 <strong>[도표/다이어그램으로 대체 가능]</strong></p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Challenges -->
-  <section class="section section-light section-padded" id="ax-challenges">
-    <div class="container">
-      <p class="section-label fade-in">10. Challenges &amp; Improvement</p>
-      <h2 class="section-title fade-in">남은 과제 · 품질·운영 관점 개선</h2>
-      <p class="body-text fade-in">단순 TODO가 아니라 <strong>서비스 고도화·품질 관리</strong> 관점에서 정리했습니다.</p>
-      <table class="ax-table fade-in">
-        <thead>
-          <tr><th>영역</th><th>현재 한계</th><th>개선 방향</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>표현</td><td>정적 자세·입 중심</td><td>제스처·모션 단계적 도입으로 몰입 보강</td></tr>
-          <tr><td>입력 품질</td><td>원본 영상에 따른 결과 편차</td><td>사진 기반 생성·보정으로 <strong>일정 품질</strong> 추구</td></tr>
-        </tbody>
-      </table>
-      <div class="insert-slot fade-in">
-        <p class="insert-slot-label">[도표 삽입: 현재 한계 vs 개선 방향]</p>
-        <p class="insert-note"><strong>[도표/다이어그램으로 대체 가능]</strong></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Future / Role -->
-  <div class="section-divider section-divider-light"></div>
-  <section class="section section-padded" id="project1-closing">
-    <div class="container">
-      <div class="two-col fade-in">
-        <div class="col">
-          <p class="section-label">11. Future Direction</p>
-          <h3 class="section-title-sm">Agent 확장 관점 (로드맵)</h3>
-          <ul class="ax-bullets">
-            <li>완성 Agent가 아니라 역할 단위로 <strong>쪼개기 쉬운 전제</strong> 유지.</li>
-            <li>Document Analysis · Retrieval · Conversation · Tool · Intent 분기는 <strong>향후 설계·구현</strong> · 현재는 AX 축 우선.</li>
-          </ul>
-          <ul class="future-list">
-            <li><span class="future-bullet"></span>Document Analysis 역할</li>
-            <li><span class="future-bullet"></span>Retrieval 역할</li>
-            <li><span class="future-bullet"></span>Conversation 역할</li>
-            <li><span class="future-bullet"></span>Tool 기반 실행 · Intent 분기</li>
-          </ul>
-        </div>
-        <div class="col">
-          <p class="section-label">My Role</p>
-          <h3 class="section-title-sm">담당 역할</h3>
-          <div class="role-box">
-            <ul class="role-list">
-              <li><strong>AX·서비스 컨셉</strong> 및 생성·대화 UX 구조</li>
-              <li><strong>대화 흐름·품질 기준</strong> 수립 및 내부 설득</li>
-              <li><strong>LLM·RAG·OCR 적용 범위</strong> 기획 (구현 세부 완료 주장 없음)</li>
-              <li><strong>테스트·운영 정책</strong> · 과금·에러 케이스 협의</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================ -->
-  <!-- 4. PROJECT 2 – NH Nonghyup Chatbot           -->
-  <!-- ============================================ -->
-  <div class="section-divider"></div>
-  <section class="section section-light section-padded" id="project2">
-    <div class="container">
-      <p class="section-label fade-in">Project 02</p>
-      <h2 class="section-title fade-in">NH농협은행 AI 가상인간 챗봇</h2>
-      <p class="section-oneliner fade-in">금융 서비스에서 역할 기반 챗봇 구조를 설계한 프로젝트</p>
-
-      <div class="project-overview fade-in">
-        <div class="project-overview-text">
-          <ul class="ax-bullets">
-            <li>금융 도메인에서 <strong>역할(Role) 기반 챗봇 구조</strong> 설계.</li>
-            <li>기존 챗봇: 정형 시나리오 위주 → 상황별 유연한 분기가 어려움.</li>
-          </ul>
-        </div>
-        <div class="media-block">
-          <div class="media-label">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-            실제 작업 화면
-          </div>
-          <div class="media-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M9 9l6 6M15 9l-6 6"/></svg>
-            <span>Image / Video Placeholder</span>
-            <span class="media-sub">챗봇 UI 또는 설계 화면</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="nh-grid fade-in">
-        <div class="nh-card">
-          <div class="nh-card-header">
-            <svg class="nh-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-            <h3>Approach</h3>
-          </div>
-          <p>
-            사용자 질문 유형과 역할(Role)에 따라
-            응답 흐름이 분기되는 구조 설계
+        <div class="p3-card">
+          <span class="p3-card-num">02 · UX / Service Flow</span>
+          <h3 class="p3-card-title">UX / 서비스 흐름 설계</h3>
+          <p class="p3-card-desc">
+            기능 나열이 아니라, 서비스 목적과
+            사용 맥락 중심으로 UX 구조를 설계합니다.
           </p>
-        </div>
-        <div class="nh-card">
-          <div class="nh-card-header">
-            <svg class="nh-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            <h3>Key Experience</h3>
-          </div>
-          <ul>
-            <li>사용자 Intent 기반 대화 흐름 설계</li>
-            <li>역할(Role) 기반 응답 구조 정의</li>
-            <li>금융 도메인 시나리오 설계</li>
-            <li>안정성 중심 UX 설계</li>
+          <ul class="p3-card-points">
+            <li class="p3-card-point">사용자 여정 기반 정보 구조 설계</li>
+            <li class="p3-card-point">Conversational UX · 대화 흐름 설계</li>
+            <li class="p3-card-point">진입–생성–대화–활용 단위 기획</li>
           </ul>
+        </div>
+
+        <div class="p3-card">
+          <span class="p3-card-num">03 · Operational Design</span>
+          <h3 class="p3-card-title">운영 구조 설계</h3>
+          <p class="p3-card-desc">
+            관리자 화면, 상태 정책, 운영 플로우 등
+            실제 운영 가능한 구조까지 함께 설계합니다.
+          </p>
+          <ul class="p3-card-points">
+            <li class="p3-card-point">Admin IA · 대시보드 구조 기획</li>
+            <li class="p3-card-point">슬롯·과금·에러 처리 정책 수립</li>
+            <li class="p3-card-point">모니터링 로직 · 상태 정의</li>
+          </ul>
+        </div>
+
+        <div class="p3-card">
+          <span class="p3-card-num">04 · Interactive Experience</span>
+          <h3 class="p3-card-title">인터랙티브 경험 설계</h3>
+          <p class="p3-card-desc">
+            AI Human · Conversational UX 기반
+            실시간 상호작용 경험을 기획합니다.
+          </p>
+          <ul class="p3-card-points">
+            <li class="p3-card-point">LLM · RAG · OCR 적용 흐름 기획</li>
+            <li class="p3-card-point">Avatar Speech · Lip Sync 품질 기준 정의</li>
+            <li class="p3-card-point">대화 연속성 · Trust Design 설계</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- UX ↔ Operation connection diagram -->
+      <div class="vis-diagram" style="margin-top:16px">
+        <p class="vis-diagram-label">UX + Operation Connection</p>
+        <svg viewBox="0 0 700 90" xmlns="http://www.w3.org/2000/svg" style="min-width:420px">
+          <defs>
+            <marker id="co-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#9BA8D0"/>
+            </marker>
+          </defs>
+
+          <rect x="10"  y="24" width="110" height="40" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="65"  y="40" text-anchor="middle" font-size="11" font-weight="600" fill="#666" font-family="system-ui,sans-serif">데이터</text>
+          <text x="65"  y="55" text-anchor="middle" font-size="11" fill="#999" font-family="system-ui,sans-serif">행동 · 이탈</text>
+
+          <line x1="120" y1="44" x2="142" y2="44" stroke="#9BA8D0" stroke-width="1.5" marker-end="url(#co-arr)"/>
+
+          <rect x="144" y="16" width="130" height="56" rx="6" fill="#EFEFF5" stroke="#9BA8D0" stroke-width="2"/>
+          <text x="209" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#3D4A7A" font-family="system-ui,sans-serif">문제 정의</text>
+          <text x="209" y="56" text-anchor="middle" font-size="11" fill="#666" font-family="system-ui,sans-serif">UX + 운영 관점</text>
+
+          <line x1="274" y1="44" x2="296" y2="44" stroke="#9BA8D0" stroke-width="1.5" marker-end="url(#co-arr)"/>
+
+          <rect x="298" y="24" width="100" height="40" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="348" y="40" text-anchor="middle" font-size="11" font-weight="600" fill="#666" font-family="system-ui,sans-serif">UX 설계</text>
+          <text x="348" y="55" text-anchor="middle" font-size="11" fill="#999" font-family="system-ui,sans-serif">흐름 · 인터랙션</text>
+
+          <line x1="398" y1="44" x2="420" y2="44" stroke="#9BA8D0" stroke-width="1.5" marker-end="url(#co-arr)"/>
+
+          <rect x="422" y="24" width="110" height="40" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="477" y="40" text-anchor="middle" font-size="11" font-weight="600" fill="#666" font-family="system-ui,sans-serif">운영 구조</text>
+          <text x="477" y="55" text-anchor="middle" font-size="11" fill="#999" font-family="system-ui,sans-serif">Admin · 정책</text>
+
+          <line x1="532" y1="44" x2="554" y2="44" stroke="#9BA8D0" stroke-width="1.5" marker-end="url(#co-arr)"/>
+
+          <rect x="556" y="16" width="130" height="56" rx="6" fill="#EFEFF5" stroke="#9BA8D0" stroke-width="2"/>
+          <text x="621" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#3D4A7A" font-family="system-ui,sans-serif">작동하는 서비스</text>
+          <text x="621" y="56" text-anchor="middle" font-size="11" fill="#666" font-family="system-ui,sans-serif">실제 운영 가능</text>
+        </svg>
+      </div>
+
+    </div><!-- /ps-visual -->
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 3: Content -->
+    <div class="ps-body">
+      <div class="cb-insight">
+        <p>
+          <strong>핵심 관점:</strong> 사용자 경험과 운영 구조는 별개가 아닙니다.
+          좋은 UX는 실제로 운영될 수 있는 구조 위에 있어야 하고,
+          운영 효율성은 사용자 흐름을 이해할 때 높아집니다.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================================
+     PAGE 4 — MAIN PROJECT 01
+     CONTENT_GUIDE.md: 다운로드 이후 끊기던 경험을 서비스 탐색 흐름으로 전환
+
+     SECTION LABEL : MAIN PROJECT 01
+     TITLE         : 다운로드 이후 끊기던 경험을 서비스 탐색 흐름으로 전환
+     SUBTITLE      : AI Dubbing 공유 페이지 퍼널 개선 프로젝트
+     VISUAL        : 프로젝트 메타 + 퍼널 Before/After 구조
+     CONTENT       : Role · Contribution · Key Responsibilities
+     ================================================================ -->
+<section class="page-section" id="p4">
+  <div class="container">
+
+    <!-- Zone 1: Header -->
+    <header class="ps-header">
+      <p class="ps-label">Main Project 01</p>
+      <h2 class="ps-title">
+        다운로드 이후 끊기던 경험을<br>서비스 탐색 흐름으로 전환
+      </h2>
+      <p class="ps-subtitle">
+        AI Dubbing 공유 페이지 퍼널 개선 프로젝트
+      </p>
+    </header>
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 2: Visual -->
+    <div class="ps-visual">
+
+      <!-- Project meta -->
+      <div class="cb-meta" style="margin-bottom:16px">
+        <div class="cb-meta-item">
+          <p class="cb-meta-label">Role</p>
+          <p class="cb-meta-value">서비스 기획 / UX 구조 설계</p>
+        </div>
+        <div class="cb-meta-item">
+          <p class="cb-meta-label">Contribution</p>
+          <p class="cb-meta-value">기획 100%</p>
+        </div>
+        <div class="cb-meta-item">
+          <p class="cb-meta-label">Service</p>
+          <p class="cb-meta-value">AI Studios — Dubbing<br>딥브레인AI</p>
         </div>
       </div>
 
-      <div class="insight-card fade-in">
-        <div class="insight-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <!-- Before / After diagram + Screen placeholders -->
+      <div class="vis-row vis-row--2" style="margin-bottom:16px">
+
+        <!-- Before -->
+        <div class="vis-card">
+          <p class="vis-card-label">Before — AS-IS 흐름</p>
+          <div class="vis-card-body">
+            <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="ba-arr" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+                  <path d="M0,0 L5,2.5 L0,5 Z" fill="#9CA3AF"/>
+                </marker>
+                <marker id="ba-arr-r" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+                  <path d="M0,0 L5,2.5 L0,5 Z" fill="#E5E7EB"/>
+                </marker>
+              </defs>
+
+              <!-- nodes -->
+              <rect x="10"  y="14" width="72"  height="32" rx="5" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="46"  y="30" text-anchor="middle" font-size="11" fill="#666" font-family="system-ui,sans-serif">외부 유입</text>
+              <text x="46"  y="41" text-anchor="middle" font-size="9"  fill="#999" font-family="system-ui,sans-serif">(대규모)</text>
+
+              <line x1="82" y1="30" x2="100" y2="30" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#ba-arr)"/>
+
+              <rect x="102" y="14" width="80" height="32" rx="5" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="142" y="28" text-anchor="middle" font-size="10" fill="#666" font-family="system-ui,sans-serif">공유 페이지</text>
+              <text x="142" y="41" text-anchor="middle" font-size="9"  fill="#999" font-family="system-ui,sans-serif">영상 시청</text>
+
+              <line x1="182" y1="30" x2="200" y2="30" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#ba-arr)"/>
+
+              <rect x="202" y="14" width="68" height="32" rx="5" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="236" y="32" text-anchor="middle" font-size="11" fill="#666" font-family="system-ui,sans-serif">다운로드</text>
+
+              <!-- Dead end arrow -->
+              <line x1="236" y1="46" x2="236" y2="70" stroke="#D1D5DB" stroke-width="1.5" marker-end="url(#ba-arr-r)"/>
+              <rect x="192" y="72" width="88" height="32" rx="5" fill="#fff" stroke="#D1D5DB" stroke-width="1.5"/>
+              <text x="236" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#9CA3AF" font-family="system-ui,sans-serif">종료 ✕</text>
+
+              <!-- Label -->
+              <text x="10" y="120" font-size="10" fill="#D1D5DB" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="0.04em">→ DEAD END — 대부분의 사용자 이탈</text>
+            </svg>
+          </div>
         </div>
-        <div class="insight-label">Takeaway</div>
-        <p>시나리오 나열이 아니라 <strong>사용자 입력 → 판단 → 응답</strong> 구조가 필요하다는 점을 도메인에서 검증.</p>
-        <p>이후 AX·대화형 설계로 이어지는 <strong>구조적 기반</strong>으로 정리함.</p>
+
+        <!-- After -->
+        <div class="vis-card">
+          <p class="vis-card-label">After — TO-BE 흐름</p>
+          <div class="vis-card-body">
+            <svg viewBox="0 0 280 130" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="tobe-arr" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+                  <path d="M0,0 L5,2.5 L0,5 Z" fill="#9BA8D0"/>
+                </marker>
+              </defs>
+
+              <rect x="10"  y="14" width="72" height="32" rx="5" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="46"  y="30" text-anchor="middle" font-size="11" fill="#666" font-family="system-ui,sans-serif">외부 유입</text>
+              <text x="46"  y="41" text-anchor="middle" font-size="9"  fill="#999" font-family="system-ui,sans-serif">(대규모)</text>
+
+              <line x1="82" y1="30" x2="100" y2="30" stroke="#9BA8D0" stroke-width="1.5" marker-end="url(#tobe-arr)"/>
+
+              <rect x="102" y="14" width="80" height="32" rx="5" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+              <text x="142" y="28" text-anchor="middle" font-size="10" fill="#666" font-family="system-ui,sans-serif">공유 페이지</text>
+              <text x="142" y="41" text-anchor="middle" font-size="9"  fill="#999" font-family="system-ui,sans-serif">영상 시청</text>
+
+              <line x1="182" y1="30" x2="200" y2="30" stroke="#9BA8D0" stroke-width="1.5" marker-end="url(#tobe-arr)"/>
+
+              <rect x="202" y="14" width="68" height="32" rx="5" fill="#EFEFF5" stroke="#9BA8D0" stroke-width="1.5"/>
+              <text x="236" y="32" text-anchor="middle" font-size="11" font-weight="600" fill="#3D4A7A" font-family="system-ui,sans-serif">다운로드</text>
+
+              <!-- Continue arrow -->
+              <line x1="236" y1="46" x2="236" y2="60" stroke="#9BA8D0" stroke-width="1.5" marker-end="url(#tobe-arr)"/>
+              <rect x="186" y="62" width="100" height="32" rx="5" fill="#EFEFF5" stroke="#9BA8D0" stroke-width="1.5"/>
+              <text x="236" y="77" text-anchor="middle" font-size="10" font-weight="600" fill="#3D4A7A" font-family="system-ui,sans-serif">기능 탐색</text>
+              <text x="236" y="88" text-anchor="middle" font-size="9"  fill="#666" font-family="system-ui,sans-serif">CTA 노출</text>
+
+              <line x1="286" y1="78" x2="300" y2="78" stroke="#9BA8D0" stroke-width="1.5" marker-end="url(#tobe-arr)"/>
+              <!-- This is off-canvas, just implicit -->
+
+              <text x="10" y="110" font-size="10" fill="#9BA8D0" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="0.04em">→ 다운로드 대기 시간을 서비스 경험으로 활용</text>
+            </svg>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Screen placeholder row -->
+      <div class="vis-row vis-row--3">
+        <div class="vis-screen vis-screen--sm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <p class="vis-screen-label">기존 공유 페이지</p>
+          <p class="vis-screen-sub">AS-IS 스크린샷</p>
+        </div>
+        <div class="vis-screen vis-screen--sm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <p class="vis-screen-label">개선된 공유 페이지</p>
+          <p class="vis-screen-sub">TO-BE 스크린샷</p>
+        </div>
+        <div class="vis-screen vis-screen--sm">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <p class="vis-screen-label">퍼널 데이터</p>
+          <p class="vis-screen-sub">전환율 비교 차트</p>
+        </div>
+      </div>
+
+    </div><!-- /ps-visual -->
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 3: Content -->
+    <div class="ps-body">
+      <ul class="cb-list">
+        <li class="cb-item"><strong>퍼널 분석</strong> — 공유 페이지 유입 → 다운로드 → 이탈 구간 데이터 분석</li>
+        <li class="cb-item"><strong>사용자 흐름 재설계</strong> — 다운로드 완료 이후에도 서비스 탐색이 이어지는 구조 설계</li>
+        <li class="cb-item"><strong>CTA 구조 개선</strong> — 다운로드 대기 시간을 활용한 핵심 기능 노출 설계</li>
+        <li class="cb-item"><strong>기능 탐색 흐름 설계</strong> — 회원가입 이후 공유 페이지 연계 및 기능 체험 흐름 기획</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- ============================================ -->
-  <!-- 5. EXPERIENCE – Large Scale Service          -->
-  <!-- ============================================ -->
-  <div class="section-divider section-divider-light"></div>
-  <section class="section section-padded" id="experience">
-    <div class="container">
-      <p class="section-label fade-in">Experience</p>
-      <h2 class="section-title fade-in">대규모 서비스 기획 경험</h2>
-      <p class="section-oneliner fade-in">AI 이전 엔터프라이즈·O2O에서 흐름·정산·운영 구조를 다룬 경험.</p>
+  </div>
+</section>
 
-      <div class="exp-grid fade-in">
-        <div class="exp-card">
-          <div class="exp-header">
-            <h3>현대자동차 / 제네시스</h3>
-            <span class="exp-tag">UX / Admin</span>
-          </div>
-          <ul class="exp-list">
-            <li>차량 견적 및 시승 신청 UX 개선</li>
-            <li>복잡한 옵션 구조 단순화</li>
-            <li>Admin 및 운영 정책 설계</li>
-          </ul>
-          <div class="exp-result">
-            <svg class="exp-result-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            <div>
-              <span class="exp-result-label">성과</span>
-              이탈률 감소 및 사용자 경험 개선
-            </div>
+
+<!-- ================================================================
+     PAGE 5 — PROBLEM DEFINITION (AS-IS)
+     CONTENT_GUIDE.md: 유입은 많았지만 서비스 사용으로 이어지지 않았습니다.
+
+     SECTION LABEL : 문제 정의 (AS-IS 분석)
+     TITLE         : 유입은 많았지만, 서비스 사용으로 이어지지 않았습니다.
+     SUBTITLE      : 다운로드 이후 사용자 행동이 종료되고 있었습니다.
+     VISUAL        : Dead-End Journey Diagram + 4 Metrics
+     CONTENT       : 문제 설명 + 가설
+     ================================================================ -->
+<section class="page-section page-section--alt" id="p5">
+  <div class="container">
+
+    <!-- Zone 1: Header -->
+    <header class="ps-header">
+      <p class="ps-label">문제 정의 · AS-IS 분석</p>
+      <h2 class="ps-title">
+        유입은 많았지만,<br>서비스 사용으로 이어지지 않았습니다.
+      </h2>
+      <p class="ps-subtitle">
+        다운로드 이후 사용자 행동이 종료되고 있었습니다.
+      </p>
+    </header>
+
+    <div class="ps-sep"></div>
+
+    <!-- Zone 2: Visual — Dead-End Journey + Data Metrics -->
+    <div class="ps-visual">
+
+      <!-- Dead-End Journey diagram (full width) -->
+      <div class="vis-diagram vis-diagram--white" style="margin-bottom:16px">
+        <p class="vis-diagram-label">User Journey — Dead-End Structure</p>
+        <svg viewBox="0 0 820 160" xmlns="http://www.w3.org/2000/svg" style="min-width:540px">
+          <defs>
+            <marker id="de-arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#9CA3AF"/>
+            </marker>
+            <marker id="de-arr-r" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#E5E7EB"/>
+            </marker>
+            <marker id="de-arr-g" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#9BA8D0"/>
+            </marker>
+          </defs>
+
+          <!-- Step labels (top) -->
+          <text x="60"   y="16" text-anchor="middle" font-size="9" fill="#9CA3AF" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="0.05em">ENTRY</text>
+          <text x="210"  y="16" text-anchor="middle" font-size="9" fill="#9CA3AF" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="0.05em">LANDING</text>
+          <text x="370"  y="16" text-anchor="middle" font-size="9" fill="#9CA3AF" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="0.05em">ACTION</text>
+          <text x="550"  y="16" text-anchor="middle" font-size="9" fill="#D1D5DB" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="0.05em">DEAD END</text>
+          <text x="730"  y="16" text-anchor="middle" font-size="9" fill="#9BA8D0" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="0.05em">OPPORTUNITY</text>
+
+          <!-- Main flow nodes -->
+          <rect x="10"  y="38" width="100" height="44" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="60"  y="58" text-anchor="middle" font-size="12" font-weight="600" fill="#666" font-family="system-ui,sans-serif">외부 유입</text>
+          <text x="60"  y="73" text-anchor="middle" font-size="10" fill="#9CA3AF" font-family="system-ui,sans-serif">공유 링크·SNS</text>
+
+          <line x1="110" y1="60" x2="150" y2="60" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#de-arr)"/>
+
+          <rect x="152" y="38" width="116" height="44" rx="6" fill="#F7F7F8" stroke="#E5E7EB" stroke-width="1.5"/>
+          <text x="210" y="56" text-anchor="middle" font-size="12" font-weight="600" fill="#666" font-family="system-ui,sans-serif">공유 페이지</text>
+          <text x="210" y="72" text-anchor="middle" font-size="10" fill="#9CA3AF" font-family="system-ui,sans-serif">영상 시청</text>
+
+          <line x1="268" y1="60" x2="308" y2="60" stroke="#9CA3AF" stroke-width="1.5" marker-end="url(#de-arr)"/>
+
+          <rect x="310" y="38" width="120" height="44" rx="6" fill="#EFEFF5" stroke="#9BA8D0" stroke-width="1.5"/>
+          <text x="370" y="56" text-anchor="middle" font-size="12" font-weight="600" fill="#3D4A7A" font-family="system-ui,sans-serif">다운로드</text>
+          <text x="370" y="72" text-anchor="middle" font-size="10" fill="#666" font-family="system-ui,sans-serif">파일 수령</text>
+
+          <!-- Dead-end path -->
+          <path d="M430 60 H480" stroke="#D1D5DB" stroke-width="1.5" fill="none" marker-end="url(#de-arr-r)"/>
+          <rect x="482" y="38" width="136" height="44" rx="6" fill="#fff" stroke="#D1D5DB" stroke-width="1.5"/>
+          <text x="550" y="56" text-anchor="middle" font-size="13" font-weight="700" fill="#D1D5DB" font-family="system-ui,sans-serif">종료 ✕</text>
+          <text x="550" y="72" text-anchor="middle" font-size="10" fill="#D1D5DB" font-family="system-ui,sans-serif">추가 행동 없음</text>
+
+          <!-- Opportunity branch (below, dashed) -->
+          <path d="M370 82 V110 H650" stroke="#9BA8D0" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#de-arr-g)"/>
+          <rect x="652" y="94" width="156" height="44" rx="6" fill="#EFEFF5" stroke="#9BA8D0" stroke-width="1.5"/>
+          <text x="730" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#3D4A7A" font-family="system-ui,sans-serif">서비스 탐색 ✓</text>
+          <text x="730" y="127" text-anchor="middle" font-size="10" fill="#666" font-family="system-ui,sans-serif">기능 체험 → 가입</text>
+
+          <!-- Opportunity label -->
+          <text x="480" y="130" font-size="9" fill="#9BA8D0" font-family="system-ui,sans-serif" font-weight="600" letter-spacing="0.04em">미활용 기회 구간</text>
+
+          <!-- Size indicator for entry -->
+          <text x="10" y="96" font-size="9" fill="#9CA3AF" font-family="system-ui,sans-serif">▶ 대규모</text>
+          <!-- Size indicator for exit -->
+          <text x="490" y="96" font-size="9" fill="#D1D5DB" font-family="system-ui,sans-serif">◀ 대부분 이탈</text>
+        </svg>
+      </div>
+
+      <!-- 4 Metrics -->
+      <div class="vis-metrics">
+        <div class="vis-metric">
+          <p class="vis-metric-label">다운로드 수</p>
+          <p class="vis-metric-value">High</p>
+          <p class="vis-metric-note">외부 공유 링크 통해<br>대규모 유입 발생</p>
+          <div class="vis-metric-bar">
+            <div class="vis-metric-bar-fill" style="width:88%"></div>
           </div>
         </div>
-
-        <div class="exp-card">
-          <div class="exp-header">
-            <h3>엔터프라이즈 예약 시스템</h3>
-            <span class="exp-tag">B2B / 정산</span>
+        <div class="vis-metric">
+          <p class="vis-metric-label">Session Start</p>
+          <p class="vis-metric-value vis-metric-value--muted">Low</p>
+          <p class="vis-metric-note">다운로드 이후<br>서비스 진입 저조</p>
+          <div class="vis-metric-bar">
+            <div class="vis-metric-bar-fill vis-metric-bar-fill--low" style="width:24%"></div>
           </div>
-          <ul class="exp-list">
-            <li>예약 → 결제 → 정산 구조 설계</li>
-            <li>B2B 선지불 시스템 구축</li>
-            <li>관리자 시스템 및 통계 페이지 설계</li>
-          </ul>
-          <div class="exp-result">
-            <svg class="exp-result-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            <div>
-              <span class="exp-result-label">성과</span>
-              전년 대비 <strong>20% 이상 성장</strong> · B2B 예약 비중 증가
-            </div>
+        </div>
+        <div class="vis-metric">
+          <p class="vis-metric-label">Signup 전환율</p>
+          <p class="vis-metric-value vis-metric-value--muted">Very Low</p>
+          <p class="vis-metric-note">회원가입까지<br>이어지는 비율 매우 낮음</p>
+          <div class="vis-metric-bar">
+            <div class="vis-metric-bar-fill vis-metric-bar-fill--very-low" style="width:8%"></div>
+          </div>
+        </div>
+        <div class="vis-metric">
+          <p class="vis-metric-label">Project Create</p>
+          <p class="vis-metric-value vis-metric-value--muted">Very Low</p>
+          <p class="vis-metric-note">프로젝트 생성까지<br>이어지는 비율 매우 낮음</p>
+          <div class="vis-metric-bar">
+            <div class="vis-metric-bar-fill vis-metric-bar-fill--very-low" style="width:4%"></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p class="footer-name">김아영</p>
-      <p class="footer-tagline">문제를 구조로, 구조를 서비스로.</p>
-      <p class="footer-sub">AI 서비스 기획자 · Portfolio</p>
-    </div>
-  </footer>
+    </div><!-- /ps-visual -->
 
-  <script src="script.js"></script>
+    <div class="ps-sep"></div>
+
+    <!-- Zone 3: Content -->
+    <div class="ps-body">
+
+      <div class="p5-highlight">
+        <p class="p5-highlight-lead">
+          공유 페이지가 '서비스 진입로'가 아니라<br>
+          '종착지'처럼 작동하고 있었습니다.
+        </p>
+        <p class="p5-highlight-sub">
+          외부 페이지를 통해 대규모 유입은 발생하고 있었지만,
+          다운로드 이후 대부분의 사용자가 추가 행동 없이 이탈하고 있었습니다.
+        </p>
+      </div>
+
+      <ul class="cb-list" style="margin-top:24px">
+        <li class="cb-item"><strong>다운로드 수</strong>는 높지만, Session Start와 Signup 전환율은 현저히 낮은 상태</li>
+        <li class="cb-item">다운로드가 완료되는 시점이 사용자 여정의 <strong>Dead-End</strong>로 설계되어 있었음</li>
+        <li class="cb-item">서비스의 핵심 가치를 경험할 기회 없이 이탈 — <strong>잠재 사용자의 활성화 실패</strong></li>
+      </ul>
+
+      <div class="cb-insight" style="margin-top:24px">
+        <p>
+          <strong>가설:</strong> 다운로드 이후에도 핵심 기능을 자연스럽게 노출한다면,
+          단발성 사용자가 서비스 탐색 사용자로 전환될 수 있다고 판단했습니다.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer style="border-top:1px solid var(--border);padding:32px 0;background:var(--bg-alt)">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+    <p style="font-size:13px;color:var(--text-3)">© 2026 김아영 · 서비스 기획자 포트폴리오</p>
+    <p style="font-size:13px;color:var(--text-3)">Pages 1–5 · 추가 페이지 작업 중</p>
+  </div>
+</footer>
+
+
+<!-- ================================================================
+     SCRIPT — Navigation toggle only
+     ================================================================ -->
+<script>
+(function () {
+  var btn   = document.getElementById('navToggle');
+  var menu  = document.getElementById('navMenu');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function () {
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () {
+      menu.classList.remove('open');
+    });
+  });
+}());
+</script>
+
 </body>
 </html>
