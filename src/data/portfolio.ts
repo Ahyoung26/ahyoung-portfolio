@@ -13,49 +13,44 @@ export const about = {
   name: "김아영",
   nameEn: "Ahyoung Kim",
   // Level 1: Hero Title
-  title: "문제를 정의하고\n서비스로 검증하는 기획자",
+  title: "문제를 서비스 구조로 해결하는\nAI 서비스 기획자",
   // Level 4: Description (의미 단위 분리 및 축약)
-  description: "사용자 문제를 발견하고, 서비스 구조를 설계하며, 데이터와 검증을 통해 개선합니다.",
-  // Level 2: Insight / Key Message
-  positioning: "기능을 정의하는 것보다 문제를 구조화하고 검증하는 과정에 집중합니다.",
+  description: "Interactive Avatar, AI Human, AI Studios 등 대화형 AI 서비스 기획 및 운영 경험",
   
   // Core Strength (PAGE 01 핵심 역량)
   strengths: [
     {
-      label: "Problem Definition",
+      label: "문제 정의",
       title: "문제 정의",
       items: ["사용자 행동 분석", "VOC 분석", "요구사항 정의"],
-      tools: ["Amplitude", "GA", "Notion"]
+      tools: ["Amplitude", "Google Analytics", "Notion"]
     },
     {
-      label: "AI Service Planning",
+      label: "서비스 설계",
       title: "서비스 설계",
       items: ["서비스 구조 설계", "User Flow 설계", "정책 정의"],
       tools: ["Figma", "Notion", "Jira"]
     },
     {
-      label: "Operational Design",
+      label: "운영 체계 구축",
       title: "운영 체계 구축",
       items: ["Admin 설계", "상태값 정의", "운영 프로세스 구축"],
       tools: ["Jira", "Notion", "Figma"]
     },
     {
-      label: "Validation & Improvement",
+      label: "가설 검증 및 개선",
       title: "가설 검증 및 개선",
       items: ["가설 수립", "실험 설계", "데이터 기반 개선"],
-      tools: ["Amplitude", "GA", "ChatGPT", "Claude", "Cursor"]
+      tools: ["Amplitude", "Google Analytics", "Cursor", "ChatGPT", "Claude"]
     }
   ],
-
-  // Highlight Quote
-  highlightQuote: "기능을 정의하는 것보다 문제를 구조화하고 검증하는 과정에 집중합니다.",
   
   contact: {
     tel: "010-2700-7678",
     email: "aykim0526@gmail.com",
     location: "경기도 군포시 산본동",
   },
-  tools: ["Figma", "Notion", "Jira", "Amplitude", "GA", "Cursor", "Claude", "ChatGPT"],
+  tools: ["Figma", "Notion", "Jira", "Amplitude", "Google Analytics", "Cursor", "Claude", "ChatGPT"],
   metrics: [
     { value: "10+", label: "서비스 기획 프로젝트" },
     { value: "3+", label: "AI 서비스 런칭" },
@@ -95,7 +90,8 @@ export const careerSummary = {
         "AI Dubbing",
         "NH농협은행 AI 가상인간",
         "AI Studios SaaS"
-      ]
+      ],
+      roleSummary: "대화형 AI 서비스 구조 설계, 운영 기준 수립, SaaS 기능 개선"
     },
     {
       period: "2020.02 — 2022.04",
@@ -106,7 +102,8 @@ export const careerSummary = {
         "제네시스 글로벌",
         "Admin 구조 개선",
         "운영 정책 수립"
-      ]
+      ],
+      roleSummary: "브랜드 플랫폼 운영 정책과 Admin 구조 개선"
     },
     {
       period: "2013.09 — 2020.02",
@@ -117,7 +114,8 @@ export const careerSummary = {
         "정산 시스템",
         "Admin 운영 구조 설계",
         "VOC 기반 개선"
-      ]
+      ],
+      roleSummary: "예약/정산 플랫폼의 운영 프로세스와 VOC 기반 개선"
     }
   ],
 

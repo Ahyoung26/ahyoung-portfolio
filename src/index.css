@@ -66,20 +66,27 @@
     max-height: 100vh;
   }
 
-  /* Mobile: normal vertical scroll, no snapping, auto height */
-  @media (max-width: 768px) {
+  /* Tablet/Mobile: normal vertical scroll, no clipping */
+  @media (max-width: 1024px) {
     html {
       scroll-snap-type: none;
     }
     .portfolio-slide {
       height: auto;
-      min-height: auto;
+      min-height: 100svh;
       overflow: visible;
       scroll-snap-align: none;
+      align-items: flex-start;
     }
     .slide-inner {
       max-height: none;
       padding: 56px 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .slide-inner {
+      padding: 48px 20px;
     }
   }
   body {

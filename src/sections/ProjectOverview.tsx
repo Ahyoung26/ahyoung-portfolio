@@ -12,18 +12,18 @@ export function ProjectOverview() {
 
   return (
     <Section id="project-summary" tone="default">
-      <div className="grid h-full max-h-[100vh] items-center gap-10 lg:grid-cols-[0.92fr_1.08fr]">
-        <div>
+      <div className="grid gap-7 lg:h-full lg:max-h-[100vh] lg:grid-rows-[auto_minmax(0,1fr)_auto]">
+        <header>
           <Eyebrow>PROJECT SUMMARY</Eyebrow>
-          <h2 className="mt-4 max-w-3xl text-[42px] font-bold leading-[1.08] tracking-[-0.04em] keep-all text-balance sm:text-[58px] lg:text-[76px]">
+          <h2 className="mt-4 max-w-4xl text-[38px] font-bold leading-[1.08] tracking-[-0.04em] keep-all text-balance sm:text-[44px] md:text-[56px] lg:text-[68px]">
             Interactive Avatar 서비스 구축
           </h2>
-          <Body className="mt-5 max-w-xl text-[18px] sm:text-[22px]">
+          <Body className="mt-5 max-w-3xl text-[16px] sm:text-[18px] lg:text-[21px]">
             Avatar 생성부터 운영까지 대화형 AI 서비스를 서비스 관점에서 설계했습니다.
           </Body>
-        </div>
+        </header>
 
-        <div className="grid gap-6">
+        <div className="grid min-h-0 gap-5 lg:grid-cols-[1.05fr_1fr_1fr]">
           <ProjectInfoBlock
             title="프로젝트 배경"
             items={[
@@ -33,29 +33,29 @@ export function ProjectOverview() {
             ]}
             primary
           />
-          <div className="grid gap-5 md:grid-cols-2">
-            <ProjectInfoBlock
-              title="수행 범위"
-              items={[
-                "Avatar 생성 경험 설계",
-                "실시간 대화 경험 설계",
-                "서비스 평가 기준 수립",
-                "운영 프로세스 구축",
-                "End-to-End 서비스 구조 설계",
-              ]}
-            />
-            <ProjectInfoBlock title="주요 산출물" items={summary.outputs} />
-          </div>
+          <ProjectInfoBlock
+            title="수행 범위"
+            items={[
+              "Avatar 생성 경험 설계",
+              "실시간 대화 경험 설계",
+              "서비스 평가 기준 수립",
+              "운영 프로세스 구축",
+              "End-to-End 서비스 구조 설계",
+            ]}
+          />
+          <ProjectInfoBlock title="주요 산출물" items={summary.outputs} />
+        </div>
 
-          <div className="border-t border-[var(--color-line)] pt-5">
+        <footer className="border-t border-[var(--color-line)] pt-5">
+          <div className="grid gap-3 lg:grid-cols-[180px_1fr] lg:items-center">
             <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
               Project Summary
             </div>
-            <p className="mt-2 text-[22px] font-bold leading-[1.35] tracking-[-0.02em] keep-all sm:text-[28px]">
+            <p className="text-[20px] font-bold leading-[1.35] tracking-[-0.02em] keep-all sm:text-[24px] lg:text-[28px]">
               {summary.oneLiner}
             </p>
           </div>
-        </div>
+        </footer>
       </div>
     </Section>
   );
@@ -73,7 +73,7 @@ function ProjectInfoBlock({
   return (
     <section
       className={cn(
-        "border-t pt-4",
+        "min-h-0 border-t pt-4",
         primary
           ? "border-[var(--color-ink)]"
           : "border-[var(--color-line)]",
