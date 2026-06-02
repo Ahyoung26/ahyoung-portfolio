@@ -3,14 +3,14 @@ import { cn } from "@/lib/cn";
 
 const NAV = [
   { id: "about", label: "About" },
-  { id: "project", label: "Project" },
+  { id: "career", label: "Career" },
+  { id: "project-summary", label: "Project" },
   { id: "problem", label: "Problem" },
   { id: "user-analysis", label: "User" },
   { id: "service-design", label: "Service" },
-  { id: "artifacts", label: "Artifacts" },
-  { id: "validation", label: "Validation" },
+  { id: "evaluation-operation", label: "Operation" },
   { id: "result", label: "Result" },
-  { id: "supporting", label: "Supporting" },
+  { id: "reflection", label: "Review" },
 ];
 
 export function Nav() {

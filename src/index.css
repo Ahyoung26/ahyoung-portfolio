@@ -16,10 +16,10 @@
   --color-line: #e8eaed;
   --color-line-2: #d1d5db;
 
-  --color-accent: #4f46e5;
-  --color-accent-dk: #4338ca;
-  --color-accent-l: rgba(79, 70, 229, 0.06);
-  --color-accent-m: rgba(79, 70, 229, 0.16);
+  --color-accent: #1e3a8a;
+  --color-accent-dk: #1d4ed8;
+  --color-accent-l: rgba(30, 58, 138, 0.06);
+  --color-accent-m: rgba(30, 58, 138, 0.16);
 
   /* === Typography === */
   --font-sans:
@@ -62,7 +62,7 @@
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
-    padding: 64px;
+    padding: clamp(40px, 5vw, 64px);
     max-height: 100vh;
   }
 
@@ -114,6 +114,12 @@
   }
   .text-pretty {
     text-wrap: pretty;
+  }
+  .clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   /* Editorial grid background pattern */

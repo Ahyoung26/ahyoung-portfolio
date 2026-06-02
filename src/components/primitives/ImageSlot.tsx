@@ -26,7 +26,7 @@ export function ImageSlot({
 }) {
   const aspect =
     ratio === "auto"
-      ? ""
+      ? "h-full min-h-[320px]"
       : ratio === "16/9"
       ? "aspect-[16/9]"
       : ratio === "21/9"
