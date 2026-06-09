@@ -225,3 +225,43 @@ Component Gap
 Card Gap
 
 16px
+
+# Reading Flow
+
+면접관의 시선은 아래 순서로 이동해야 한다.
+
+Title
+
+↓
+
+Visual
+
+↓
+
+Insight
+
+↓
+
+Key Point
+
+↓
+
+Description
+
+레이아웃은 이 순서를 방해하지 않아야 한다.
+
+---
+
+Tool List
+
+텍스트 또는 아이콘 사용
+
+우선순위
+
+아이콘 > 텍스트
+
+Icon Size
+
+16~20px
+
+Monochrome

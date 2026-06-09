@@ -21,21 +21,21 @@ export function Supporting() {
             {supportingProjects.title}
           </span>
         }
-        subtitle="AI · UX · 운영 구조까지 다양한 도메인에서 문제 정의 → 검증 → 운영 까지 수행"
+        subtitle={supportingProjects.description}
       />
 
       <ul className="mt-8 grid gap-5 lg:grid-cols-3">
         {supportingProjects.items.map((p, i) => (
           <li
             key={i}
-            className="group flex flex-col rounded-2xl border border-[var(--color-line)] bg-white overflow-hidden"
+            className="group flex flex-col overflow-hidden bg-white"
           >
             <ImageSlot
               slot={p.slot}
               ratio="16/9"
               caption={p.label}
               badge={p.year}
-              className="rounded-none border-x-0 border-t-0"
+              className="rounded-none border-0"
             >
               <SupportingMock label={p.label} index={i} />
             </ImageSlot>
@@ -45,22 +45,33 @@ export function Supporting() {
                 {p.title}
               </h3>
 
-              {/* mini KPI */}
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                {p.kpis.map((k, j) => (
-                  <div
-                    key={j}
-                    className="rounded-lg border border-[var(--color-line)] bg-[var(--color-bg-alt)] px-3 py-2"
-                  >
-                    <div className="num text-[18px] font-bold tracking-[-0.02em] text-[var(--color-accent)] leading-none">
-                      {k.value}
+              {p.kpis.length > 0 && (
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  {p.kpis.map((k, j) => (
+                    <div key={j} className="px-0 py-2">
+                      <div className="num text-[24px] font-bold leading-none tracking-[-0.03em] text-[var(--color-primary-accent)]">
+                        {k.value}
+                      </div>
+                      <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--color-ink-3)]">
+                        {k.label}
+                      </div>
                     </div>
-                    <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--color-ink-3)]">
-                      {k.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
+
+              {"highlights" in p && (
+                <ul className="mt-3 grid gap-2">
+                  {p.highlights.map((item) => (
+                    <li
+                      key={item}
+                      className="text-[14px] leading-[1.55] text-[var(--color-text-secondary)] keep-all"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
 
               <div className="mt-auto pt-4 flex flex-wrap gap-1.5">
                 {p.tags.map((t) => (
@@ -73,13 +84,52 @@ export function Supporting() {
           </li>
         ))}
       </ul>
+
+      {"commonRole" in supportingProjects && (
+        <div className="mt-10 border-t border-[var(--color-border-divider)] pt-8">
+          <h3 className="text-[18px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)]">
+            공통 역할
+          </h3>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-3">
+            {supportingProjects.commonRole.map((item) => (
+              <li
+                key={item}
+                className="text-[15px] leading-[1.6] text-[var(--color-text-secondary)] keep-all"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {"insight" in supportingProjects && (
+        <footer className="mt-10 border-t border-[var(--color-border-divider)] pt-8">
+          <div className="grid grid-cols-[4px_1fr] items-center gap-4">
+            <span className="min-h-10 w-1 self-stretch bg-[var(--color-primary-accent)]" />
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--color-primary-accent)]">
+                Insight
+              </div>
+              <p className="mt-2 text-[18px] font-bold leading-[1.4] tracking-[-0.02em] keep-all sm:text-[20px] lg:text-[24px]">
+                {supportingProjects.insight}
+              </p>
+              {"insightSub" in supportingProjects && (
+                <p className="mt-2 text-[16px] font-semibold leading-[1.45] tracking-[-0.02em] text-[var(--color-text-secondary)] keep-all sm:text-[17px]">
+                  {supportingProjects.insightSub}
+                </p>
+              )}
+            </div>
+          </div>
+        </footer>
+      )}
     </Section>
   );
 }
 
 /* === Sample visual per supporting project === */
 function SupportingMock({ label, index }: { label: string; index: number }) {
-  if (label.includes("DUBBING")) return <DubbingShareMock />;
+  if (label.includes("GENESIS")) return <HyundaiFunnelMock />;
   if (label.includes("HYUNDAI")) return <HyundaiFunnelMock />;
   return <AlamoReservationMock index={index} />;
 }

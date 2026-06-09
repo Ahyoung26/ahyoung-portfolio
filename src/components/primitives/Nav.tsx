@@ -74,7 +74,7 @@ export function Nav() {
               className={cn(
                 "rounded-full px-3 py-1.5 text-[12px] font-medium transition-colors",
                 active === n.id
-                  ? "bg-[var(--color-ink)] text-white"
+                  ? "bg-[var(--color-accent-l)] font-bold text-[var(--color-primary-accent)]"
                   : "text-[var(--color-ink-2)] hover:bg-[var(--color-bg-alt)]",
               )}
             >

@@ -1,19 +1,18 @@
 import {
   Section,
   Eyebrow,
-  ImageSlot,
   Highlight,
 } from "@/components/primitives";
 import { projectSlides, type ProjectSlideData } from "@/data/portfolio";
 import { cn } from "@/lib/cn";
 
 /**
- * COMPONENT_GUIDE 기준 공통 프로젝트 장표.
+ * TYPE B — 프로젝트 상세 장표 (PAGE 04~10)
  *
- * 모든 프로젝트 장표는 동일한 정보 구조를 따른다.
- * Hero → Key Point Section → Insight Section → Visual Section
- *
- * VISUAL_GUIDE 기준으로 Visual Section을 가장 큰 영역(60~70%)으로 둔다.
+ * 100vh Flex hierarchy:
+ * 1. Hero (flex-shrink: 0) — title always visible
+ * 2. Main Grid 35:65 (flex: 1, overflow hidden)
+ * 3. Footer: Insight + Pagination (flex-shrink: 0)
  */
 export function ProjectSlides() {
   return (
@@ -49,120 +48,143 @@ function ProjectSlide({
     <Section
       id={slide.id}
       tone={slide.tone ?? "default"}
-      containerClassName="grid gap-6 lg:h-full lg:max-h-[100vh] lg:grid-rows-[minmax(0,1fr)_auto_auto] lg:gap-4"
+      containerClassName="type-b-slide"
     >
-      <div className="grid min-h-0 gap-8 lg:grid-cols-[0.56fr_1fr] lg:items-center">
-        {/* Left Content 35~40% */}
-        <div className="min-w-0">
-          <Eyebrow tone={dark ? "white" : "accent"}>{slide.label}</Eyebrow>
+      {/* 2. Hero — full width, never shrinks */}
+      <header className="type-b-hero">
+        <Eyebrow tone={dark ? "white" : "accent"}>{slide.label}</Eyebrow>
 
-          <h2
-            className={cn(
-              "clamp-2 mt-4 max-w-[640px] font-bold leading-[1.08] tracking-[-0.04em] keep-all text-balance",
-              compactTitle
-                ? "text-[36px] sm:text-[42px] lg:text-[56px]"
-                : "text-[40px] sm:text-[44px] lg:text-[64px]",
-              dark ? "text-white" : "text-[var(--color-ink)]",
-            )}
-          >
-            <Highlight tone={dark ? "dark" : "default"}>
-              {slide.title}
-            </Highlight>
-          </h2>
+        <h2
+          className={cn(
+            "clamp-2 mt-3 max-w-4xl font-bold leading-[1.3] tracking-[-0.03em] text-[var(--color-text-primary)] keep-all text-balance",
+            compactTitle
+              ? "text-[28px] sm:text-[34px] lg:text-[48px]"
+              : "text-[32px] sm:text-[38px] lg:text-[52px]",
+            dark && "text-white",
+          )}
+        >
+          <Highlight tone={dark ? "dark" : "default"}>
+            {slide.title}
+          </Highlight>
+        </h2>
 
-          <p
-            className={cn(
-              "clamp-2 mt-4 max-w-[520px] text-[16px] leading-[1.6] keep-all sm:text-[18px] lg:text-[21px]",
-              dark ? "text-white/65" : "text-[var(--color-ink-2)]",
-            )}
-          >
-            <Highlight tone={dark ? "dark" : "default"}>
-              {slide.description}
-            </Highlight>
-          </p>
+        <p
+          className={cn(
+            "clamp-2 mt-4 max-w-3xl text-[15px] leading-[1.55] keep-all sm:text-[16px] lg:text-[18px]",
+            dark ? "text-white/65" : "text-[var(--color-text-secondary)]",
+          )}
+        >
+          <Highlight tone={dark ? "dark" : "default"}>
+            {slide.description}
+          </Highlight>
+        </p>
+      </header>
 
-          <ul
-            className={cn(
-              "mt-6 grid gap-y-4 border-t pt-5 md:grid-cols-3 md:gap-y-0",
-              dark ? "border-white/10" : "border-[var(--color-line)]",
-            )}
-          >
-            {slide.keyPoints.slice(0, 3).map((point, pointIndex) => (
-              <li
-                key={point.title}
-                className={cn(
-                  "min-w-0 md:px-4 md:first:pl-0",
-                  pointIndex > 0 &&
-                    (dark
-                      ? "md:border-l md:border-white/10"
-                      : "md:border-l md:border-[var(--color-line)]"),
-                )}
-              >
-                <div
+      {/* 3. Main Content Grid — flex: 1 */}
+      <div className="type-b-body">
+        <div className="type-b-left">
+          <div className="type-b-main-content main-content">
+            {slide.keyPoints.slice(0, 4).map((point) => (
+              <section key={point.title} className="min-w-0">
+                <h3
                   className={cn(
-                    "text-[16px] font-bold tracking-[-0.02em] keep-all lg:text-[20px]",
-                    dark ? "text-white" : "text-[var(--color-ink)]",
+                    "font-semibold tracking-[-0.02em] keep-all",
+                    point.title === "핵심 질문"
+                      ? "text-[var(--color-primary-accent)]"
+                      : dark
+                        ? "text-white"
+                        : "text-[var(--color-text-primary)]",
                   )}
                 >
                   {point.title}
-                </div>
-                <div
+                </h3>
+                <ul className="mt-1 grid gap-1">
+                  {point.items.map((item) => (
+                    <li
+                      key={item}
+                      className={cn(
+                        "keep-all",
+                        dark ? "text-white/55" : "text-[var(--color-text-secondary)]",
+                      )}
+                    >
+                      <KeyPointItem text={item} dark={dark} />
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </div>
+
+        <div className="type-b-visual">
+          <ArtifactPlaceholder visual={slide.visual} dark={dark} />
+        </div>
+      </div>
+
+      {/* 4. Footer — Insight + Pagination */}
+      <div className="type-b-footer">
+        <div
+          className={cn(
+            "type-b-insight border-t pt-3",
+            dark ? "border-white/10" : "border-[var(--color-border-divider)]",
+          )}
+        >
+          <div className="grid grid-cols-[4px_1fr] items-center gap-3">
+            <span className="min-h-8 w-1 self-stretch bg-[var(--color-primary-accent)]" />
+            <div className="space-y-2">
+              {slide.insightLead && (
+                <p
                   className={cn(
-                    "mt-1.5 text-[14px] leading-[1.5] keep-all lg:text-[16px]",
-                    dark ? "text-white/50" : "text-[var(--color-ink-2)]",
+                    "text-[15px] font-medium leading-[1.45] tracking-[-0.02em] sm:text-[16px] lg:text-[18px]",
+                    dark ? "text-white/75" : "text-[var(--color-text-secondary)]",
                   )}
                 >
-                  {point.items.join(" · ")}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Right Visual 60~65% */}
-        <div className="min-h-[260px] md:min-h-[320px] lg:h-full lg:min-h-0">
-          <ImageSlot
-            slot={slide.visual.slot}
-            ratio="auto"
-            tone={dark ? "dark" : "light"}
-            className="h-full rounded-[28px]"
-          >
-            <ArtifactPlaceholder visual={slide.visual} dark={dark} />
-          </ImageSlot>
-        </div>
-      </div>
-
-      {/* Bottom Insight Bar: full-width conclusion */}
-      <div
-        className={cn(
-          "flex items-center border-t px-1 py-3",
-          dark ? "border-white/10" : "border-[var(--color-line)]",
-        )}
-      >
-        <div className="grid w-full gap-2 sm:grid-cols-[96px_1fr] sm:items-center sm:gap-4">
-          <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
-            Insight
+                  {slide.insightLead}
+                </p>
+              )}
+              <p
+                className={cn(
+                  "text-[17px] font-bold leading-[1.35] tracking-[-0.02em] sm:text-[20px] lg:text-[24px]",
+                  dark ? "text-white" : "text-[var(--color-text-primary)]",
+                )}
+              >
+                <InsightHighlight text={slide.insight} dark={dark} />
+              </p>
+            </div>
           </div>
-          <p
-            className={cn(
-              "text-[16px] font-semibold leading-[1.45] tracking-[-0.01em] sm:text-[18px] lg:text-[21px]",
-              dark ? "text-white" : "text-[var(--color-ink)]",
-            )}
-          >
-            {slide.insight}
-          </p>
         </div>
-      </div>
 
-      <SlidePagination
-        dark={dark}
-        index={index}
-        current={slide}
-        previous={previous}
-        next={next}
-      />
+        <SlidePagination
+          dark={dark}
+          index={index}
+          current={slide}
+          previous={previous}
+          next={next}
+        />
+      </div>
     </Section>
   );
+}
+
+function KeyPointItem({ text, dark }: { text: string; dark: boolean }) {
+  const isQuestion = text.includes("?") || text.endsWith("있는가");
+  if (isQuestion) {
+    return (
+      <strong
+        className={cn(
+          "font-semibold",
+          dark ? "text-white" : "text-[var(--color-primary-accent)]",
+        )}
+      >
+        {text}
+      </strong>
+    );
+  }
+  return <span>{text}</span>;
+}
+
+function InsightHighlight({ text, dark }: { text: string; dark: boolean }) {
+  return <Highlight tone={dark ? "dark" : "default"}>{text}</Highlight>;
 }
 
 function ArtifactPlaceholder({
@@ -174,50 +196,46 @@ function ArtifactPlaceholder({
 }) {
   return (
     <div
+      data-slot={visual.slot}
       className={cn(
-        "relative flex h-full w-full flex-col justify-between overflow-hidden p-5 sm:p-7 lg:p-10",
+        "relative flex h-full min-h-0 w-full flex-col justify-between overflow-hidden p-4 sm:p-5 lg:p-6",
         dark
-          ? "bg-[#0f0f12] text-white"
-          : "bg-white text-[var(--color-ink)]",
+          ? "bg-[var(--color-background-dark)] text-white"
+          : "bg-[var(--color-background-pure)] text-[var(--color-ink)]",
       )}
     >
-      <div className="relative flex items-start justify-between gap-6">
-        <div>
-          <div
-            className={cn(
-              "text-[11px] font-bold uppercase tracking-[0.22em]",
-              dark ? "text-white/45" : "text-[var(--color-ink-3)]",
-            )}
-          >
-            Artifact Label
-          </div>
-          <h3 className="mt-2 max-w-xl text-[24px] font-bold leading-[1.1] tracking-[-0.03em] sm:text-[32px] lg:text-[40px]">
-            {visual.title}
-          </h3>
-        </div>
-      </div>
-
-      <div className="relative grid flex-1 place-items-center py-5 text-center lg:py-8">
+      <div>
         <div
           className={cn(
-            "grid h-full min-h-[170px] w-full place-items-center rounded-2xl border sm:min-h-[220px] lg:min-h-[280px]",
-            dark
-              ? "border-white/10 bg-white/[0.03]"
-              : "border-[var(--color-line)] bg-[var(--color-bg-alt)]",
+            "text-[10px] font-bold uppercase tracking-[0.22em]",
+            dark ? "text-white/45" : "text-[var(--color-ink-3)]",
           )}
         >
+          Artifact Label
+        </div>
+        <h3 className="mt-1.5 text-[18px] font-bold leading-[1.15] tracking-[-0.03em] sm:text-[22px] lg:text-[28px]">
+          {visual.title}
+        </h3>
+      </div>
+
+      <div className="flex flex-1 items-end pb-1">
+        <div className="max-w-2xl">
           <div
             className={cn(
-              "flex h-16 w-16 items-center justify-center rounded-2xl border sm:h-20 sm:w-20",
-              dark
-                ? "border-white/15 text-white/45"
-                : "border-[var(--color-line)] text-[var(--color-ink-3)]",
+              "text-[10px] font-bold uppercase tracking-[0.18em]",
+              dark ? "text-white/35" : "text-[var(--color-ink-3)]",
             )}
           >
-            <span className="text-[13px] font-bold uppercase tracking-[0.18em]">
-              Image Slot
-            </span>
+            Actual Artifact Area
           </div>
+          <p
+            className={cn(
+              "mt-1.5 text-[14px] font-semibold leading-[1.5] tracking-[-0.01em] keep-all sm:text-[15px]",
+              dark ? "text-white/65" : "text-[var(--color-text-secondary)]",
+            )}
+          >
+            {visual.type}
+          </p>
         </div>
       </div>
     </div>
@@ -237,37 +255,42 @@ function SlidePagination({
   previous?: ProjectSlideData;
   next?: ProjectSlideData;
 }) {
-  const currentPage = current.label.match(/PAGE\s+(\d+)/)?.[1] ?? String(index + 3).padStart(2, "0");
+  const currentPage =
+    current.label.match(/PAGE\s+(\d+)/)?.[1] ??
+    String(index + 4).padStart(2, "0");
   const totalPage = "10";
 
   return (
     <nav
       aria-label="Slide navigation"
       className={cn(
-        "flex flex-wrap items-center justify-between gap-3 pb-1 text-[12px] sm:h-12 sm:flex-nowrap sm:pb-0",
+        "type-b-pagination flex h-8 shrink-0 items-center justify-between text-[11px]",
         dark ? "text-white/45" : "text-[var(--color-ink-3)]",
       )}
     >
       <a
         href={previous ? `#${previous.id}` : "#project-summary"}
         className={cn(
-          "inline-flex items-center gap-2 rounded-xl border px-3 py-2 transition-colors",
-          dark
-            ? "border-white/10 hover:bg-white/[0.04]"
-            : "border-[var(--color-line)] hover:bg-[var(--color-bg-alt)]",
+          "inline-flex min-w-0 items-center gap-1.5 transition-colors",
+          dark ? "hover:text-white" : "hover:text-[var(--color-ink)]",
         )}
       >
-        <span className="text-[18px] leading-none">←</span>
-        <span className="hidden sm:inline">
+        <span className="shrink-0 text-[16px] leading-none">←</span>
+        <span className="hidden truncate sm:inline">
           {previous ? previous.label.replace("PAGE ", "") : "03 · Project Summary"}
         </span>
       </a>
 
-      <div className="order-first flex w-full items-center justify-center gap-3 sm:order-none sm:w-auto">
-          <span className={cn("num font-semibold", dark ? "text-white/45" : "text-[var(--color-ink-3)]")}>
+      <div className="flex shrink-0 items-center gap-2">
+        <span
+          className={cn(
+            "num font-semibold",
+            dark ? "text-white/45" : "text-[var(--color-ink-3)]",
+          )}
+        >
           {currentPage}
         </span>
-        <span className={cn(dark ? "text-white/30" : "text-[var(--color-line-2)]")}>
+        <span className={dark ? "text-white/30" : "text-[var(--color-line-2)]"}>
           /
         </span>
         <span className="num">{totalPage}</span>
@@ -276,16 +299,14 @@ function SlidePagination({
       <a
         href={next ? `#${next.id}` : "#supporting"}
         className={cn(
-          "inline-flex items-center gap-2 rounded-xl border px-3 py-2 transition-colors",
-          dark
-            ? "border-white/10 hover:bg-white/[0.04]"
-            : "border-[var(--color-line)] hover:bg-[var(--color-bg-alt)]",
+          "inline-flex min-w-0 items-center gap-1.5 transition-colors",
+          dark ? "hover:text-white" : "hover:text-[var(--color-ink)]",
         )}
       >
-        <span className="hidden sm:inline">
+        <span className="hidden truncate sm:inline">
           {next ? next.label.replace("PAGE ", "") : "Supporting"}
         </span>
-        <span className="text-[18px] leading-none">→</span>
+        <span className="shrink-0 text-[16px] leading-none">→</span>
       </a>
     </nav>
   );

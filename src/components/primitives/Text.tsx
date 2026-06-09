@@ -6,6 +6,17 @@ import { cn } from "@/lib/cn";
    ---------------------------------------------------------------- */
 const KEYWORDS = [
   // longest first matters for regex alternation — sorted at build time
+  "대화형 AI 서비스 기획",
+  "AI 기술",
+  "사용자 경험",
+  "비즈니스 가치",
+  "생성형 AI 서비스",
+  "서비스 구축",
+  "서비스 운영",
+  "운영 체계",
+  "서비스 경험",
+  "AI SaaS",
+  "글로벌 플랫폼",
   "Interactive Avatar",
   "AI 서비스 기획",
   "운영 구조 설계",
@@ -19,11 +30,25 @@ const KEYWORDS = [
   "운영 구조",
   "운영 정책",
   "품질 검증",
+  "Service Workflow",
+  "Quality Framework",
+  "User Flow",
   "Workflow",
-  "Prompt",
+  "Framework",
   "Latency",
-  "LLM",
-  "RAG",
+  "대화가 자연스럽게 이어지는 경험",
+  "응답 대기 경험",
+  "대화 연결성",
+  "Waiting 경험 개선",
+  "데이터로 검증하는 과정",
+  "운영 체계 표준화",
+  "공통 평가 기준",
+  "서비스 경험 중심 관점",
+  "사용자 경험을 설계하는 방식",
+  "운영 체계와 품질 관리 구조",
+  "체감 Latency",
+  "+20%",
+  "+15%",
 ];
 
 function escapeRegExp(s: string) {
@@ -56,10 +81,10 @@ export function Highlight({
           <strong
             key={i}
             className={cn(
-              "font-semibold",
+              "highlight",
               tone === "dark"
                 ? "text-white"
-                : "text-[var(--color-accent)]",
+                : "text-[var(--color-primary-accent)]",
             )}
           >
             {part}

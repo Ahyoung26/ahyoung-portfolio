@@ -6,7 +6,13 @@ import { about } from "@/data/portfolio";
  */
 export function Closing() {
   return (
-    <Section id="contact" tone="dark" size="xl" printPage={false}>
+    <Section
+      id="contact"
+      tone="dark"
+      size="xl"
+      printPage={false}
+      className="bg-[var(--color-background-dark)]"
+    >
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:items-end">
         <div>
           <Eyebrow tone="white">Let’s Talk</Eyebrow>
@@ -22,26 +28,29 @@ export function Closing() {
 
         <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-7 lg:p-8 backdrop-blur-sm">
           <ul className="divide-y divide-white/10">
-            <li className="flex items-baseline justify-between py-4">
+            <li className="flex items-baseline justify-between gap-6 py-4">
               <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/45">
                 Email
               </span>
               <a
                 href={`mailto:${about.contact.email}`}
-                className="font-mono text-[14px] sm:text-[15px] font-semibold text-white hover:text-[var(--color-accent)] transition-colors"
+                className="select-all font-mono text-[14px] font-semibold text-white transition-colors hover:text-[var(--color-primary-accent)] sm:text-[15px]"
               >
                 {about.contact.email}
               </a>
             </li>
-            <li className="flex items-baseline justify-between py-4">
+            <li className="flex items-baseline justify-between gap-6 py-4">
               <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/45">
                 Tel
               </span>
-              <span className="font-mono text-[14px] sm:text-[15px] font-semibold text-white">
+              <a
+                href={`tel:${about.contact.tel.replace(/-/g, "")}`}
+                className="select-all font-mono text-[14px] font-semibold text-white transition-colors hover:text-[var(--color-primary-accent)] sm:text-[15px]"
+              >
                 {about.contact.tel}
-              </span>
+              </a>
             </li>
-            <li className="flex items-baseline justify-between py-4">
+            <li className="flex items-baseline justify-between gap-6 py-4">
               <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/45">
                 Location
               </span>
