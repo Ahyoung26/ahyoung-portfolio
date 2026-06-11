@@ -10,30 +10,30 @@ export function ProjectOverview() {
   const summary = careerSummary.projectSummary;
   const rows = [
     { title: "프로젝트 배경", items: summary.background },
-    { title: "수행 범위", items: summary.scope },
+    { title: "프로젝트 목표", items: summary.goals },
     { title: "프로젝트 역할", items: summary.role },
   ];
 
   return (
-    <Section id="project-summary" tone="default">
-      <div className="grid gap-7 lg:h-full lg:max-h-[100vh] lg:grid-rows-[auto_minmax(0,1fr)_auto]">
-        <header>
+    <Section id="project-summary" tone="default" containerClassName="type-a-slide">
+      <div className="type-a-layout">
+        <header className="type-a-hero">
           <Eyebrow>PROJECT SUMMARY</Eyebrow>
-          <h2 className="mt-4 max-w-4xl text-[38px] font-bold leading-[1.18] tracking-[-0.03em] keep-all text-balance sm:text-[44px] md:text-[56px] lg:text-[64px]">
+          <h2 className="mt-4 max-w-4xl text-[38px] font-bold leading-[1.2] tracking-[-0.03em] keep-all text-balance sm:text-[44px] md:text-[52px] lg:text-[58px]">
             Interactive Avatar 서비스 구축
           </h2>
-          <Body className="mt-5 max-w-3xl whitespace-pre-line text-[16px] sm:text-[18px] lg:text-[21px]">
+          <Body className="mt-5 max-w-3xl whitespace-pre-line text-[16px] sm:text-[18px]">
             {summary.context}
           </Body>
         </header>
 
-        <div className="grid min-h-0 gap-[var(--space-component-gap)] sm:grid-cols-2 lg:grid-cols-3">
+        <div className="type-a-content type-a-summary-grid">
           {rows.map((row) => (
             <ProjectSummaryRow key={row.title} title={row.title} items={row.items} />
           ))}
         </div>
 
-        <footer className="pt-[var(--space-component-gap)]">
+        <footer className="type-a-footer">
           <div className="grid grid-cols-[4px_1fr] items-center gap-4">
             <span className="min-h-10 w-1 self-stretch bg-[var(--color-primary-accent)]" />
             <div>
@@ -62,11 +62,11 @@ function ProjectSummaryRow({
   items: string[];
 }) {
   return (
-    <section className="min-h-0">
-      <h3 className="text-[18px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)] keep-all sm:text-[20px]">
+    <section className="min-h-0 border-t border-[var(--color-border-divider)] pt-5">
+      <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)] keep-all sm:text-[22px]">
         {title}
       </h3>
-      <ul className="mt-3 grid gap-[var(--space-list-gap)]">
+      <ul className="mt-4 grid gap-[var(--space-list-gap)]">
         {items.map((item) => (
           <li
             key={item}

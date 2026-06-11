@@ -19,20 +19,19 @@ export function About() {
    ========================================== */
 function AboutMe() {
   return (
-    <Section id="about" tone="default">
-      <div className="grid gap-0 lg:h-full lg:max-h-[100vh] lg:grid-rows-[auto_auto_minmax(0,1fr)]">
-        <header className="max-w-6xl">
+    <Section id="about" tone="default" containerClassName="type-a-slide">
+      <div className="type-a-layout">
+        <header className="type-a-hero max-w-6xl">
           <Eyebrow>{about.label}</Eyebrow>
-          <h1 className="mt-4 whitespace-pre-line text-[38px] font-bold leading-[1.16] tracking-[-0.03em] keep-all text-balance sm:text-[44px] md:text-[56px] lg:text-[64px]">
+          <h1 className="mt-4 whitespace-pre-line text-[34px] font-bold leading-[1.2] tracking-[-0.03em] keep-all text-balance sm:text-[42px] md:text-[50px] lg:text-[58px]">
             {about.title}
           </h1>
+          <Body className="mt-[var(--space-component-gap)] max-w-3xl text-[16px] sm:text-[18px]">
+            {about.description}
+          </Body>
         </header>
 
-        <Body className="mt-[var(--space-component-gap)] max-w-3xl whitespace-pre-line text-[16px] sm:text-[18px] lg:text-[20px]">
-          {about.description}
-        </Body>
-
-        <div className="mt-[var(--space-section-gap)] grid min-h-0 gap-[var(--space-card-gap)] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="type-a-content type-a-about-grid">
           {about.strengths.map((strength) => (
             <StrengthBlock key={strength.label} strength={strength} />
           ))}
@@ -53,7 +52,7 @@ function StrengthBlock({
   };
 }) {
   return (
-    <section className="flex min-h-0 flex-col rounded-2xl border border-[var(--color-border-divider)] bg-white p-5 shadow-[0_10px_30px_rgba(17,24,39,0.03)]">
+    <section className="flex min-h-0 flex-col bg-white p-4">
       <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-3)]">
         Category
       </div>
@@ -61,16 +60,16 @@ function StrengthBlock({
         {strength.label}
       </div>
 
-      <div className="mt-6">
+      <div className="mt-4">
         <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-3)]">
           Title
         </div>
-        <h3 className="mt-2 text-[24px] font-bold leading-[1.12] tracking-[-0.03em] text-[var(--color-text-primary)] keep-all sm:text-[26px] lg:text-[28px]">
+        <h3 className="mt-2 text-[22px] font-bold leading-[1.18] tracking-[-0.03em] text-[var(--color-text-primary)] keep-all lg:text-[24px]">
           {strength.title}
         </h3>
       </div>
 
-      <div className="mt-6 border-t border-[var(--color-border-divider)] pt-4">
+      <div className="mt-4 border-t border-[var(--color-border-divider)] pt-4">
         <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-3)]">
           Task List
         </div>
@@ -120,25 +119,25 @@ function ToolChip({ tool }: { tool: string }) {
    ========================================== */
 function CareerSummary() {
   return (
-    <Section id="career" tone="alt">
-      <div className="grid gap-0 lg:h-full lg:max-h-[100vh] lg:grid-rows-[auto_minmax(0,1fr)_auto]">
-        <header>
+    <Section id="career" tone="alt" containerClassName="type-a-slide">
+      <div className="type-a-layout">
+        <header className="type-a-hero">
           <Eyebrow>{careerSummary.label}</Eyebrow>
-          <h2 className="mt-3 max-w-5xl whitespace-pre-line text-[32px] font-bold leading-[1.18] tracking-[-0.03em] keep-all text-balance sm:text-[42px] lg:text-[56px]">
+          <h2 className="mt-3 max-w-5xl whitespace-pre-line text-[32px] font-bold leading-[1.2] tracking-[-0.03em] keep-all text-balance sm:text-[42px] lg:text-[56px]">
             {careerSummary.title}
           </h2>
-          <Body className="mt-4 max-w-3xl whitespace-pre-line text-[16px] sm:text-[18px] lg:text-[20px]">
+          <Body className="mt-4 max-w-3xl text-[16px] sm:text-[18px]">
             {careerSummary.description}
           </Body>
         </header>
 
-        <ol className="mt-8 grid min-h-0 border-y border-[var(--color-border-divider)] lg:mt-10">
+        <ol className="type-a-content type-a-career-grid">
           {careerSummary.timeline.map((career, index) => (
             <CareerCard key={career.company} career={career} index={index} />
           ))}
         </ol>
 
-        <footer className="mt-5 grid gap-3 lg:grid-cols-[1fr_0.82fr] lg:items-start">
+        <footer className="type-a-footer grid gap-3 lg:grid-cols-[1fr_0.82fr] lg:items-start">
           <div className="flex flex-wrap gap-2">
             {careerSummary.experienceSummary.map((exp: string) => (
               <span
@@ -172,7 +171,7 @@ function CareerCard({
   index: number;
 }) {
   return (
-    <li className="grid min-h-0 gap-4 border-b border-[var(--color-border-divider)] py-4 last:border-b-0 lg:grid-cols-[0.16fr_0.22fr_0.18fr_0.28fr_0.16fr] lg:items-start">
+    <li className="flex min-h-0 flex-col border-t border-[var(--color-border-divider)] pt-4">
       <div className="flex items-center justify-between gap-4 lg:block">
         <span className="num text-[12px] font-semibold text-[var(--color-ink-3)]">
           0{index + 1}
@@ -186,12 +185,12 @@ function CareerCard({
         <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-3)]">
           Company
         </div>
-        <h3 className="mt-2 text-[24px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)] keep-all">
+        <h3 className="mt-2 text-[22px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)] keep-all lg:text-[24px]">
           {career.company}
         </h3>
       </div>
 
-      <div>
+      <div className="mt-4">
         <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-3)]">
           Role
         </div>
@@ -200,7 +199,7 @@ function CareerCard({
         </p>
       </div>
 
-      <div>
+      <div className="mt-4">
         <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-3)]">
           대표 프로젝트
         </div>
@@ -208,7 +207,7 @@ function CareerCard({
           {career.items.map((item) => (
             <li
               key={item}
-              className="text-[16px] font-normal leading-[1.6] text-[var(--color-text-secondary)] keep-all"
+              className="text-[15px] font-normal leading-[1.5] text-[var(--color-text-secondary)] keep-all"
             >
               {item}
             </li>
@@ -216,7 +215,7 @@ function CareerCard({
         </ul>
       </div>
 
-      <div>
+      <div className="mt-auto pt-4">
         <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--color-ink-3)]">
           핵심 역할
         </div>

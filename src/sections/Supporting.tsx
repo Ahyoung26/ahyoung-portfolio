@@ -85,24 +85,6 @@ export function Supporting() {
         ))}
       </ul>
 
-      {"commonRole" in supportingProjects && (
-        <div className="mt-10 border-t border-[var(--color-border-divider)] pt-8">
-          <h3 className="text-[18px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)]">
-            공통 역할
-          </h3>
-          <ul className="mt-4 grid gap-3 sm:grid-cols-3">
-            {supportingProjects.commonRole.map((item) => (
-              <li
-                key={item}
-                className="text-[15px] leading-[1.6] text-[var(--color-text-secondary)] keep-all"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
       {"insight" in supportingProjects && (
         <footer className="mt-10 border-t border-[var(--color-border-divider)] pt-8">
           <div className="grid grid-cols-[4px_1fr] items-center gap-4">

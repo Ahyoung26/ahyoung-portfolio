@@ -13,35 +13,35 @@ export const about = {
   name: "김아영",
   nameEn: "Ahyoung Kim",
   // Level 1: Hero Title
-  title: "AI 기술을 사용자 경험과\n비즈니스 가치로 연결하는 PM",
+  title: "AI 기술을 사용자 경험과 비즈니스 가치로 연결하는\n서비스 기획자 김아영 입니다.",
   // Level 4: Description (의미 단위 분리 및 축약)
   description:
-    "Interactive Avatar, AI Human, AI Studios 등\n\n생성형 AI 서비스의 설계부터 운영까지 경험했습니다.",
+    "Interactive Avatar, AI Human, AI Studios 등 생성형 AI 서비스의 설계부터 운영까지 다양한 경험했습니다.",
   
   // Core Strength (PAGE 01 핵심 역량)
   strengths: [
     {
       label: "문제 정의",
       title: "문제 정의",
-      items: ["사용자 행동 분석", "VOC 분석", "요구사항 정의"],
+      items: ["사용자 행동 분석", "VOC 클러스터링", "비즈니스 요구사항 정의"],
       tools: ["Amplitude", "Google Analytics", "Notion"]
     },
     {
       label: "서비스 설계",
       title: "서비스 설계",
-      items: ["서비스 구조 설계", "User Flow 설계", "정책 정의"],
+      items: ["AI 엔진-클라이언트 데이터 흐름 설계", "User Flow", "인터랙션 및 정책 정의"],
       tools: ["Figma", "Notion", "Jira"]
     },
     {
       label: "운영 체계 구축",
       title: "운영 체계 구축",
-      items: ["Admin 설계", "상태값 정의", "운영 프로세스 구축"],
+      items: ["도메인별 Admin 구조 설계", "상태값 정의", "QA 및 운영 프로세스 표준화"],
       tools: ["Jira", "Notion", "Figma"]
     },
     {
       label: "가설 검증 및 개선",
       title: "가설 검증 및 개선",
-      items: ["가설 수립", "실험 설계", "데이터 기반 개선"],
+      items: ["가설 수립 및 실험 설계", "프로토타이핑", "LLM 프롬프트 가이드라인 최적화"],
       tools: ["Amplitude", "Google Analytics", "Cursor", "ChatGPT", "Claude"]
     }
   ],
@@ -127,25 +127,24 @@ export const careerSummary = {
     context:
       "Avatar 생성부터 실시간 대화까지,\n대화형 AI 기술을 실제 서비스 경험으로 연결하기 위한 구조 설계",
     background: [
-      "Chatbot 중심 경험의 한계로 차별화된 상호작용 경험 필요",
-      "실시간 추론 지연으로 사용자 이탈 발생",
+      "가상인간 제작에 시간과 비용이 많이 드는 구조",
+      "Chatbot 중심 경험의 한계",
       "서비스 품질을 판단할 공통 기준 부재",
     ],
-    scope: [
-      "Avatar 생성 및 대화 경험 설계",
-      "AI 엔진-클라이언트 인터랙션 구조 정의",
-      "품질 평가 Framework 수립",
-      "운영 프로세스 및 정책 정의",
+    goals: [
+      "아바타를 빠르고 쉽게 제작 할 수 있는 구조",
+      "자연스러운 실시간 대화 경험 제공",
+      "서비스 품질 평가 체계 구축",
     ],
     role: [
       "서비스 기획 리드",
-      "품질 기준 정의",
+      "대화 경험 설계",
       "운영 체계 설계",
     ],
     insight:
-      "대화형 AI의 경쟁력은 모델 성능 자체보다 기술을 사용자 경험으로 전환하는 구조에 있음.",
+      "대화형 AI의 경쟁력은 모델 성능보다 기술을 사용자 경험으로 전환하는 구조에 있음.",
     oneLiner:
-      "기술 중심 관점이 아닌 서비스 경험 중심 관점으로 문제를 재정의함.",
+      "기술 중심보다는 서비스 경험 중심 관점으로 문제를 재정의함.",
   }
 };
 
@@ -460,16 +459,11 @@ export const supportingProjects = {
   label: "SUPPORTING PROJECTS",
   title: "주요 서비스 구축 경험",
   description:
-    "AI SaaS, 글로벌 플랫폼, 모빌리티 서비스까지 다양한 도메인 경험 보유",
+    "AI SaaS부터 글로벌 플랫폼까지 다양한 도메인에서 서비스 구조와 운영 체계를 설계",
   insight:
     "도메인은 달라도 복잡한 문제를 구조화하고 운영 가능한 서비스로 전환하는 과정은 동일함.",
   insightSub:
-    "서비스 기획의 본질은 기능 정의가 아니라 비즈니스와 사용자를 연결하는 구조를 설계하는 데 있음.",
-  commonRole: [
-    "서비스 구조 설계",
-    "운영 체계 구축",
-    "정책 및 프로세스 정의",
-  ],
+    "서비스 기획의 본질은 기능 정의가 아니라 비즈니스와 사용자를 연결하는 구조를 설계하는 것에 있음.",
   items: [
     {
       label: "GENESIS GLOBAL",
@@ -543,36 +537,32 @@ export const projectSlides: ProjectSlideData[] = [
   {
     id: "problem",
     label: "PAGE 04 · 문제 정의",
-    title: "대화형 Avatar 경험 정의",
+    title: "Conversational Experience 문제 정의",
     description:
-      "아바타 생성과 실시간 대화를 하나의 서비스 흐름으로 연결하기 위한 문제 정의",
+      "실시간 대화 과정에서 사용자가 경험하는 불편 요소를 정의하고 핵심 문제를 도출",
     keyPoints: [
       {
         title: "문제 상황",
         items: [
-          "높은 제작 비용과 긴 구축 기간으로 확장성 제약 존재",
-          "AI 추론 지연으로 대화 몰입도 저하",
-          "사람과 유사한 상호작용 경험 제공에 한계 존재",
+          "응답 지연으로 대화 몰입도 저하",
+          "Waiting 구간에서 사용자 이탈 발생",
         ],
       },
       {
         title: "사용자 요구",
         items: [
-          "누구나 쉽게 생성 가능한 Avatar 경험",
-          "자연스럽고 끊김 없는 대화 경험",
-          "빠른 응답과 명확한 상태 피드백 제공",
+          "빠른 응답",
+          "자연스러운 대화 흐름",
+          "예측 가능한 서비스 경험",
         ],
       },
       {
         title: "핵심 질문",
         items: [
+          "체감 Latency를 줄일 수 있는가",
           "기술적 한계를 UX로 보완할 수 있는가",
-          "비용과 품질의 균형점을 확보할 수 있는가",
+          "대화 경험을 어떻게 측정할 수 있는가",
         ],
-      },
-      {
-        title: "주요 고려사항",
-        items: ["체감 Latency 최소화", "서비스 확장성 확보", "운영 효율성 고려"],
       },
     ],
     insightLead:
@@ -581,25 +571,25 @@ export const projectSlides: ProjectSlideData[] = [
       "결국 문제는 기술의 한계가 아니라 기술적 제약을 인지하지 않도록 설계하는 서비스 구조에 있었음.",
     visual: {
       slot: "service-structure",
-      title: "서비스 구조도",
-      type: "IA · Service Structure · Workflow",
-      items: ["IA", "서비스 구조", "Workflow"],
+      title: "문제 정의 Canvas",
+      type: "Problem Definition Canvas · User Journey Map",
+      items: ["문제 정의 Canvas", "User Journey Map", "대화 경험 이슈"],
     },
     tone: "default",
   },
   {
     id: "user-analysis",
     label: "PAGE 05 · 사용자 경험 분석",
-    title: "VOC 기반 경험 진단",
+    title: "데이터 기반 경험 진단",
     description:
-      "VOC와 인터뷰를 기반으로 사용자 경험을 저해하는 핵심 요인 도출",
+      "VOC와 인터뷰를 기반으로 사용자 경험을 저해하는 핵심 요인 분석",
     keyPoints: [
       {
-        title: "분석 방법",
+        title: "분석 데이터",
         items: [
-          "VOC 유형별 클러스터링 수행",
-          "고객 인터뷰 및 QA 로그 분석",
-          "사용자 행동 패턴 비교 검토",
+          "VOC XX건",
+          "인터뷰 50명",
+          "QA Case XX건",
         ],
       },
       {
@@ -613,21 +603,21 @@ export const projectSlides: ProjectSlideData[] = [
       {
         title: "우선 과제",
         items: [
-          "체감 대기 시간 최소화",
+          "체감 응답 시간 개선",
           "대화 연결성 강화",
-          "Waiting UX 개선 방향 수립",
+          "Waiting UX 개선",
         ],
       },
     ],
     insightLead:
-      "문제는 답변의 정확도가 아니라 응답을 기다리는 과정에서 발생하는 불확실성이었음.",
+      "사용자가 문제로 인식한 것은 AI 성능보다 대화 경험의 단절이었음.",
     insight:
-      "분석 결과, 대화 연결성 유지와 Waiting 경험 개선이 최우선 과제로 도출됨.",
+      "분석 결과, 대화 연결성을 유지하고 Waiting 경험을 개선하는 것이 최우선 과제로 도출됨.",
     visual: {
       slot: "voc-cluster",
-      title: "VOC 분석 결과",
-      type: "VOC Clustering · Interview Notes",
-      items: ["VOC 클러스터링", "인터뷰 정리", "QA 로그"],
+      title: "VOC 분석 결과 및 QA 이슈 분류 차트",
+      type: "VOC Analysis · QA Issue Classification",
+      items: ["VOC XX건", "인터뷰 50명", "QA Case XX건"],
     },
     tone: "alt",
   },
@@ -636,34 +626,34 @@ export const projectSlides: ProjectSlideData[] = [
     label: "PAGE 06 · 가설 수립",
     title: "체감 지연 개선 가설 수립",
     description:
-      "기술적 한계를 인정하고 서비스 관점에서 검증 가능한 해결 방안 정의",
+      "분석 결과를 기반으로 검증 가능한 UX 가설 정의",
     keyPoints: [
       {
         title: "관찰 내용",
-        items: ["응답 대기 시간 증가", "립싱크 지연 발생", "Waiting 구간 이탈 증가"],
+        items: ["응답 지연 발생", "립싱크 지연 발생", "Waiting 구간 이탈 증가"],
       },
       {
         title: "가설 정의",
         items: [
           "대기 인터랙션 제공 시 이탈 감소 가능",
-          "Streaming 구조 적용 시 체감 지연 감소 가능",
-          "응답 진행 상태 노출 시 만족도 향상 가능",
+          "실시간 출력 방식 적용 시 체감 지연 감소 가능",
+          "상태 피드백 제공 시 만족도 향상 가능",
         ],
       },
       {
         title: "검증 계획",
-        items: ["구조별 비교 테스트", "고부하 환경 테스트", "UX 패턴별 실험 설계"],
+        items: ["응답 방식별 비교 검증", "부하 환경 검증", "UX 패턴별 실험 설계"],
       },
     ],
     insightLead:
       "기술적 문제를 단순 추측으로 해석하지 않고 사용자 경험 관점의 가설로 전환함.",
     insight:
-      "원인 규명보다 중요한 것은 실제 사용자 경험에 영향을 주는 요소를 데이터로 검증하는 과정이었음.",
+      "원인 규명보다 중요한 것은 실제 사용자 경험에 영향을 주는 요소를 데이터 기반으로 검증하는 과정이었음.",
     visual: {
       slot: "hypothesis-sheet",
-      title: "가설 정의 문서",
-      type: "Hypothesis Sheet · Test Plan",
-      items: ["가설 시트", "테스트 계획서", "비교 조건"],
+      title: "가설 검증 플로우",
+      type: "Hypothesis Flow · Test Design",
+      items: ["가설 검증 플로우", "테스트 설계 문서", "비교 조건"],
     },
     tone: "default",
   },
@@ -672,11 +662,11 @@ export const projectSlides: ProjectSlideData[] = [
     label: "PAGE 07 · 서비스 구조 설계",
     title: "End-to-End 서비스 구조 설계",
     description:
-      "생성, 대화, 운영 전 과정을 연결하는 서비스 아키텍처 설계",
+      "대화 진입부터 운영까지 연결되는 서비스 구조 설계",
     keyPoints: [
       {
         title: "설계 대상",
-        items: ["Avatar 생성 경험", "실시간 대화 경험", "운영 및 관리 경험"],
+        items: ["대화 진입 경험", "실시간 대화 경험", "운영 및 관리 경험"],
       },
       {
         title: "설계 원칙",
@@ -702,29 +692,29 @@ export const projectSlides: ProjectSlideData[] = [
     visual: {
       slot: "workflow-diagram",
       title: "Workflow Diagram",
-      type: "User Flow · Workflow",
-      items: ["아바타 생성", "검수", "배포", "대화", "운영"],
+      type: "End-to-End User Flow · Workflow",
+      items: ["대화 진입", "실시간 대화", "운영", "관리"],
     },
     tone: "alt",
   },
   {
     id: "evaluation-operation",
-    label: "PAGE 08 · 서비스 평가 및 운영 체계",
-    title: "서비스 평가 및 운영 체계 구축",
+    label: "PAGE 08 · 서비스 품질 Framework",
+    title: "서비스 품질 Framework 구축",
     description:
-      "서비스 경험을 객관적으로 평가하고 지속적으로 개선할 수 있는 기준 정의",
+      "서비스 경험을 객관적으로 평가하고 개선하기 위한 기준 정의",
     keyPoints: [
-      { title: "평가 기준", items: ["응답 속도", "대화 연결성", "자연스러움"] },
+      { title: "품질 항목", items: ["응답 속도", "대화 연결성", "자연스러움"] },
       {
-        title: "운영 체계",
-        items: ["QA 프로세스 수립", "운영 정책 정의", "품질 관리 프로세스 구축"],
+        title: "측정 기준",
+        items: ["평가 항목 정의", "점수 기준 수립", "QA 기준 정립"],
       },
       {
         title: "기대 효과",
         items: [
-          "공통 품질 기준 확보",
-          "운영 프로세스 표준화",
-          "조직 간 협업 효율 향상",
+          "공통 품질 언어 확보",
+          "객관적 서비스 평가",
+          "품질 개선 기준 마련",
         ],
       },
     ],
@@ -733,37 +723,37 @@ export const projectSlides: ProjectSlideData[] = [
       "지속적인 개선을 위해서는 공통 평가 기준과 운영 체계 표준화가 반드시 필요했음.",
     visual: {
       slot: "service-framework",
-      title: "Service Framework",
-      type: "Framework · QA Process · Policy",
-      items: ["평가 Framework", "QA 프로세스", "운영 정책 문서"],
+      title: "품질 평가 Framework",
+      type: "Quality Framework · QA Matrix",
+      items: ["품질 평가 Framework", "QA Matrix", "점수 기준"],
     },
     tone: "default",
   },
   {
     id: "result",
     label: "PAGE 09 · 서비스 구축 성과",
-    title: "서비스 운영 기반 구축",
+    title: "서비스 성과 및 운영 체계 구축",
     description:
-      "PoC부터 상용화까지 서비스가 지속적으로 운영될 수 있는 기반 구축",
+      "PoC부터 상용화까지 서비스 운영 기반 구축",
     keyPoints: [
       {
         title: "사업 성과",
-        items: ["주요 고객사 PoC 수행", "상용 계약 체결 지원", "신규 레퍼런스 확보"],
+        items: ["PoC XX건 수행", "상용 계약 XX건 지원", "고객사 XX개 확보"],
       },
       {
         title: "서비스 성과",
         items: [
+          "Latency XX% 개선",
+          "QA 이슈 XX% 감소",
           "운영 안정성 확보",
-          "품질 관리 체계 정립",
-          "대화 경험 개선 기반 마련",
         ],
       },
       {
         title: "조직 성과",
         items: [
-          "평가 기준 표준화",
+          "품질 기준 표준화",
           "운영 프로세스 구축",
-          "개발·연구소 협업 체계 정립",
+          "협업 체계 정립",
         ],
       },
     ],
@@ -773,9 +763,9 @@ export const projectSlides: ProjectSlideData[] = [
       "PoC에서 상용화로 이어지기 위해서는 기술보다 운영 체계와 품질 관리 구조가 중요했음.",
     visual: {
       slot: "project-summary",
-      title: "프로젝트 Summary",
-      type: "Structure · Workflow · Framework",
-      items: ["전체 서비스 구조도", "End-to-End Workflow", "운영 Framework"],
+      title: "성과 대시보드",
+      type: "Performance Dashboard · Operation Process",
+      items: ["성과 대시보드", "운영 프로세스 구조도", "품질 지표"],
     },
     tone: "alt",
   },
@@ -784,25 +774,23 @@ export const projectSlides: ProjectSlideData[] = [
     label: "PAGE 10 · 프로젝트 회고",
     title: "서비스 관점의 AI 기획",
     description:
-      "기술을 사용자 가치로 연결하는 과정에서 기획자의 역할과 책임 정리",
+      "기술을 사용자 가치로 연결하는 과정에서 얻은 인사이트 정리",
     keyPoints: [
       {
         title: "배운 점",
         items: [
-          "사용자 경험은 기술보다 서비스 흐름에서 완성됨",
-          "문제 정의가 솔루션의 방향을 결정함",
+          "사용자 경험은 서비스 흐름에서 완성됨",
+          "문제 정의가 솔루션 방향을 결정함",
+          "운영까지 고려한 설계가 중요함",
         ],
       },
       {
         title: "어려웠던 점",
-        items: ["AI 품질을 객관적으로 측정하기 어려움", "조직 간 관점 차이 존재"],
+        items: ["AI 품질 측정 기준 부재", "조직 간 관점 차이 존재", "기술과 비즈니스 간 균형 필요"],
       },
       {
-        title: "주요 성찰",
-        items: [
-          "사용자 중심 접근 중요성 확인",
-          "운영 가능한 구조 설계 필요성 확인",
-        ],
+        title: "다음 단계",
+        items: ["데이터 기반 평가 체계 고도화", "품질 측정 자동화", "운영 효율성 강화"],
       },
     ],
     insightLead:
@@ -811,9 +799,9 @@ export const projectSlides: ProjectSlideData[] = [
       "결국 AI 서비스의 경쟁력은 사용자 경험을 설계하는 방식에서 결정됨.",
     visual: {
       slot: "lessons-learned",
-      title: "프로젝트 회고",
-      type: "Lessons Learned · Summary",
-      items: ["프로젝트 요약", "Lessons Learned", "서비스 운영 구조"],
+      title: "프로젝트 회고 맵",
+      type: "Lessons Learned · Reflection Map",
+      items: ["프로젝트 회고 맵", "Lessons Learned", "다음 단계"],
     },
     tone: "default",
   },

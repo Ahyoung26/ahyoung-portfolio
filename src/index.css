@@ -39,9 +39,9 @@
     --color-background: #ffffff;
     --color-background-alt: #f9fafb;
     --color-background-dark: #0f172a;
-    --space-section-gap: 64px;
-    --space-component-gap: 28px;
-    --space-list-gap: 20px;
+    --space-section-gap: 56px;
+    --space-component-gap: 24px;
+    --space-list-gap: 16px;
     --space-card-gap: 16px;
   }
 
@@ -70,14 +70,20 @@
     scroll-snap-align: start;
     scroll-snap-stop: always;
     display: flex;
-    align-items: center;
+    align-items: stretch;
   }
   .slide-inner {
     width: 100%;
     max-width: 1320px;
     margin: 0 auto;
-    padding: clamp(40px, 5vw, 64px);
+    padding: clamp(72px, 8vh, 88px) clamp(40px, 5vw, 64px)
+      clamp(24px, 4vh, 40px);
+    height: 100vh;
     max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
   }
 
   .portfolio-slide:has(.type-b-slide) {
@@ -87,11 +93,11 @@
   .slide-inner:has(.type-b-slide) {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 3.5rem);
-    max-height: calc(100vh - 3.5rem);
-    margin-top: 3.5rem;
-    padding-top: clamp(16px, 2.5vw, 24px);
-    padding-bottom: clamp(16px, 2vw, 24px);
+    height: 100vh;
+    max-height: 100vh;
+    margin-top: 0;
+    padding-top: clamp(72px, 8vh, 88px);
+    padding-bottom: clamp(14px, 2vh, 24px);
     overflow: hidden;
   }
 
@@ -101,17 +107,17 @@
       height: 100vh;
       overflow: hidden;
       scroll-snap-align: start;
-      align-items: center;
+      align-items: stretch;
     }
     .slide-inner {
       max-height: 100vh;
-      padding: 56px 24px;
+      padding: 72px 24px 28px;
     }
   }
 
   @media (max-width: 768px) {
     .slide-inner {
-      padding: 48px 20px;
+      padding: 68px 20px 24px;
     }
   }
   body {
@@ -159,6 +165,88 @@
     overflow: hidden;
   }
 
+  /* === Type A Intro/Summary Slide Safe Guard === */
+  .type-a-slide {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+
+  .type-a-layout {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  .type-a-hero {
+    flex-shrink: 0;
+  }
+
+  .type-a-content {
+    flex: 1 1 auto;
+    min-height: 0;
+    margin-top: var(--space-section-gap);
+    overflow: hidden;
+  }
+
+  .type-a-footer {
+    flex-shrink: 0;
+    margin-top: var(--space-component-gap);
+  }
+
+  .type-a-about-grid,
+  .type-a-summary-grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  .type-a-about-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .type-a-summary-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .type-a-career-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .type-a-career-grid > li {
+    flex: 1 1 0;
+  }
+
+  @media (max-width: 1024px) {
+    .type-a-about-grid,
+    .type-a-summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .type-a-career-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .type-a-content {
+      margin-top: var(--space-component-gap);
+    }
+
+    .type-a-about-grid,
+    .type-a-summary-grid,
+    .type-a-career-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
   /* === Type B Project Slide Layout === */
   .type-b-slide {
     display: flex;
@@ -172,12 +260,12 @@
   /* Hero: never shrink — title/subtitle always fully visible */
   .type-b-hero {
     flex-shrink: 0;
-    margin-bottom: var(--space-section-gap);
+    margin-bottom: 32px;
   }
 
   .type-b-body {
     display: grid;
-    flex: 1 1 auto;
+    flex: 1 1 0;
     min-height: 0;
     overflow: hidden;
     gap: var(--space-component-gap);
@@ -202,26 +290,26 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 16px;
     min-height: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   .type-b-main-content h3 {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.35;
   }
 
   @media (min-width: 1024px) {
     .type-b-main-content h3 {
-      font-size: 17px;
+      font-size: 19px;
     }
   }
 
   .type-b-main-content li {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.45;
   }
 
   @media (min-width: 1024px) {
@@ -231,6 +319,7 @@
   }
 
   .type-b-visual {
+    height: 100%;
     min-height: 0;
     overflow: hidden;
   }
@@ -243,15 +332,13 @@
 
   .type-b-footer {
     flex-shrink: 0;
-    margin-top: auto;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
 
   .type-b-insight {
     flex-shrink: 0;
-  }
-
-  .type-b-pagination {
-    flex-shrink: 0;
+    margin-bottom: 0;
   }
 
   .type-b-insight p {

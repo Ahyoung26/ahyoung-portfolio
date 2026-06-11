@@ -12,18 +12,15 @@ import { cn } from "@/lib/cn";
  * 100vh Flex hierarchy:
  * 1. Hero (flex-shrink: 0) — title always visible
  * 2. Main Grid 35:65 (flex: 1, overflow hidden)
- * 3. Footer: Insight + Pagination (flex-shrink: 0)
+ * 3. Footer: Insight pinned to bottom (flex-shrink: 0)
  */
 export function ProjectSlides() {
   return (
     <>
-      {projectSlides.map((slide, index) => (
+      {projectSlides.map((slide) => (
         <ProjectSlide
           key={slide.id}
           slide={slide}
-          index={index}
-          previous={projectSlides[index - 1]}
-          next={projectSlides[index + 1]}
         />
       ))}
     </>
@@ -32,14 +29,8 @@ export function ProjectSlides() {
 
 function ProjectSlide({
   slide,
-  index,
-  previous,
-  next,
 }: {
   slide: ProjectSlideData;
-  index: number;
-  previous?: ProjectSlideData;
-  next?: ProjectSlideData;
 }) {
   const dark = slide.tone === "dark";
   const compactTitle = slide.title.length > 18;
@@ -81,10 +72,10 @@ function ProjectSlide({
       </header>
 
       {/* 3. Main Content Grid — flex: 1 */}
-      <div className="type-b-body">
+      <div className="type-b-body main-content-grid">
         <div className="type-b-left">
           <div className="type-b-main-content main-content">
-            {slide.keyPoints.slice(0, 4).map((point) => (
+            {slide.keyPoints.map((point) => (
               <section key={point.title} className="min-w-0">
                 <h3
                   className={cn(
@@ -121,11 +112,11 @@ function ProjectSlide({
         </div>
       </div>
 
-      {/* 4. Footer — Insight + Pagination */}
+      {/* 4. Footer — Insight pinned to bottom */}
       <div className="type-b-footer">
         <div
           className={cn(
-            "type-b-insight border-t pt-3",
+            "type-b-insight border-t pt-4",
             dark ? "border-white/10" : "border-[var(--color-border-divider)]",
           )}
         >
@@ -153,14 +144,6 @@ function ProjectSlide({
             </div>
           </div>
         </div>
-
-        <SlidePagination
-          dark={dark}
-          index={index}
-          current={slide}
-          previous={previous}
-          next={next}
-        />
       </div>
     </Section>
   );
@@ -198,7 +181,7 @@ function ArtifactPlaceholder({
     <div
       data-slot={visual.slot}
       className={cn(
-        "relative flex h-full min-h-0 w-full flex-col justify-between overflow-hidden p-4 sm:p-5 lg:p-6",
+        "relative flex h-full min-h-0 w-full flex-col justify-between overflow-hidden p-4 sm:p-5 lg:p-8",
         dark
           ? "bg-[var(--color-background-dark)] text-white"
           : "bg-[var(--color-background-pure)] text-[var(--color-ink)]",
@@ -239,75 +222,5 @@ function ArtifactPlaceholder({
         </div>
       </div>
     </div>
-  );
-}
-
-function SlidePagination({
-  dark,
-  index,
-  current,
-  previous,
-  next,
-}: {
-  dark: boolean;
-  index: number;
-  current: ProjectSlideData;
-  previous?: ProjectSlideData;
-  next?: ProjectSlideData;
-}) {
-  const currentPage =
-    current.label.match(/PAGE\s+(\d+)/)?.[1] ??
-    String(index + 4).padStart(2, "0");
-  const totalPage = "10";
-
-  return (
-    <nav
-      aria-label="Slide navigation"
-      className={cn(
-        "type-b-pagination flex h-8 shrink-0 items-center justify-between text-[11px]",
-        dark ? "text-white/45" : "text-[var(--color-ink-3)]",
-      )}
-    >
-      <a
-        href={previous ? `#${previous.id}` : "#project-summary"}
-        className={cn(
-          "inline-flex min-w-0 items-center gap-1.5 transition-colors",
-          dark ? "hover:text-white" : "hover:text-[var(--color-ink)]",
-        )}
-      >
-        <span className="shrink-0 text-[16px] leading-none">←</span>
-        <span className="hidden truncate sm:inline">
-          {previous ? previous.label.replace("PAGE ", "") : "03 · Project Summary"}
-        </span>
-      </a>
-
-      <div className="flex shrink-0 items-center gap-2">
-        <span
-          className={cn(
-            "num font-semibold",
-            dark ? "text-white/45" : "text-[var(--color-ink-3)]",
-          )}
-        >
-          {currentPage}
-        </span>
-        <span className={dark ? "text-white/30" : "text-[var(--color-line-2)]"}>
-          /
-        </span>
-        <span className="num">{totalPage}</span>
-      </div>
-
-      <a
-        href={next ? `#${next.id}` : "#supporting"}
-        className={cn(
-          "inline-flex min-w-0 items-center gap-1.5 transition-colors",
-          dark ? "hover:text-white" : "hover:text-[var(--color-ink)]",
-        )}
-      >
-        <span className="hidden truncate sm:inline">
-          {next ? next.label.replace("PAGE ", "") : "Supporting"}
-        </span>
-        <span className="shrink-0 text-[16px] leading-none">→</span>
-      </a>
-    </nav>
   );
 }
