@@ -13,3 +13,4 @@ export * from "./VOCCluster";
 export * from "./BeforeAfterRow";
 export * from "./ValidationTable";
 export * from "./Nav";
+export * from "./ArtifactImage";

@@ -7,12 +7,12 @@ export function Eyebrow({
   className,
 }: {
   children: ReactNode;
-  tone?: "accent" | "muted" | "white";
+  tone?: "accent" | "muted" | "white" | "chapter";
   className?: string;
 }) {
   const color =
-    tone === "white"
-      ? "text-white/60"
+    tone === "white" || tone === "chapter"
+      ? "text-white/70"
       : tone === "muted"
       ? "text-[var(--color-ink-3)]"
       : "text-[var(--color-accent)]";

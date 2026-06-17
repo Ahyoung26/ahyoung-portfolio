@@ -2,11 +2,13 @@ import { type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 import { Highlight } from "./Text";
 
-type Tone = "default" | "alt" | "dark" | "insight";
+type Tone = "default" | "alt" | "chapter" | "dark" | "insight";
 
 const toneClass: Record<Tone, string> = {
   default: "bg-[var(--color-bg)] text-[var(--color-ink)]",
   alt: "bg-[var(--color-bg-alt)] text-[var(--color-ink)]",
+  chapter:
+    "bg-gradient-to-br from-[#1D4ED8] via-[#1e3a8a] to-[#0F172A] text-white",
   dark: "bg-[var(--color-bg-dark)] text-white",
   insight:
     "bg-[var(--color-bg-insight)] text-[var(--color-ink)] border-y border-[var(--color-accent-m)]",
@@ -78,13 +80,13 @@ export function SectionHeader({
       ? "text-[32px] sm:text-[42px] lg:text-[52px] leading-[1.1]"
       : "text-[28px] sm:text-[36px] lg:text-[44px] leading-[1.15]";
   const eyebrowColor =
-    tone === "dark"
+    tone === "dark" || tone === "chapter"
       ? "text-white/60"
       : tone === "insight"
       ? "text-[var(--color-accent)]"
       : "text-[var(--color-accent)]";
   const subtitleColor =
-    tone === "dark"
+    tone === "dark" || tone === "chapter"
       ? "text-white/70"
       : "text-[var(--color-ink-2)]";
   return (
@@ -121,7 +123,7 @@ export function SectionHeader({
           )}
         >
           {typeof subtitle === "string" ? (
-            <Highlight tone={tone === "dark" ? "dark" : "default"}>
+            <Highlight tone={tone === "dark" || tone === "chapter" ? "dark" : "default"}>
               {subtitle}
             </Highlight>
           ) : (

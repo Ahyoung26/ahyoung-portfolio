@@ -5,12 +5,13 @@ const NAV = [
   { id: "about", label: "About" },
   { id: "career", label: "Career" },
   { id: "project-summary", label: "Project" },
-  { id: "problem", label: "Problem" },
-  { id: "user-analysis", label: "User" },
-  { id: "service-design", label: "Service" },
-  { id: "evaluation-operation", label: "Operation" },
+  { id: "voc-analysis", label: "VOC" },
+  { id: "hypothesis", label: "Hypothesis" },
+  { id: "service-design", label: "Design" },
+  { id: "quality-framework", label: "Quality" },
   { id: "result", label: "Result" },
   { id: "reflection", label: "Review" },
+  { id: "supporting", label: "Works" },
 ];
 
 export function Nav() {
@@ -53,7 +54,7 @@ export function Nav() {
           : "bg-transparent border-b border-transparent",
       )}
     >
-      <div className="mx-auto flex h-14 w-full max-w-[1320px] items-center justify-between px-6 sm:px-10 lg:px-16">
+      <div className="mx-auto flex h-14 w-full max-w-[1320px] items-center justify-between px-6 sm:px-8 lg:px-0">
         <a
           href="#about"
           className="flex items-center gap-3 text-[12px] font-bold tracking-[-0.01em]"

@@ -12,8 +12,8 @@ import { Closing } from "@/sections/Closing";
  *  P01  About / Hero
  *  P02  Career Summary
  *  P03  Project Summary
- *  P04~P10 Case Study Slides
- *  ---  Supporting Projects
+ *  P04~P09 Case Study Slides
+ *  P10  Supporting Projects
  *  ---  Contact
  */
 export default function App() {

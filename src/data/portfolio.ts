@@ -13,37 +13,41 @@ export const about = {
   name: "김아영",
   nameEn: "Ahyoung Kim",
   // Level 1: Hero Title
-  title: "AI 기술을 사용자 경험과 비즈니스 가치로 연결하는\n서비스 기획자 김아영 입니다.",
-  // Level 4: Description (의미 단위 분리 및 축약)
+  title: "문제를 발견하고 서비스 구조로 해결하는\nAI 서비스 기획자 김아영 입니다.",
   description:
-    "Interactive Avatar, AI Human, AI Studios 등 생성형 AI 서비스의 설계부터 운영까지 다양한 경험했습니다.",
-  
-  // Core Strength (PAGE 01 핵심 역량)
+    "AI SaaS부터 글로벌 플랫폼까지 서비스 구축과 운영 체계를 설계해왔습니다.",
   strengths: [
     {
-      label: "문제 정의",
+      label: "01. 문제 정의",
       title: "문제 정의",
-      items: ["사용자 행동 분석", "VOC 클러스터링", "비즈니스 요구사항 정의"],
-      tools: ["Amplitude", "Google Analytics", "Notion"]
+      items: ["사용자 행동 분석", "VOC 분석", "요구사항 정의"],
+      tools: ["Amplitude", "GA", "Notion"],
     },
     {
-      label: "서비스 설계",
+      label: "02. 서비스 설계",
       title: "서비스 설계",
-      items: ["AI 엔진-클라이언트 데이터 흐름 설계", "User Flow", "인터랙션 및 정책 정의"],
-      tools: ["Figma", "Notion", "Jira"]
+      items: ["서비스 구조 설계", "User Flow 설계", "정책 정의"],
+      tools: ["Figma", "Notion"],
     },
     {
-      label: "운영 체계 구축",
+      label: "03. 가설 검증 및 프로토타이핑",
+      title: "가설 검증 및 프로토타이핑",
+      items: ["가설 수립 및 실험 설계", "데이터 기반 개선", "빠른 프로토타입 제작"],
+      tools: ["Cursor", "ChatGPT", "Claude"],
+    },
+    {
+      label: "04. 운영 체계 구축",
       title: "운영 체계 구축",
-      items: ["도메인별 Admin 구조 설계", "상태값 정의", "QA 및 운영 프로세스 표준화"],
-      tools: ["Jira", "Notion", "Figma"]
+      items: ["Admin 설계", "운영 정책 정의", "QA 체계 구축"],
+      tools: ["Jira", "Notion"],
     },
-    {
-      label: "가설 검증 및 개선",
-      title: "가설 검증 및 개선",
-      items: ["가설 수립 및 실험 설계", "프로토타이핑", "LLM 프롬프트 가이드라인 최적화"],
-      tools: ["Amplitude", "Google Analytics", "Cursor", "ChatGPT", "Claude"]
-    }
+  ],
+  summary: [
+    "5+ Years Experience",
+    "AI SaaS",
+    "Global Platform",
+    "Admin Structure",
+    "Service Operations",
   ],
   
   contact: {
@@ -65,87 +69,60 @@ export const about = {
    ---------------------------------------------------------------- */
 export const careerSummary = {
   label: "CAREER SUMMARY",
-  title: "AI SaaS부터 글로벌 플랫폼까지\n서비스 구축과 운영을 리드해왔습니다.",
+  title: "AI SaaS부터 글로벌 플랫폼까지 서비스 구축과 운영을 리드해왔습니다.",
   description:
-    "신규 서비스 구축부터 대규모 플랫폼 운영까지\n\n서비스 전 주기의 구조 설계를 수행했습니다.",
-  
-  // Experience Summary (회사 목록보다 먼저 읽혀야 하는 핵심 키워드들)
-  experienceSummary: [
-    "11년+ 서비스 기획 경험",
-    "AI SaaS",
-    "B2B Solution",
-    "Platform Service",
-    "Admin 시스템",
-    "Operation Policy"
-  ],
-
-  // Career Timeline
+    "신규 서비스 구축부터 대규모 플랫폼 운영까지 서비스 전 주기의 구조 설계를 수행했습니다.",
   timeline: [
     {
       period: "2022.04 — 현재",
       company: "DeepBrain AI",
       role: "AI 서비스 기획",
       items: [
-        "Interactive Avatar",
-        "AI Human",
-        "AI Dubbing",
-        "NH농협은행 AI 가상인간",
-        "AI Studios SaaS"
+        "Interactive Avatar / AI Human 서비스 기획",
+        "AI SaaS 제품 고도화 및 운영",
+        "금융권 AI 가상인간 프로젝트 리드",
       ],
-      roleSummary: "대화형 AI 서비스 구조 설계, 운영 기준 수립, SaaS 기능 개선"
     },
     {
       period: "2020.02 — 2022.04",
       company: "아이파트너즈",
       role: "서비스 기획",
       items: [
-        "현대자동차",
-        "제네시스 글로벌",
-        "Admin 구조 개선",
-        "운영 정책 수립"
+        "현대자동차 / 제네시스 견적·시승 웹 기획",
+        "Admin 구조 개선 및 운영 정책 설계",
+        "대규모 서비스 운영 프로세스 구축",
       ],
-      roleSummary: "브랜드 플랫폼 운영 정책과 Admin 구조 개선"
     },
     {
       period: "2013.09 — 2020.02",
       company: "투어마케팅코리아 / 알라모",
       role: "서비스 기획",
       items: [
-        "렌터카 예약 플랫폼",
-        "정산 시스템",
-        "Admin 운영 구조 설계",
-        "VOC 기반 개선"
+        "예약·정산 플랫폼 제로투원 구축",
+        "정산 자동화 프로세스 설계",
+        "VOC 기반 운영 시스템 개선",
       ],
-      roleSummary: "예약/정산 플랫폼의 운영 프로세스와 VOC 기반 개선"
-    }
+    },
   ],
-
-  keyMessage: "서비스는 출시보다 운영이 중요하다고 생각합니다. 사용자 문제를 발견하고 서비스 구조를 설계하며 운영 가능한 체계로 연결해왔습니다.",
-
-  // Project Summary (Interactive Avatar 메인 프로젝트 개요)
   projectSummary: {
     context:
-      "Avatar 생성부터 실시간 대화까지,\n대화형 AI 기술을 실제 서비스 경험으로 연결하기 위한 구조 설계",
-    background: [
-      "가상인간 제작에 시간과 비용이 많이 드는 구조",
-      "Chatbot 중심 경험의 한계",
+      "Avatar 생성부터 실시간 대화까지, 대화형 AI를 실제 서비스로 구현하기 위한 구조 설계",
+    challenge: [
+      "Avatar 제작에 많은 시간과 비용이 소요됨",
+      "텍스트 기반 Chatbot 경험만으로는 차별화에 한계 존재",
       "서비스 품질을 판단할 공통 기준 부재",
     ],
-    goals: [
-      "아바타를 빠르고 쉽게 제작 할 수 있는 구조",
-      "자연스러운 실시간 대화 경험 제공",
-      "서비스 품질 평가 체계 구축",
+    approach: [
+      "생성과 대화를 하나의 서비스 경험으로 연결",
+      "체감 대기 시간을 줄이는 UX 중심 설계",
+      "품질을 측정 가능한 기준으로 표준화",
     ],
     role: [
-      "서비스 기획 리드",
+      "서비스 구조 설계",
       "대화 경험 설계",
-      "운영 체계 설계",
+      "운영 체계 및 품질 기준 정의",
     ],
-    insight:
-      "대화형 AI의 경쟁력은 모델 성능보다 기술을 사용자 경험으로 전환하는 구조에 있음.",
-    oneLiner:
-      "기술 중심보다는 서비스 경험 중심 관점으로 문제를 재정의함.",
-  }
+  },
 };
 
 /* ----------------------------------------------------------------
@@ -499,10 +476,7 @@ export const supportingProjects = {
         "Admin 시스템 설계",
         "글로벌 운영 프로세스 구축",
       ],
-      kpis: [
-        { value: "+20%", label: "전년 대비 성장" },
-        { value: "+15%", label: "B2B 비중" },
-      ],
+      kpis: [],
       tags: ["B2B", "Reservation", "Admin"],
       year: "2013–2020",
       slot: "support-alamo",
@@ -530,211 +504,171 @@ export type ProjectSlideData = {
     type: string;
     items: string[];
   };
-  tone?: "default" | "alt" | "dark" | "insight";
+  tone?: "default" | "alt" | "chapter" | "dark" | "insight";
 };
 
 export const projectSlides: ProjectSlideData[] = [
   {
-    id: "problem",
-    label: "PAGE 04 · 문제 정의",
-    title: "Conversational Experience 문제 정의",
+    id: "voc-analysis",
+    label: "PAGE 04 · VOC 진단",
+    title: "기존 Avatar VOC 기반 경험 진단",
     description:
-      "실시간 대화 과정에서 사용자가 경험하는 불편 요소를 정의하고 핵심 문제를 도출",
+      "기존 Avatar 서비스 운영 경험과 VOC 분석을 통해 사용자 경험을 저해하는 핵심 문제를 도출",
     keyPoints: [
       {
-        title: "문제 상황",
-        items: [
-          "응답 지연으로 대화 몰입도 저하",
-          "Waiting 구간에서 사용자 이탈 발생",
-        ],
-      },
-      {
-        title: "사용자 요구",
-        items: [
-          "빠른 응답",
-          "자연스러운 대화 흐름",
-          "예측 가능한 서비스 경험",
-        ],
-      },
-      {
-        title: "핵심 질문",
-        items: [
-          "체감 Latency를 줄일 수 있는가",
-          "기술적 한계를 UX로 보완할 수 있는가",
-          "대화 경험을 어떻게 측정할 수 있는가",
-        ],
-      },
-    ],
-    insightLead:
-      "사용자는 기능의 복잡함보다 대화가 자연스럽게 이어지는 경험을 더 중요하게 평가함.",
-    insight:
-      "결국 문제는 기술의 한계가 아니라 기술적 제약을 인지하지 않도록 설계하는 서비스 구조에 있었음.",
-    visual: {
-      slot: "service-structure",
-      title: "문제 정의 Canvas",
-      type: "Problem Definition Canvas · User Journey Map",
-      items: ["문제 정의 Canvas", "User Journey Map", "대화 경험 이슈"],
-    },
-    tone: "default",
-  },
-  {
-    id: "user-analysis",
-    label: "PAGE 05 · 사용자 경험 분석",
-    title: "데이터 기반 경험 진단",
-    description:
-      "VOC와 인터뷰를 기반으로 사용자 경험을 저해하는 핵심 요인 분석",
-    keyPoints: [
-      {
-        title: "분석 데이터",
-        items: [
-          "VOC XX건",
-          "인터뷰 50명",
-          "QA Case XX건",
-        ],
+        title: "데이터 분석",
+        items: ["VOC 분석", "QA 로그 검토", "내부 사용자 테스트"],
       },
       {
         title: "주요 발견",
         items: [
-          "사용자는 답변 품질보다 응답 대기 경험에 더 민감하게 반응함",
-          "대화 흐름이 끊기는 순간 서비스 신뢰도가 빠르게 하락함",
-          "Waiting 구간의 피드백 부재가 주요 이탈 요인으로 확인됨",
+          "답변 품질보다 응답 대기 경험에 대한 불만 집중",
+          "대화 흐름이 끊기는 순간 만족도 하락",
+          "Avatar 자연스러움에 대한 기대 증가",
         ],
       },
       {
         title: "우선 과제",
-        items: [
-          "체감 응답 시간 개선",
-          "대화 연결성 강화",
-          "Waiting UX 개선",
-        ],
+        items: ["체감 대기 시간 개선", "대화 연결성 강화", "자연스러움 개선"],
       },
     ],
     insightLead:
-      "사용자가 문제로 인식한 것은 AI 성능보다 대화 경험의 단절이었음.",
+      "사용자는 답변 품질보다 응답 속도와 대화 연결성을 더 민감하게 인식함.",
     insight:
-      "분석 결과, 대화 연결성을 유지하고 Waiting 경험을 개선하는 것이 최우선 과제로 도출됨.",
+      "VOC와 테스트 데이터를 기반으로 개선 우선순위를 정의하고 가설 수립의 근거를 확보함.",
     visual: {
       slot: "voc-cluster",
-      title: "VOC 분석 결과 및 QA 이슈 분류 차트",
-      type: "VOC Analysis · QA Issue Classification",
-      items: ["VOC XX건", "인터뷰 50명", "QA Case XX건"],
+      title: "VOC Affinity Map",
+      type: "VOC Affinity Map · Pain Point Journey",
+      items: ["VOC Affinity Map", "Pain Point Journey"],
     },
-    tone: "alt",
+    tone: "default",
   },
   {
     id: "hypothesis",
-    label: "PAGE 06 · 가설 수립",
+    label: "PAGE 05 · 가설 수립",
     title: "체감 지연 개선 가설 수립",
-    description:
-      "분석 결과를 기반으로 검증 가능한 UX 가설 정의",
+    description: "분석 결과를 기반으로 검증 가능한 UX 가설 정의",
     keyPoints: [
       {
         title: "관찰 내용",
-        items: ["응답 지연 발생", "립싱크 지연 발생", "Waiting 구간 이탈 증가"],
+        items: [
+          "응답 생성 과정에서 대기 시간 발생",
+          "음성과 Avatar 움직임 간 지연 발생",
+          "Waiting 구간에서 사용자 이탈 집중",
+        ],
       },
       {
         title: "가설 정의",
         items: [
-          "대기 인터랙션 제공 시 이탈 감소 가능",
-          "실시간 출력 방식 적용 시 체감 지연 감소 가능",
-          "상태 피드백 제공 시 만족도 향상 가능",
+          "대기 인터랙션이 이탈을 줄일 수 있을 것이라 판단",
+          "실시간 출력 방식이 체감 지연을 줄일 수 있을 것이라 판단",
+          "상태 피드백 제공이 대화 몰입도를 높일 수 있을 것이라 판단",
         ],
       },
       {
         title: "검증 계획",
-        items: ["응답 방식별 비교 검증", "부하 환경 검증", "UX 패턴별 실험 설계"],
+        items: [
+          "프로토타입 기반 사용자 검토",
+          "대기 경험 개선안 비교",
+          "내부 테스트를 통한 가설 검증",
+        ],
       },
     ],
     insightLead:
-      "기술적 문제를 단순 추측으로 해석하지 않고 사용자 경험 관점의 가설로 전환함.",
-    insight:
-      "원인 규명보다 중요한 것은 실제 사용자 경험에 영향을 주는 요소를 데이터 기반으로 검증하는 과정이었음.",
+      "기술적 문제를 해결하는 것과 사용자가 느끼는 경험을 개선하는 것은 다른 문제였음.",
+    insight: "서비스 관점에서 두 영역을 병행하여 접근함.",
     visual: {
       slot: "hypothesis-sheet",
       title: "가설 검증 플로우",
       type: "Hypothesis Flow · Test Design",
-      items: ["가설 검증 플로우", "테스트 설계 문서", "비교 조건"],
-    },
-    tone: "default",
-  },
-  {
-    id: "service-design",
-    label: "PAGE 07 · 서비스 구조 설계",
-    title: "End-to-End 서비스 구조 설계",
-    description:
-      "대화 진입부터 운영까지 연결되는 서비스 구조 설계",
-    keyPoints: [
-      {
-        title: "설계 대상",
-        items: ["대화 진입 경험", "실시간 대화 경험", "운영 및 관리 경험"],
-      },
-      {
-        title: "설계 원칙",
-        items: [
-          "일관된 사용자 경험 제공",
-          "확장 가능한 구조 설계",
-          "운영 효율성 고려",
-        ],
-      },
-      {
-        title: "기대 효과",
-        items: [
-          "서비스 구조 표준화",
-          "기능 확장 대응",
-          "운영 비용 절감 기반 확보",
-        ],
-      },
-    ],
-    insightLead:
-      "개별 기능의 완성도보다 생성·대화·운영이 하나의 흐름으로 연결되는 구조가 서비스 경험을 결정함.",
-    insight:
-      "특히 운영 단계까지 고려한 설계가 서비스의 확장성과 지속 가능성을 좌우함.",
-    visual: {
-      slot: "workflow-diagram",
-      title: "Workflow Diagram",
-      type: "End-to-End User Flow · Workflow",
-      items: ["대화 진입", "실시간 대화", "운영", "관리"],
+      items: ["가설 검증 플로우", "테스트 설계 문서"],
     },
     tone: "alt",
   },
   {
-    id: "evaluation-operation",
-    label: "PAGE 08 · 서비스 품질 Framework",
-    title: "서비스 품질 Framework 구축",
-    description:
-      "서비스 경험을 객관적으로 평가하고 개선하기 위한 기준 정의",
+    id: "service-design",
+    label: "PAGE 06 · 서비스 구조",
+    title: "End-to-End 서비스 구조 설계",
+    description: "생성, 대화, 운영 전 과정을 하나의 서비스 흐름으로 연결",
     keyPoints: [
-      { title: "품질 항목", items: ["응답 속도", "대화 연결성", "자연스러움"] },
       {
-        title: "측정 기준",
-        items: ["평가 항목 정의", "점수 기준 수립", "QA 기준 정립"],
+        title: "As-Is",
+        items: [
+          "Avatar 생성과 대화 경험이 분리됨",
+          "상태 정보가 사용자에게 전달되지 않음",
+          "운영 기준이 프로젝트마다 상이함",
+        ],
       },
       {
-        title: "기대 효과",
+        title: "To-be",
         items: [
-          "공통 품질 언어 확보",
-          "객관적 서비스 평가",
-          "품질 개선 기준 마련",
+          "생성·대화·운영 흐름 통합",
+          "상태 및 예외 처리 정책 정의",
+          "운영 프로세스 표준화",
+        ],
+      },
+      {
+        title: "설계 결과",
+        items: [
+          "생성 시간 및 단계 단축",
+          "공통 운영 정책 적용",
+          "QA Framework 구축",
         ],
       },
     ],
-    insightLead: "AI 서비스 품질은 모델 성능만으로 관리할 수 없음.",
+    insightLead: "사용자는 기능이 아니라 하나의 서비스 경험을 인식함.",
     insight:
-      "지속적인 개선을 위해서는 공통 평가 기준과 운영 체계 표준화가 반드시 필요했음.",
+      "생성·대화·운영이 연결된 구조 설계를 통해 확장 가능한 서비스 기반을 구축함.",
     visual: {
-      slot: "service-framework",
-      title: "품질 평가 Framework",
-      type: "Quality Framework · QA Matrix",
-      items: ["품질 평가 Framework", "QA Matrix", "점수 기준"],
+      slot: "workflow-diagram",
+      title: "Workflow Diagram",
+      type: "End-to-End User Flow · Workflow",
+      items: ["User Flow", "Workflow"],
     },
     tone: "default",
   },
   {
-    id: "result",
-    label: "PAGE 09 · 서비스 구축 성과",
-    title: "서비스 성과 및 운영 체계 구축",
+    id: "quality-framework",
+    label: "PAGE 07 · 품질 기준",
+    title: "AI 서비스 품질 기준 정의",
     description:
-      "PoC부터 상용화까지 서비스 운영 기반 구축",
+      "정의되지 않은 대화 경험을 측정 가능한 평가 기준으로 구조화",
+    keyPoints: [
+      {
+        title: "품질 항목",
+        items: ["응답 속도", "대화 연결성", "Avatar 자연스러움"],
+      },
+      {
+        title: "Framework 설계",
+        items: ["평가 항목 정의", "점수 기준 수립", "QA 기준 정립"],
+      },
+      {
+        title: "활용 목적",
+        items: [
+          "공통 품질 기준 확보",
+          "객관적 서비스 평가 가능",
+          "지속적인 개선 기반 마련",
+        ],
+      },
+    ],
+    insightLead:
+      "AI 서비스의 가장 큰 문제는 좋은 경험을 정의하기 어렵다는 점이었음.",
+    insight:
+      "대화 경험을 측정 가능한 기준으로 구조화하여 품질을 관리할 수 있는 기반을 마련함.",
+    visual: {
+      slot: "service-framework",
+      title: "품질 평가 Framework",
+      type: "Quality Framework · QA Matrix",
+      items: ["Quality Framework", "QA Matrix"],
+    },
+    tone: "alt",
+  },
+  {
+    id: "result",
+    label: "PAGE 08 · 성과",
+    title: "서비스 성과 및 운영 체계 구축",
+    description: "PoC부터 상용화까지 서비스 운영 기반 구축",
     keyPoints: [
       {
         title: "사업 성과",
@@ -765,13 +699,13 @@ export const projectSlides: ProjectSlideData[] = [
       slot: "project-summary",
       title: "성과 대시보드",
       type: "Performance Dashboard · Operation Process",
-      items: ["성과 대시보드", "운영 프로세스 구조도", "품질 지표"],
+      items: ["성과 대시보드", "운영 프로세스 구조도"],
     },
-    tone: "alt",
+    tone: "default",
   },
   {
     id: "reflection",
-    label: "PAGE 10 · 프로젝트 회고",
+    label: "PAGE 09 · 회고",
     title: "서비스 관점의 AI 기획",
     description:
       "기술을 사용자 가치로 연결하는 과정에서 얻은 인사이트 정리",
@@ -786,11 +720,19 @@ export const projectSlides: ProjectSlideData[] = [
       },
       {
         title: "어려웠던 점",
-        items: ["AI 품질 측정 기준 부재", "조직 간 관점 차이 존재", "기술과 비즈니스 간 균형 필요"],
+        items: [
+          "AI 품질 측정 기준 부재",
+          "조직 간 관점 차이 존재",
+          "기술과 비즈니스 간 균형 필요",
+        ],
       },
       {
         title: "다음 단계",
-        items: ["데이터 기반 평가 체계 고도화", "품질 측정 자동화", "운영 효율성 강화"],
+        items: [
+          "데이터 기반 평가 체계 고도화",
+          "품질 측정 자동화",
+          "운영 효율성 강화",
+        ],
       },
     ],
     insightLead:
@@ -801,8 +743,8 @@ export const projectSlides: ProjectSlideData[] = [
       slot: "lessons-learned",
       title: "프로젝트 회고 맵",
       type: "Lessons Learned · Reflection Map",
-      items: ["프로젝트 회고 맵", "Lessons Learned", "다음 단계"],
+      items: ["프로젝트 회고 맵", "Lessons Learned"],
     },
-    tone: "default",
+    tone: "chapter",
   },
 ];

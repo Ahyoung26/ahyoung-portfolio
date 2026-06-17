@@ -3,13 +3,13 @@
 @theme {
   /* === Color Tokens (DESIGN_GUIDE) === */
   --color-bg: #ffffff;
-  --color-bg-alt: #f9fafb;
+  --color-bg-alt: #fafbfc;
   --color-bg-dark: #0f172a;
   --color-bg-darker: #020617;
   --color-bg-insight: rgba(29, 78, 216, 0.04);
 
-  --color-ink: #111827;
-  --color-ink-2: #4b5563;
+  --color-ink: #111111;
+  --color-ink-2: #666666;
   --color-ink-3: #9ca3af;
   --color-ink-4: #d1d5db;
 
@@ -33,11 +33,11 @@
 @layer base {
   :root {
     --color-primary-accent: #1d4ed8;
-    --color-text-primary: #111827;
-    --color-text-secondary: #4b5563;
+    --color-text-primary: #111111;
+    --color-text-secondary: #666666;
     --color-border-divider: #e5e7eb;
     --color-background: #ffffff;
-    --color-background-alt: #f9fafb;
+    --color-background-alt: #fafbfc;
     --color-background-dark: #0f172a;
     --space-section-gap: 56px;
     --space-component-gap: 24px;
@@ -65,6 +65,7 @@
   /* === One Slide = One Screen === */
   .portfolio-slide {
     position: relative;
+    min-height: 100vh;
     height: 100vh;
     overflow: hidden;
     scroll-snap-align: start;
@@ -73,17 +74,30 @@
     align-items: stretch;
   }
   .slide-inner {
-    width: 100%;
+    width: calc(100% - 24px);
     max-width: 1320px;
     margin: 0 auto;
-    padding: clamp(72px, 8vh, 88px) clamp(40px, 5vw, 64px)
-      clamp(24px, 4vh, 40px);
+    padding: clamp(72px, 8vh, 88px) 0 clamp(24px, 4vh, 40px);
+    min-height: 100vh;
     height: 100vh;
     max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .slide-inner {
+      width: calc(100% - 32px);
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .slide-inner {
+      width: 100%;
+      max-width: 1320px;
+    }
   }
 
   .portfolio-slide:has(.type-b-slide) {
@@ -101,23 +115,36 @@
     overflow: hidden;
   }
 
-  /* Responsive padding only. Slides keep 100vh + scroll snap per master guide. */
+  /* Responsive layout: desktop is fixed deck, smaller screens use min-height flow. */
   @media (max-width: 1024px) {
     .portfolio-slide {
-      height: 100vh;
+      height: auto;
+      min-height: 100vh;
       overflow: hidden;
       scroll-snap-align: start;
       align-items: stretch;
     }
     .slide-inner {
-      max-height: 100vh;
-      padding: 72px 24px 28px;
+      height: auto;
+      min-height: 100vh;
+      max-height: none;
+      width: calc(100% - 32px);
+      padding: 72px 0 28px;
+    }
+
+    .slide-inner:has(.type-b-slide) {
+      height: auto;
+      min-height: 100vh;
+      max-height: none;
+      padding-top: 72px;
+      padding-bottom: 28px;
     }
   }
 
   @media (max-width: 768px) {
     .slide-inner {
-      padding: 68px 20px 24px;
+      width: calc(100% - 24px);
+      padding: 68px 0 24px;
     }
   }
   body {
@@ -146,7 +173,7 @@
 @layer utilities {
   .highlight {
     color: var(--color-primary-accent);
-    font-weight: 800;
+    font-weight: 700;
   }
 
   .keep-all {
@@ -163,6 +190,86 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* === Typography scale (DESIGN_SYSTEM) === */
+  .type-hero-a {
+    font-size: clamp(36px, 4.5vw, 58px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  @media (min-width: 1024px) {
+    .type-hero-a {
+      font-size: clamp(48px, 4.8vw, 64px);
+    }
+  }
+
+  .type-hero-b {
+    font-size: clamp(44px, 4.5vw, 64px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+  }
+
+  @media (max-width: 768px) {
+    .type-hero-b {
+      font-size: clamp(36px, 10vw, 44px);
+    }
+  }
+
+  .type-desc {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 768px) {
+    .type-desc {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .type-desc {
+      font-size: 20px;
+    }
+  }
+
+  .type-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  @media (min-width: 1024px) {
+    .type-section-title {
+      font-size: 20px;
+    }
+  }
+
+  .type-body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  @media (min-width: 1024px) {
+    .type-body {
+      font-size: 15px;
+    }
+  }
+
+  /* Chapter page (Type A on dark bg) */
+  .chapter-surface {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   /* === Type A Intro/Summary Slide Safe Guard === */
@@ -208,6 +315,57 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .about-strength-grid {
+    flex: 0 0 auto;
+    align-items: stretch;
+  }
+
+  .about-strength-card {
+    height: clamp(220px, 24vh, 260px);
+    padding: 16px;
+  }
+
+  .tool-icon {
+    display: inline-grid;
+    width: 26px;
+    height: 26px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .about-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: clamp(24px, 4vh, 40px);
+    padding-top: clamp(18px, 3vh, 28px);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .about-summary span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0 14px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
   .type-a-summary-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -222,6 +380,18 @@
     flex: 1 1 0;
   }
 
+  .project-overview-artifact {
+    display: flex;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+    padding: clamp(20px, 3vw, 36px);
+  }
+
+  .project-overview-artifact > * {
+    width: 100%;
+  }
+
   @media (max-width: 1024px) {
     .type-a-about-grid,
     .type-a-summary-grid {
@@ -233,17 +403,34 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
+
+    .about-strength-card {
+      height: 220px;
+    }
   }
 
   @media (max-width: 768px) {
+    .type-a-slide,
+    .type-a-layout {
+      height: auto;
+      min-height: 100vh;
+      max-height: none;
+    }
+
     .type-a-content {
       margin-top: var(--space-component-gap);
+      overflow: visible;
     }
 
     .type-a-about-grid,
     .type-a-summary-grid,
     .type-a-career-grid {
       grid-template-columns: 1fr;
+    }
+
+    .about-strength-card {
+      height: auto;
+      min-height: 190px;
     }
   }
 
@@ -260,7 +447,12 @@
   /* Hero: never shrink — title/subtitle always fully visible */
   .type-b-hero {
     flex-shrink: 0;
-    margin-bottom: 32px;
+    margin-bottom: clamp(24px, 3vh, 32px);
+  }
+
+  .type-b-hero-description {
+    margin-top: 16px;
+    max-width: 760px;
   }
 
   .type-b-body {
@@ -268,13 +460,37 @@
     flex: 1 1 0;
     min-height: 0;
     overflow: hidden;
-    gap: var(--space-component-gap);
+    gap: clamp(24px, 2.4vw, 32px);
   }
 
   @media (min-width: 1024px) {
     .type-b-body {
-      grid-template-columns: 35% 65%;
-      align-items: stretch;
+      grid-template-columns: minmax(320px, 38%) minmax(0, 62%);
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .type-b-body {
+      grid-template-columns: 1fr;
+      align-content: start;
+      gap: var(--space-component-gap);
+    }
+
+    .type-b-left {
+      order: 1;
+      overflow: visible;
+    }
+
+    .type-b-visual {
+      order: 2;
+      min-height: clamp(240px, 38vh, 420px);
+    }
+
+    .type-b-slide {
+      height: auto;
+      min-height: 100vh;
+      max-height: none;
     }
   }
 
@@ -284,27 +500,23 @@
     min-width: 0;
     min-height: 0;
     overflow: hidden;
+    gap: 0;
   }
 
   .type-b-main-content {
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
-    justify-content: space-between;
-    gap: 16px;
+    justify-content: center;
+    gap: clamp(24px, 3vh, 32px);
     min-height: 0;
     overflow: hidden;
   }
 
   .type-b-main-content h3 {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
     line-height: 1.35;
-  }
-
-  @media (min-width: 1024px) {
-    .type-b-main-content h3 {
-      font-size: 19px;
-    }
   }
 
   .type-b-main-content li {
@@ -314,11 +526,13 @@
 
   @media (min-width: 1024px) {
     .type-b-main-content li {
-      font-size: 15px;
+      font-size: 16px;
     }
   }
 
   .type-b-visual {
+    display: flex;
+    align-items: center;
     height: 100%;
     min-height: 0;
     overflow: hidden;
@@ -330,22 +544,205 @@
     }
   }
 
-  .type-b-footer {
-    flex-shrink: 0;
-    margin-top: 20px;
-    margin-bottom: 0;
-  }
-
   .type-b-insight {
     flex-shrink: 0;
     margin-bottom: 0;
+    margin-top: clamp(20px, 3vh, 28px);
+    border-top: 1px solid;
+    padding-top: 16px;
   }
 
   .type-b-insight p {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+
+  .type-b-insight .insight-lead {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+
+  .type-b-insight .insight-main {
+    margin-top: 4px;
+    font-size: clamp(24px, 2.8vw, 34px);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .artifact-frame {
+    aspect-ratio: 16 / 10;
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  .artifact-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .artifact-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    padding: clamp(20px, 3vw, 36px);
+  }
+
+  .artifact-bars,
+  .artifact-steps,
+  .artifact-matrix,
+  .artifact-metric-grid,
+  .artifact-reflection,
+  .artifact-flow {
+    min-height: 0;
+  }
+
+  .artifact-bars {
+    display: grid;
+    gap: 12px;
+  }
+
+  .artifact-bar-row {
+    min-width: 0;
+  }
+
+  .artifact-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .artifact-chip {
+    display: inline-flex;
+    border: 1px solid var(--color-border-divider);
+    background: #ffffff;
+    padding: 6px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+  }
+
+  .portfolio-slide[data-tone="chapter"] .artifact-chip,
+  .portfolio-slide[data-tone="dark"] .artifact-chip {
+    border-color: rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .artifact-steps,
+  .artifact-flow,
+  .artifact-metric-grid {
+    display: grid;
+    gap: 12px;
+  }
+
+  .artifact-steps,
+  .artifact-metric-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .artifact-step,
+  .artifact-flow-node,
+  .artifact-metric {
+    border: 1px solid var(--color-border-divider);
+    background: #ffffff;
+    padding: 14px;
+  }
+
+  .portfolio-slide[data-tone="chapter"] .artifact-step,
+  .portfolio-slide[data-tone="chapter"] .artifact-flow-node,
+  .portfolio-slide[data-tone="chapter"] .artifact-metric,
+  .portfolio-slide[data-tone="dark"] .artifact-step,
+  .portfolio-slide[data-tone="dark"] .artifact-flow-node,
+  .portfolio-slide[data-tone="dark"] .artifact-metric {
+    border-color: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .artifact-step-index,
+  .artifact-flow-node span {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--color-primary-accent);
+  }
+
+  .artifact-step p,
+  .artifact-metric span {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+  }
+
+  .portfolio-slide[data-tone="chapter"] .artifact-step p,
+  .portfolio-slide[data-tone="chapter"] .artifact-metric span,
+  .portfolio-slide[data-tone="dark"] .artifact-step p,
+  .portfolio-slide[data-tone="dark"] .artifact-metric span {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .artifact-flow {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+  }
+
+  .artifact-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .artifact-matrix {
+    display: grid;
+    gap: 10px;
+  }
+
+  .artifact-matrix-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr 0.8fr;
+    gap: 10px;
+    border-bottom: 1px solid var(--color-border-divider);
+    padding-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .portfolio-slide[data-tone="chapter"] .artifact-matrix-row,
+  .portfolio-slide[data-tone="dark"] .artifact-matrix-row {
+    border-color: rgba(255, 255, 255, 0.16);
+  }
+
+  .artifact-reflection {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .artifact-reflection span {
+    display: grid;
+    min-height: 96px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.08);
+    font-weight: 700;
+  }
+
+  @media (max-width: 1023px) {
+    .artifact-frame {
+      max-height: none;
+    }
+
+    .type-b-insight {
+      margin-top: var(--space-component-gap);
+    }
   }
 
   .accent-semibold {

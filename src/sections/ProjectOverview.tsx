@@ -1,54 +1,42 @@
-import { Section, Eyebrow, Body } from "@/components/primitives";
+import { ArtifactImage, Section, Eyebrow, Body } from "@/components/primitives";
 import { careerSummary } from "@/data/portfolio";
 
 /**
- * PAGE 03 — PROJECT SUMMARY
- *
- * 프로젝트 소개 영역이며, PAGE 04~10 Case Study Slide 구조를 사용하지 않는다.
+ * PAGE 03 — PROJECT SUMMARY (Type A · Chapter)
+ * Challenge / Approach / My Role — Insight Bar 없음
  */
 export function ProjectOverview() {
   const summary = careerSummary.projectSummary;
   const rows = [
-    { title: "프로젝트 배경", items: summary.background },
-    { title: "프로젝트 목표", items: summary.goals },
-    { title: "프로젝트 역할", items: summary.role },
+    { title: "Challenge", items: summary.challenge },
+    { title: "Approach", items: summary.approach },
+    { title: "My Role", items: summary.role },
   ];
 
   return (
-    <Section id="project-summary" tone="default" containerClassName="type-a-slide">
+    <Section id="project-summary" tone="chapter" containerClassName="type-a-slide">
       <div className="type-a-layout">
         <header className="type-a-hero">
-          <Eyebrow>PROJECT SUMMARY</Eyebrow>
-          <h2 className="mt-4 max-w-4xl text-[38px] font-bold leading-[1.2] tracking-[-0.03em] keep-all text-balance sm:text-[44px] md:text-[52px] lg:text-[58px]">
+          <Eyebrow tone="chapter">PROJECT SUMMARY</Eyebrow>
+          <h2 className="type-hero-a mt-4 max-w-4xl keep-all text-balance">
             Interactive Avatar 서비스 구축
           </h2>
-          <Body className="mt-5 max-w-3xl whitespace-pre-line text-[16px] sm:text-[18px]">
+          <Body className="type-desc mt-5 max-w-3xl clamp-2 text-white/80">
             {summary.context}
           </Body>
         </header>
 
-        <div className="type-a-content type-a-summary-grid">
-          {rows.map((row) => (
-            <ProjectSummaryRow key={row.title} title={row.title} items={row.items} />
-          ))}
-        </div>
-
-        <footer className="type-a-footer">
-          <div className="grid grid-cols-[4px_1fr] items-center gap-4">
-            <span className="min-h-10 w-1 self-stretch bg-[var(--color-primary-accent)]" />
-            <div>
-              <div className="text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--color-primary-accent)]">
-                Insight
+        <div className="type-a-content">
+          <div className="project-overview-artifact chapter-surface">
+            <ArtifactImage pageLabel="PAGE 03" alt="Interactive Avatar project overview artifact">
+              <div className="type-a-summary-grid">
+                {rows.map((row) => (
+                  <ProjectSummaryRow key={row.title} title={row.title} items={row.items} />
+                ))}
               </div>
-              <p className="mt-2 text-[18px] font-bold leading-[1.4] tracking-[-0.02em] keep-all sm:text-[20px] lg:text-[24px]">
-                {summary.insight}
-              </p>
-              <p className="mt-2 text-[16px] font-semibold leading-[1.45] tracking-[-0.02em] text-[var(--color-primary-accent)] keep-all sm:text-[18px] lg:text-[20px]">
-                {summary.oneLiner}
-              </p>
-            </div>
+            </ArtifactImage>
           </div>
-        </footer>
+        </div>
       </div>
     </Section>
   );
@@ -62,16 +50,11 @@ function ProjectSummaryRow({
   items: string[];
 }) {
   return (
-    <section className="min-h-0 border-t border-[var(--color-border-divider)] pt-5">
-      <h3 className="text-[20px] font-semibold tracking-[-0.02em] text-[var(--color-text-primary)] keep-all sm:text-[22px]">
-        {title}
-      </h3>
-      <ul className="mt-4 grid gap-[var(--space-list-gap)]">
+    <section className="min-h-0">
+      <h3 className="type-section-title text-white keep-all">{title}</h3>
+      <ul className="mt-3 grid gap-[var(--space-list-gap)]">
         {items.map((item) => (
-          <li
-            key={item}
-            className="text-[16px] leading-[1.6] text-[var(--color-text-secondary)] keep-all"
-          >
+          <li key={item} className="type-body text-white/75 keep-all">
             {item}
           </li>
         ))}
